@@ -8,6 +8,5 @@ public class PrimitiveDataTypes {
         long largerDecimal = 348894797893849L;
         boolean check = true; //or false
 
-
     }
 }
