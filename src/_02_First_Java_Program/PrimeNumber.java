@@ -1,4 +1,4 @@
-package _01.Introduction_To_Java;
+package _02_First_Java_Program;
 
 public class PrimeNumber {
     public static void main(String[] args) {
