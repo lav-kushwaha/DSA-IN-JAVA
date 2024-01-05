@@ -19,5 +19,17 @@ public class TypeCasting {
 //        byte ans = a*2;
 //         int ans = a*2;
 
+        byte b = 42;
+        char c = 'a';
+        short s = 1024;
+        int i = 50000;
+        float f = 5.67f;
+        double d = 0.1234;
+        double result = (f*b)+(i/c)-(d*s);//always smaller primitive data types converted to bigger.
+        // float + int - double = double.
+        System.out.println((f*b)+ " " +(i/c)+ " " +(d*s));//238.14 515 126.3616
+        System.out.println(result);//626.7784146484375
+
+
     }
 }
