@@ -1,4 +1,4 @@
-package _02_First_Java_Program;
+package _02_First_Java_Program.Questions;
 
 public class PrintingNumber1To10 {
     public static void printNos(int N){

@@ -2,7 +2,7 @@ package _02_First_Java_Program;
 
 import java.util.Scanner;
 
-public class Solution {
+public class FirstLineOfCode {
     public static void main(String[] args) {
 
         //Printing Hello world.
