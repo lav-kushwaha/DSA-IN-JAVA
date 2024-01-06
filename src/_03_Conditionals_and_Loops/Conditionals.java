@@ -1,5 +1,5 @@
-package _03_Conditions_and_Loops;
-public class Conditions {
+package _03_Conditionals_and_Loops;
+public class Conditionals {
     public static void main(String[] args) {
         //if statement
 //        int salary = 10000;
