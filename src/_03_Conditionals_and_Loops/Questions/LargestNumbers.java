@@ -1,4 +1,4 @@
-package _03_Conditionals_and_Loops;
+package _03_Conditionals_and_Loops.Questions;
 import java.util.Scanner;
 
 public class LargestNumbers {
