@@ -14,30 +14,52 @@ public class Calculator_Using_Switch {
 
         System.out.println("Enter num2: ");
         int num2 = sc.nextInt();
+//
+//        int result = 0; // Declare a variable to store the result
+//
+//        switch (operator) {
+//            case "+":
+//                result = num1 + num2;
+//                break;
+//            case "-":
+//                result = num1 - num2;
+//                break;
+//            case "*":
+//                result = num1 * num2;
+//                break;
+//            case "/":
+//                if (num2 != 0) {
+//                    result = num1 / num2;
+//                } else {
+//                    System.out.println("Cannot divide by zero");
+//                    return; // Exit the program if division by zero is attempted
+//                }
+//                break;
+//            default:
+//                System.out.println("Please enter a valid operator");
+//                return; // Exit the program if an invalid operator is entered
+//        }
+//
+//        System.out.println("Result: " + result);
 
+        //Switch statement can be replaced with enhanced 'switch'
         int result = 0; // Declare a variable to store the result
-
         switch (operator) {
-            case "+":
-                result = num1 + num2;
-                break;
-            case "-":
-                result = num1 - num2;
-                break;
-            case "*":
-                result = num1 * num2;
-                break;
-            case "/":
+            case "+" -> result = num1 + num2;
+            case "-" -> result = num1 - num2;
+            case "*" -> result = num1 * num2;
+            case "/" -> {
                 if (num2 != 0) {
                     result = num1 / num2;
                 } else {
                     System.out.println("Cannot divide by zero");
                     return; // Exit the program if division by zero is attempted
                 }
-                break;
-            default:
+            }
+            default -> {
                 System.out.println("Please enter a valid operator");
                 return; // Exit the program if an invalid operator is entered
+            }
         }
 
         System.out.println("Result: " + result);
