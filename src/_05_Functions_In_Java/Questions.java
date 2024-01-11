@@ -29,7 +29,6 @@ public class Questions {
         return sum == original;
     }
 
-
     //Write a program to check number is prime or not.
     static boolean IsPrime(int num){
         int originalNum = num;
