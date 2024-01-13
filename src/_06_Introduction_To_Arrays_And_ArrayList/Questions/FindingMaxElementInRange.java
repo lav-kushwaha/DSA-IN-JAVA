@@ -7,7 +7,13 @@ public class FindingMaxElementInRange {
         System.out.println(ans);
     }
     static int MaxInRange(int arr[], int start, int end){
-        //we can do this question using for-loop as well as.
+        //we can do this question using for-loop as well as;
+        if(end<start){
+            return -1;
+        }
+        if(arr == null){
+            return -1;
+        }
         int maxVal = arr[0];
         while(start<=end){
             if(maxVal<arr[start]){
