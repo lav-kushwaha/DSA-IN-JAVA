@@ -1,4 +1,4 @@
-package Searching.LinearSearch.Questions;
+package _06_Searching.LinearSearch.Questions;
 public class MaxValueIn2DArrays {
     public static void main(String[] args) {
         int [][] arr = new int[][]{

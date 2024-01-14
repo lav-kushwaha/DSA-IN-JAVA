@@ -1,6 +1,4 @@
-package Searching.LinearSearch;
-
-import javax.xml.transform.stax.StAXResult;
+package _06_Searching.LinearSearch;
 
 public class LinearSearch {
     public static void main(String[] args) {

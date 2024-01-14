@@ -1,4 +1,4 @@
-package Searching.LinearSearch.Questions;
+package _06_Searching.LinearSearch.Questions;
 public class MinElement {
     public static void main(String[] args) {
         int [] arr ={10,20};
