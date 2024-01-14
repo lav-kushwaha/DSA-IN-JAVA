@@ -1,4 +1,4 @@
-package _05_Functions_In_Java;
+package _05_Functions_In_Java.Questions;
 
 import java.util.Scanner;
 
