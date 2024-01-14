@@ -5,7 +5,7 @@ import javax.xml.transform.stax.StAXResult;
 public class LinearSearch {
     public static void main(String[] args) {
         int [] arr = {10,20,40,50,25,30};
-        int target = 30;
+        int target = 40;
 
         //here we will get the index of target element:
         int valueIndex = Search(arr,target);
@@ -36,7 +36,7 @@ public class LinearSearch {
          return -1;
     }
 
-    //Search the target and return the element.
+    //Search the target element and return the element.
     static int LinearSearch2(int[] arr, int target){
         if(arr.length == 0){
             return -1;
@@ -47,7 +47,7 @@ public class LinearSearch {
                 return element;
             }
         }
-        return -1;
+        return Integer.MAX_VALUE;//2147483647
     }
 
     //Return true if target element is found otherwise return false.
