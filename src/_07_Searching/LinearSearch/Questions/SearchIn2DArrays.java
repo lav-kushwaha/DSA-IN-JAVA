@@ -1,4 +1,4 @@
-package _06_Searching.LinearSearch.Questions;
+package _07_Searching.LinearSearch.Questions;
 
 import java.util.Arrays;
 
