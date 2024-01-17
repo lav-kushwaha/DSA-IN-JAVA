@@ -23,6 +23,5 @@ public class Find_Smallest_Letter_Greater_Than_Target {
         char target = 'j';
         char ans = nextGreatestLetter(letters,target);
         System.out.println(ans);
-
     }
 }
