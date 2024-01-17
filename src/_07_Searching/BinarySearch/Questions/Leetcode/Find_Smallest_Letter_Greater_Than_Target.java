@@ -1,5 +1,4 @@
 package _07_Searching.BinarySearch.Questions.Leetcode;
-
 //https://leetcode.com/problems/find-smallest-letter-greater-than-target/
 public class Find_Smallest_Letter_Greater_Than_Target {
     //this is like a ceiling just a little bit change.
