@@ -3,7 +3,7 @@ package _07_Searching.BinarySearch.Questions.Leetcode;
 public class Find_Smallest_Letter_Greater_Than_Target {
     //this is like a ceiling just a little bit change.
     static char nextGreatestLetter(char[] letters, char target) {
-        int left =0;
+        int left = 0;
         int right = letters.length - 1;
         while (left <= right) {
             int mid = left + (right - left) / 2;
