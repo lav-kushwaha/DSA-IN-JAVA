@@ -17,16 +17,13 @@ public class SearchingInRotatedSortedArray {
             // just do normal binary search
             return binarySearch(nums, target, 0 , nums.length - 1);
         }
-
         // if pivot is found, you have found 2 asc sorted arrays
         if (nums[pivot] == target) {
             return pivot;
         }
-
         if (target >= nums[0]) {
             return binarySearch(nums, target, 0, pivot - 1);
         }
-
         return binarySearch(nums, target, pivot + 1, nums.length - 1);
     }
     static int binarySearch(int[] arr, int target, int start, int end) {
