@@ -29,7 +29,6 @@ public class SearchingInRotatedSortedArray {
 
         return binarySearch(nums, target, pivot + 1, nums.length - 1);
     }
-
     static int binarySearch(int[] arr, int target, int start, int end) {
         while(start <= end) {
             // find the middle element
