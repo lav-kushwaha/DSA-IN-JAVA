@@ -47,7 +47,6 @@ public class SearchingInRotatedSortedArray {
         }
         return -1;
     }
-
     // this will not work in duplicate values
     static int findPivot(int[] arr) {
         int start = 0;
