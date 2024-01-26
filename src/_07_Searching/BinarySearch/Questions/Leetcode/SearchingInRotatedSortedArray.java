@@ -17,6 +17,7 @@ public class SearchingInRotatedSortedArray {
             // just do normal binary search
             return binarySearch(nums, target, 0 , nums.length - 1);
         }
+
         // if pivot is found, you have found 2 asc sorted arrays
         if (nums[pivot] == target) {
             return pivot;
