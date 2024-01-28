@@ -8,7 +8,5 @@ public class BinarySearchIn2DArrays {
                     {28,29,37,49},
                     {33,34,38,50}
         };
-
-
     }
 }
