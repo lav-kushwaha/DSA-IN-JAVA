@@ -24,7 +24,7 @@ public class Main {
         int i = 0;
         // Iterate through the array in groups of size K
         while (i < N) {
-            // Find the ending index of the current group
+            // Find the ending index of the current group.
             int endIndex = (i + K - 1 < N - 1) ? i + K - 1 : N - 1;
 
             // Reverse the current group
