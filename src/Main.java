@@ -35,7 +35,7 @@ public class Main {
         }
     }
     // Helper function to reverse a sub-array in-place
-     static void reverseArray(int[] arr, int start, int end) {
+    static void reverseArray(int[] arr, int start, int end) {
         while (start < end) {
             // Swap elements at start and end indices
             int temp = arr[start];
