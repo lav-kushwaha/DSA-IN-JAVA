@@ -34,7 +34,7 @@ public class BinarySearchIn2DSortedMatrix {
             }else {
                 rowEnd = mid;
             }
-            //now we have two rows
+            //now we have two rows.
             //check whether the target is in the col of 2 rows.
             if(matrix[rowStart][colMid]==target){
                 return new int[]{rowStart,colMid};
