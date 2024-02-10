@@ -41,7 +41,6 @@ public class Main {
             int temp = arr[start];
             arr[start] = arr[end];
             arr[end] = temp;
-
             // Move indices towards the center
             start++;
             end--;
