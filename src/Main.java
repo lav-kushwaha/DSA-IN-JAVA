@@ -27,10 +27,10 @@ public class Main {
             // Find the ending index of the current group.
             int endIndex = (i + K - 1 < N - 1) ? i + K - 1 : N - 1;
 
-            // Reverse the current group
+            // Reverse the current group.
             reverseArray(arr, i, endIndex);
 
-            // Move to the next group
+            // Move to the next group.
             i += K;
         }
     }
