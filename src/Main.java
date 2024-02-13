@@ -29,7 +29,6 @@ public class Main {
 
             // Reverse the current group.
             reverseArray(arr, i, endIndex);
-
             // Move to the next group.
             i += K;
         }
