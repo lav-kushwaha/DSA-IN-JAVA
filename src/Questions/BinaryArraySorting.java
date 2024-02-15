@@ -20,7 +20,6 @@ public class BinaryArraySorting {
                 count++;
             }
         }
-
         // Fill the first count elements with 0
         for (int i = 0; i < count; i++) {
             A[i] = 0;
