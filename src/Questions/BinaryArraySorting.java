@@ -1,6 +1,6 @@
 package Questions;
 //https://www.geeksforgeeks.org/problems/binary-array-sorting-1587115620/1?page=1&category=Arrays,Strings&difficulty=Basic&sortBy=submissions
-//Binary Array Sorting
+//Binary Array Sorting.
 
 import java.util.Arrays;
 public class BinaryArraySorting {
@@ -20,10 +20,12 @@ public class BinaryArraySorting {
                 count++;
             }
         }
+
         // Fill the first count elements with 0
         for (int i = 0; i < count; i++) {
             A[i] = 0;
         }
+
         // Fill the remaining elements with 1
         for (int i = count; i < N; i++) {
             A[i] = 1;
