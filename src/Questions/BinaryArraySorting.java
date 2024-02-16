@@ -14,18 +14,16 @@ public class BinaryArraySorting {
     {
         int count = 0; // Count of 0's
 
-        // Traverse the array and count the number of 0's
+        //Traverse the array and count the number of 0's
         for (int i = 0; i < N; i++) {
             if (A[i] == 0) {
                 count++;
             }
         }
-
         // Fill the first count elements with 0
         for (int i = 0; i < count; i++) {
             A[i] = 0;
         }
-
         // Fill the remaining elements with 1
         for (int i = count; i < N; i++) {
             A[i] = 1;
