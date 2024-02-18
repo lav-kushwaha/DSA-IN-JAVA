@@ -17,6 +17,7 @@ public class SelectionSort {
                     minIndex = j;
                 }
             }
+
             // Swap the minimum element with the first element in the unsorted part of the array.
             int temp = arr[minIndex];
             arr[minIndex] = arr[i];
