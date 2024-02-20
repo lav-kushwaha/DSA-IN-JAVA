@@ -20,6 +20,7 @@ public class Main {
 //            System.out.print(value + " ");// // Output: 8 6 5 9
 //        }
     }
+    
     public static void reverseInGroups(int[] arr, int N, int K) {
         int i = 0;
         // Iterate through the array in groups of size K
