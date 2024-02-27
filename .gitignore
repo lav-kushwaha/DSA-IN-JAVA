@@ -15,7 +15,6 @@ DSA-IN-JAVA.iml
 .sts4-cache
 bin/
 
-
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
