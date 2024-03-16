@@ -31,8 +31,19 @@ public class flipAndInvertImage {
                 image[row][col] = image[row][col] ^ 1;
             }
         }
-
         return image;
+
+
+        //2nd way.
+//        int C = image[0].length;
+//        for (int[] row: image)
+//            for (int i = 0; i < (C + 1) / 2; ++i) {
+//                int tmp = row[i] ^ 1;
+//                row[i] = row[C - 1 - i] ^ 1;
+//                row[C - 1 - i] = tmp;
+//            }
+//
+//        return A;
 
     }
 }
