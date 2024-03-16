@@ -1,5 +1,5 @@
 package _11_MathsForDSA.BitwiseAndNumberSystem;
-
+//Q.Count no. of set bits.
 public class CountNoOfSetBits {
     public static void main(String[] args) {
         int n = 6;
@@ -10,6 +10,6 @@ public class CountNoOfSetBits {
             }
             n=n>>1;
         }
-        System.out.println(count);
+        System.out.println(count);//2
     }
 }
