@@ -1,4 +1,4 @@
-package _11_MathsForDSA.BitwiseAndNumberSystem;
+package _11_MathsForDSA.BitwiseAndNumberSystem.Questions;
 
 public class Power {
     public static void main(String[] args) {

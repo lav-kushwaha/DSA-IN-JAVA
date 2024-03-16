@@ -1,4 +1,4 @@
-package _11_MathsForDSA.BitwiseAndNumberSystem;
+package _11_MathsForDSA.BitwiseAndNumberSystem.Questions;
 //sum of nth row in pascals triangle - by k.k
 public class PascalsTriangle02 {
     public static void main(String[] args) {

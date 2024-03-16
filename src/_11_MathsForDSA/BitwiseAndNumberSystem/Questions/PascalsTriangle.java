@@ -1,4 +1,4 @@
-package _11_MathsForDSA.BitwiseAndNumberSystem;
+package _11_MathsForDSA.BitwiseAndNumberSystem.Questions;
 //https://www.geeksforgeeks.org/sum-of-all-elements-up-to-nth-row-in-a-pascals-triangle/
 //if you don't understand check it. gfg there is best explaination given.
 public class PascalsTriangle {

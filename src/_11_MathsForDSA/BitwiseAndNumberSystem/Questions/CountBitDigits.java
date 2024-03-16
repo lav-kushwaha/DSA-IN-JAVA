@@ -1,4 +1,4 @@
-package _11_MathsForDSA.BitwiseAndNumberSystem;
+package _11_MathsForDSA.BitwiseAndNumberSystem.Questions;
 //Q.Find the no. of digits in base b.
 public class CountBitDigits {
     public static void main(String[] args) {
