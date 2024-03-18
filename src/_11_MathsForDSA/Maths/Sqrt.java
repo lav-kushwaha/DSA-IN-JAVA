@@ -1,5 +1,5 @@
 package _11_MathsForDSA.Maths;
-
+//sqrt using binary search
 public class Sqrt {
     public static void main(String[] args) {
         int n = 625;
