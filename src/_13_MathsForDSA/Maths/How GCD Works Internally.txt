@@ -1,0 +1,23 @@
+1. **Base Case**: If \( a \) is equal to 0, it means that \( b \) is the gcd. In this case, we return \( b \).
+
+2. **Recursive Case**: If \( a \) is not 0, we call the `gcd` function recursively with arguments \( b\%a \) and \( a \). This is based on the fact that the gcd of two numbers \( a \) and \( b \) is the same as the gcd of \( b \) and \( a\%b \). This step is repeated until \( a \) becomes 0.
+
+#Here's a step-by-step example of how this function works with inputs \( a = 48 \) and \( b = 18 \):
+
+1. First call: `gcd(48, 18)`.
+2. \( a \) is not 0, so we move to the recursive call: `gcd(18 % 48, 48)`, which simplifies to `gcd(18, 48)`.
+3. Again, \( a \) is not 0, so we make another recursive call: `gcd(48 % 18, 18)`, which simplifies to `gcd(12, 18)`.
+4. Continuing in this manner, we eventually reach a point where \( a \) becomes 0: `gcd(0, 6)`.
+5. Since \( a \) is 0, we return \( b \), which is 6.
+6. The final result, the gcd of 48 and 18, is 6.
+
+This recursive approach efficiently finds the gcd by repeatedly applying the modulo operator until one of the numbers becomes 0.
+
+#Code :
+ static int gcd(int a, int b){
+        if(a==0){
+            return b;
+        }
+        return gcd(b%a,a);
+    }
+
