@@ -20,3 +20,4 @@ This recursive approach efficiently finds the gcd by repeatedly applying the mod
         }
         return gcd(b%a,a);
     }
+
