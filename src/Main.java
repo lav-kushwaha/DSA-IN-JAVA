@@ -6,7 +6,7 @@ public class Main {
         int K1 = 3;
         reverseInGroups(arr1, N1, K1);
         for (int value : arr1) {
-            System.out.print(value + " ");// Output: 3 2 1 5 4
+            System.out.print(value + " "); // Output: 3 2 1 5 4
         }
         // Example 2:
         //int[] arr2 = {5, 6, 8, 9};
