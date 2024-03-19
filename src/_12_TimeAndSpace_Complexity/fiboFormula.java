@@ -1,4 +1,4 @@
-package _10_TimeAndSpace_Complexity;
+package _12_TimeAndSpace_Complexity;
 
 public class fiboFormula {
     public static void main(String[] args) {

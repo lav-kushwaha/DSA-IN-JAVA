@@ -1,4 +1,4 @@
-package Recursion;
+package _11_Recursion;
 //How function calls work in languages.
 public class Number {
     public static void main(String[] args) {
