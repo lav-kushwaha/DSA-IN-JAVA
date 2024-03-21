@@ -20,6 +20,6 @@ public class Q7_Pallindrome {
     }
 
     public static void main(String[] args) {
-        System.out.println(Pallindrome(121));
+        System.out.println(Pallindrome(121));//true
     }
 }
