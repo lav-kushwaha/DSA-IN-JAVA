@@ -1,4 +1,4 @@
-package _14_Recursion_Questions;
+package _14_Recursion_Questions.Recursion_Level_01_Questions;
 
 public class Q1_Nto1AND1toN {
     public static void main(String[] args) {

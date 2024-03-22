@@ -1,4 +1,4 @@
-package _14_Recursion_Questions;
+package _14_Recursion_Questions.Recursion_Level_01_Questions;
 
 public class Q8_CountZeros {
     //Method-1 Counting Zeros.

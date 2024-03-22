@@ -1,4 +1,4 @@
-package _14_Recursion_Questions;
+package _14_Recursion_Questions.Recursion_Level_01_Questions;
 //Q.5 DigitsProduct
 public class Q5_ProductsOfDigits {
     public static void main(String[] args) {

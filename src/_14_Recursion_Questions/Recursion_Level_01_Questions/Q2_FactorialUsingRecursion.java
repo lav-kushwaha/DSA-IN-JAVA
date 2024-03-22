@@ -1,4 +1,4 @@
-package _14_Recursion_Questions;
+package _14_Recursion_Questions.Recursion_Level_01_Questions;
 
 public class Q2_FactorialUsingRecursion {
     public static void main(String[] args) {

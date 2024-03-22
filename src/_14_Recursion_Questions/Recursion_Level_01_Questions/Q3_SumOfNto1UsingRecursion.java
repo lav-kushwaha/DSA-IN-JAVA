@@ -1,4 +1,4 @@
-package _14_Recursion_Questions;
+package _14_Recursion_Questions.Recursion_Level_01_Questions;
 //Q.Sum of n to 1
 public class Q3_SumOfNto1UsingRecursion {
     public static void main(String[] args) {
