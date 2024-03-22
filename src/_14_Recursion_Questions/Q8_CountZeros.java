@@ -42,6 +42,7 @@ public class Q8_CountZeros {
         return helper(n,0);
     }
 
+    //Special pattern, how to pass a value to above calls.
     static int helper(int n, int c){
         if(n==0){
             return c;
