@@ -1,6 +1,5 @@
 package _14_Recursion_Questions.Recursion_Array_Questions;
 
-import java.sql.ClientInfoStatus;
 import java.util.ArrayList;
 
 public class Q2_LinearSearchUsingRecursion {
