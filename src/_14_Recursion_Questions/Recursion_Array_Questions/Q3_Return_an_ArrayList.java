@@ -37,5 +37,4 @@ public class Q3_Return_an_ArrayList {
        list.addAll(ansFromBelowCalls);
        return list;
     }
-
 }
