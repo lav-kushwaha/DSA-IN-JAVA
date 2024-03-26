@@ -1,6 +1,5 @@
 package _14_Recursion_Questions.Recursion_Pattern_Questions;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Q3_BubbleSort_Using_Recursion {
