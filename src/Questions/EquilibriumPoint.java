@@ -8,7 +8,6 @@ public class EquilibriumPoint {
         System.out.println(ans);
     }
     public static int equilibriumPoint(int[] a, int n) {
-
         // Your code here
         long sum = 0;
         for (int i = 0; i < n; i++) {
@@ -23,7 +22,6 @@ public class EquilibriumPoint {
             Lsum += a[i];
             sum -= a[i];
         }
-
         return -1;// No equilibrium index found
     }
 }
