@@ -1,6 +1,7 @@
 package Questions;
 //Q.Equilibrium Point
 //https://www.geeksforgeeks.org/problems/equilibrium-point-1587115620/1?page=1&category=Arrays,Strings,Sorting,Matrix,Searching,Recursion,Binary%20Search&sortBy=submissions
+
 public class EquilibriumPoint {
     public static void main(String[] args) {
         int A[] = {1,3,5,2,2};
