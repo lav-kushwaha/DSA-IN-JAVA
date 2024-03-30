@@ -36,8 +36,8 @@ public class MergeSortUsingRecursion {
             k++;
         }
 
-        //it may be possible that one of the arrays is not complete
-        // Copy remaining elements from left array
+        //it may be possible that one of the arrays is not complete.
+        // Copy remaining elements from left array.
         while(i < left.length){
             mix[k] = left[i];
             i++;
