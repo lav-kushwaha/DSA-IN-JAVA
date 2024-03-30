@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MergeSortUsingRecursion {
     public static void main(String[] args) {
-        int [] arr = {4,3,2,1};
+        int [] arr = {5,6,7,4,3,2,1};
         int [] ans = MergeSort(arr);
         System.out.println(Arrays.toString(ans)); // Use Arrays.toString() to print the array
     }
