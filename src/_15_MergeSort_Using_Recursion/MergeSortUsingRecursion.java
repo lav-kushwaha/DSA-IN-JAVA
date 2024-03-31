@@ -1,7 +1,7 @@
 package _15_MergeSort_Using_Recursion;
 
 import java.util.Arrays;
-
+////Merge Sort By Kunal Kushwaha
 public class MergeSortUsingRecursion {
     public static void main(String[] args) {
         int [] arr = {5,6,7,4,3,2,1};
@@ -14,7 +14,7 @@ public class MergeSortUsingRecursion {
             return arr;
         }
         int mid = arr.length/2;
-        int[] left = MergeSort(Arrays.copyOfRange(arr,0,mid));
+        int[] left = MergeSort(Arrays.copyOfRange(arr,0,mid));//it is exculsive means it will take mid -1
         int[] right = MergeSort(Arrays.copyOfRange(arr,mid,arr.length)); // Include the last element
         return Merge(left,right);
     }

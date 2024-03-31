@@ -1,9 +1,9 @@
 package _15_MergeSort_Using_Recursion;
 import java.util.Arrays;
-
-public class MergeSort {
+//Merge Sort By Kunal Kushwaha
+public class MergeSort_01 {
     public static void main(String[] args) {
-        int[] arr = {5, 4, 3, 2, 1};
+        int[] arr = {5,4,3,2,1};
         mergeSort(arr, 0, arr.length);
         System.out.println(Arrays.toString(arr));
     }
@@ -18,12 +18,12 @@ public class MergeSort {
         mergeSort(arr, s, mid);
         mergeSort(arr, mid, e);
 
-        //This is merge and sort the array.
+        // This is merge and sort the array.
         merge(arr, s, mid, e);
     }
 
     private static void merge(int[] arr, int s, int m, int e) {
-        int[] mix = new int[e-s];
+        int[] mix = new int[e - s];
         int i = s;
         int j = m;
         int k = 0;
