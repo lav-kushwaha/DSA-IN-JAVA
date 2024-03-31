@@ -1,4 +1,4 @@
-package _15_MergeSort_Using_Recursion;
+package _15_MergeSort_Using_Recursion.Questions;
 
 import java.util.*;
 
