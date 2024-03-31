@@ -1,28 +1,29 @@
 package _15_MergeSort_Using_Recursion;
 import java.util.Arrays;
 
-public class MergeSortInPlace {
+public class MergeSort {
     public static void main(String[] args) {
         int[] arr = {5, 4, 3, 2, 1};
-        mergeSortInPlace(arr, 0, arr.length);
+        mergeSort(arr, 0, arr.length);
         System.out.println(Arrays.toString(arr));
     }
 
-    static void mergeSortInPlace(int[] arr, int s, int e) {
-        if (e - s == 1) {
+    static void mergeSort(int[] arr, int s, int e) {
+        if (e - s <= 1) {
             return;
         }
 
         int mid = (s + e) / 2;
 
-        mergeSortInPlace(arr, s, mid);
-        mergeSortInPlace(arr, mid, e);
-        mergeInPlace(arr, s, mid, e);
+        mergeSort(arr, s, mid);
+        mergeSort(arr, mid, e);
+
+        //This is merge and sort the array.
+        merge(arr, s, mid, e);
     }
 
-    private static void mergeInPlace(int[] arr, int s, int m, int e) {
-        int[] mix = new int[e - s];
-
+    private static void merge(int[] arr, int s, int m, int e) {
+        int[] mix = new int[e-s];
         int i = s;
         int j = m;
         int k = 0;
@@ -38,8 +39,7 @@ public class MergeSortInPlace {
             k++;
         }
 
-        // it may be possible that one of the arrays is not complete
-        // copy the remaining elements
+        // Copy the remaining elements
         while (i < m) {
             mix[k] = arr[i];
             i++;
@@ -52,9 +52,9 @@ public class MergeSortInPlace {
             k++;
         }
 
+        // Copy elements from mix back to arr
         for (int l = 0; l < mix.length; l++) {
-            arr[s+l] = mix[l];
+            arr[s + l] = mix[l];
         }
     }
-
 }
