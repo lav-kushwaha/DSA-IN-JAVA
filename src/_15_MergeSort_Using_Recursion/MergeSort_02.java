@@ -25,7 +25,7 @@ public class MergeSort_02 {
         int j = mid + 1;   // starting index of j half of arr
         int k = 0;
 
-        //storing elements in the temporary array in a sorted manner//
+        //storing elements in the mix array in a sorted manner//
         while (i <= mid && j <= end) {
             if (arr[i] <= arr[j]) {
                 mix[k]=arr[i];
@@ -44,14 +44,14 @@ public class MergeSort_02 {
             k++;
         }
 
-        //  if elements on the j half are still i //
+        //  if elements on the j half are still j //
         while (j <= end) {
             mix[k]=arr[j];
             j++;
             k++;
         }
 
-        // transfering all elements from temporary to arr //
+        // transfering all elements from mix to arr //
         for (int l = 0; l < mix.length; l++) {
             arr[start+l] = mix[l];
         }
