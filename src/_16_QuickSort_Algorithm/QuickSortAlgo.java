@@ -30,6 +30,8 @@ public class QuickSortAlgo {
                 end--;
             }
 
+            //Swap elements, if any of elements are less than pivot and its lie on the r.h.s or
+            // if any element greater than pivot and its lie on the l.h.s.
             if(start<=end){
                 int temp = arr[start];
                 arr[start] = arr[end];
