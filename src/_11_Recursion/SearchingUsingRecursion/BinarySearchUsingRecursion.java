@@ -1,4 +1,4 @@
-package _11_Recursion;
+package _11_Recursion.SearchingUsingRecursion;
 
 public class BinarySearchUsingRecursion {
     public static void main(String[] args) {
