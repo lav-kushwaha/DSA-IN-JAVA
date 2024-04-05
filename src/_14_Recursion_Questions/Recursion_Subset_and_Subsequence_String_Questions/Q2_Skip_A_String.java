@@ -1,12 +1,12 @@
 package _14_Recursion_Questions.Recursion_Subset_and_Subsequence_String_Questions;
 
-public class Q2_SkipStringFromChar {
+public class Q2_Skip_A_String {
     public static void main(String[] args) {
         //skip apple from this string
         System.out.println(Skip("ballapplecat"));
 
         //if not apple in the string then skip app form the string.
-        System.out.println(Skip1("ballapplecat"));
+        System.out.println(SkipAppNotApple("ballapplecat"));
     }
 
     //skip apple from the string
@@ -21,15 +21,16 @@ public class Q2_SkipStringFromChar {
             return Skip(up.substring(5));
         }
         else{
-            return up.charAt(0) + Skip(up.substring(1));
+            return ch + Skip(up.substring(1));
         }
     }
 
-    //if not apple in the string then skip app form the string.
-    static String Skip1(String up){
+    //if not apple in the string then skip app from the string.
+    static String SkipAppNotApple(String up){
         if(up.isEmpty()){
             return "";
         }
+
         char ch  = up.charAt(0);
 
         //if not apple in the string then skip app form the string.
