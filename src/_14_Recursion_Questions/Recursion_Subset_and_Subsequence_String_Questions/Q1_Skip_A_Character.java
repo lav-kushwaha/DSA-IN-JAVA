@@ -2,7 +2,10 @@ package _14_Recursion_Questions.Recursion_Subset_and_Subsequence_String_Question
 
 public class Q1_Skip_A_Character {
     public static void main(String[] args) {
+        //Method -1 : Without return type.
         Skip("","baaccluvaa");
+
+        //Method 2 : With Return Type.
         String ans = Skip("baaccluvaa");
         System.out.println(ans);
     }
