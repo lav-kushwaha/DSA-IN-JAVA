@@ -2,12 +2,12 @@ package _14_Recursion_Questions.Recursion_Subset_and_Subsequence_String_Question
 
 public class Q1_Skip_A_Character {
     public static void main(String[] args) {
-        //Method -1 : Without return type.
-        Skip("","baaccluvaa");
+//        //Method -1 : Without return type.
+        Skip("","baachda");
 
         //Method 2 : With Return Type.
-        String ans = Skip("baaccluvaa");
-        System.out.println(ans);
+//        String ans = Skip("baachda");
+//        System.out.println(ans);
     }
     static void Skip(String p,String up){
         if(up.isEmpty()){
@@ -29,7 +29,6 @@ public class Q1_Skip_A_Character {
         if(up.isEmpty()){
             return " ";
         }
-
         char ch = up.charAt(0);
 
         if(ch == 'a'){
