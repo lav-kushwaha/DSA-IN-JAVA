@@ -1,5 +1,7 @@
 package _14_Recursion_Questions.Recursion_Subset_and_Subsequence_String_Questions;
 
+import java.util.ArrayList;
+
 public class Q5_PrintAsciiValueof_Substring {
     public static void main(String[] args) {
 
@@ -9,7 +11,10 @@ public class Q5_PrintAsciiValueof_Substring {
 
 
         //calling function
-        SubsetsAscii("","abc");
+//        SubsetsAscii("","abc");
+
+        //Returning SubsetsAscii
+        System.out.println(SubsetsAsciii("","ab"));
 
     }
 
@@ -25,5 +30,24 @@ public class Q5_PrintAsciiValueof_Substring {
         SubsetsAscii(p,up.substring(1));
 
         SubsetsAscii(p+(ch+0),up.substring(1));
+    }
+
+    static ArrayList<String> SubsetsAsciii(String p, String up) {
+        if(up.isEmpty()){
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p);
+            return list;
+        }
+
+        char ch = up.charAt(0);
+
+        ArrayList<String> first = SubsetsAsciii(p+ch,up.substring(1));
+        ArrayList<String> second = SubsetsAsciii(p,up.substring(1));
+        ArrayList<String> third = SubsetsAsciii(p+(ch+0),up.substring(1));
+
+        first.addAll(second);
+        first.addAll(third);
+
+        return first;
     }
 }
