@@ -17,7 +17,7 @@ public class Q6_Subsets {
     }
 
     private static List<List<Integer>> subset(int[] arr) {
-        List<List<Integer>> outer = new ArrayList<>();// [ [] [1]] //empty list we add like this :- [[]]
+        List<List<Integer>> outer = new ArrayList<>();// [ [] [1]] //empty list we added like this :- [[]]
 
         outer.add(new ArrayList<>());//[[]]
 
