@@ -1,5 +1,9 @@
 package _14_Recursion_Questions.Recursion_Subset_and_Subsequence_String_Questions;
 
+//90. Subsets II
+//https://leetcode.com/problems/subsets-ii/description/
+//Facebook ,Amazon, Bloomberg ,Adobe asked question.
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
