@@ -10,10 +10,11 @@ public class PermutationsQuestions {
             System.out.print(p + " ");
             return;
         }
-        for (int i = 0; i < up.length(); i++) {
-            char ch = up.charAt(i);
-            String remaining = up.substring(0, i) + up.substring(i + 1);
-            permutations(p + ch, remaining);
+        char ch = up.charAt(0);
+        for (int i = 0; i <= p.length(); i++) {
+            String first = p.substring(0, i);
+            String second =p.substring(i,p.length());
+            permutations(first+ch+second, up.substring(1));
         }
     }
 }
