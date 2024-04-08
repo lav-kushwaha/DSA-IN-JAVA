@@ -2,7 +2,7 @@ package _14_Recursion_Questions.Recursion_Subset_and_Subsequence_String_Question
 
 import java.util.ArrayList;
 
-public class Q4_Substring_ArrayList_Return {
+public class Q4_Subsequence_Substring_Return_ArrayList {
     public static void main(String[] args) {
         System.out.println(Substring("","abc"));
     }
