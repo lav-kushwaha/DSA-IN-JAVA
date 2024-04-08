@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Q1_PermutationsQuestions {
     public static void main(String[] args) {
-//        permutations("", "abc");
+        permutations("", "abc");
 
         ArrayList<String> ans = permutationsList("", "abc");
         System.out.println(ans);
