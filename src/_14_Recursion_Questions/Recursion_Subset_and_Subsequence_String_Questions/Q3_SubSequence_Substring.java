@@ -1,6 +1,6 @@
 package _14_Recursion_Questions.Recursion_Subset_and_Subsequence_String_Questions;
 
-public class Q3_Substring {
+public class Q3_SubSequence_Substring {
     public static void main(String[] args) {
         Substring(" ","abc");
     }
