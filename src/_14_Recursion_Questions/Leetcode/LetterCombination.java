@@ -1,12 +1,8 @@
 package _14_Recursion_Questions.Leetcode;
 
-//https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
-//Q: Letter Combinations of a Phone Number.
-//This question asked in Amazon, Microsoft,Facebook,Uber,Apple.
-
 import java.util.ArrayList;
 import java.util.List;
-
+//By K.k
 public class LetterCombination {
     public static void main(String[] args) {
         System.out.println();
