@@ -1,6 +1,6 @@
 package _08_Sorting.CyclicSortQuestions;
 
-public class Solution {
+public class majorityElements {
     // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
     public static int majorityElement(final int[] A) {
         int i = 0;
