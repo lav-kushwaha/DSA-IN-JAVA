@@ -9,6 +9,7 @@ import java.util.List;
 class Phonepad {
 
     public static List<String> letterCombinations(String digits) {
+        //if digit string is empty, return empty arraylist []
         if (digits.isEmpty())
             return new ArrayList<>();
         return letterCombinations("", digits);
@@ -37,7 +38,7 @@ class Phonepad {
 
     public static void main(String[] args) {
 
-        List<String> result = letterCombinations("23");
+        List<String> result = letterCombinations("");
         System.out.println(result);
     }
 }
