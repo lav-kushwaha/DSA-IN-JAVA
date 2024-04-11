@@ -24,7 +24,7 @@ public class LetterCombination {
 
     }
 
-    //return letter combintions as a list.
+    //return letter combinations as a list.
     static List<String> letterCombinations(String p,String up){
         if(up.isEmpty()){
             List<String> list = new ArrayList<>();
