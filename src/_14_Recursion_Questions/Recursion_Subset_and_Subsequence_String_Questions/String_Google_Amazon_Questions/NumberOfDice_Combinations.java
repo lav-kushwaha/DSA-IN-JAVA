@@ -1,4 +1,4 @@
-package _14_Recursion_Questions.Recursion_Subset_and_Subsequence_String_Questions.String_Questions;
+package _14_Recursion_Questions.Recursion_Subset_and_Subsequence_String_Questions.String_Google_Amazon_Questions;
 import java.util.ArrayList;
 
 public class NumberOfDice_Combinations {
