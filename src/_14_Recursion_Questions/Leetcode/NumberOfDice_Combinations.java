@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class NumberOfDice_Combination {
     public static void main(String[] args) {
-        DicePrint("",4);
-//        System.out.println(Dice("",4));
+//        DicePrint("",4);
+        System.out.println(Dice("",4));
 //        System.out.println(CountDice("",4));
     }
     static void DicePrint(String p,int target){
