@@ -2,7 +2,7 @@ package _14_Recursion_Questions.Backtracking;
 import java.util.ArrayList;
 
 //https://leetcode.com/problems/unique-paths/description/
-//62. Unique Paths
+//62. Unique Paths I
 
 public class Maze {
     public static void main(String[] args) {

@@ -11,13 +11,13 @@ public class MazeWithObstacles {
                 {true,false,true},
                 {true,true,true}
         };
-        Obstaclespath("",maze,0,0);
+        PathRestriction("",maze,0,0);
 
-        System.out.println(Obstaclespath(maze,0,0));
+        System.out.println(PathRestriction(maze,0,0));
 
 
     }
-    static void Obstaclespath(String p,boolean[][] maze, int row, int col) {
+    static void PathRestriction(String p,boolean[][] maze, int row, int col) {
         // Base case: reached the bottom-right corner
         if(row==maze.length-1 && col== maze[0].length-1){
             System.out.println(p);
@@ -28,15 +28,15 @@ public class MazeWithObstacles {
         }
 
         if(row<maze.length-1){
-            Obstaclespath(p+"D",maze,row+1,col);
+            PathRestriction(p+"D",maze,row+1,col);
         }
 
         if(col<maze[0].length-1){
-            Obstaclespath(p+"R",maze,row,col+1);
+            PathRestriction(p+"R",maze,row,col+1);
         }
     }
 
-    static int Obstaclespath(boolean[][] maze, int row, int col) {
+    static int PathRestriction(boolean[][] maze, int row, int col) {
         // Base case: reached the bottom-right corner
         if(row==maze.length-1 && col== maze[0].length-1){
             return 1;
@@ -47,11 +47,11 @@ public class MazeWithObstacles {
 
         int count = 0 ;
         if(row<maze.length-1){
-            count = count + Obstaclespath(maze,row+1,col);
+            count = count + PathRestriction(maze,row+1,col);
         }
 
         if(col<maze[0].length-1){
-           count = count + Obstaclespath(maze,row,col+1);
+           count = count + PathRestriction(maze,row,col+1);
         }
 
         return count;
