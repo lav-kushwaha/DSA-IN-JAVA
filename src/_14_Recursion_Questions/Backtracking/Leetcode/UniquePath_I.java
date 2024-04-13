@@ -1,10 +1,10 @@
-package _14_Recursion_Questions.Backtracking;
+package _14_Recursion_Questions.Backtracking.Leetcode;
 import java.util.ArrayList;
 
 //https://leetcode.com/problems/unique-paths/description/
 //62. Unique Paths
 
-public class Maze {
+public class UniquePath_I {
     public static void main(String[] args) {
 //        System.out.println(count(3,3));
 //         path("",3,3);
@@ -15,7 +15,7 @@ public class Maze {
 
     //count the path.
     public static int count (int row,int col){
-        //when any of row and col becomes 1 just return 1 bcs we found one possible ans.
+        //when any of row and col becomes 1 just return 1.
         if(row == 1 || col==1){
             return 1;
         }
@@ -29,13 +29,12 @@ public class Maze {
 
     //Finding path with direction where D is down and R is right.
     public static void path (String p,int row, int col){
-        //when both of row and col becomes 1 just print the ans, we found our 1 path.
+        //when any of row and col becomes 1 just return 1.
         if(row == 1 && col==1){
             System.out.println(p);
             return;
         }
 
-        //rows and column is must be greater than 1.
         if(row>1){
             path(p+"D",row-1,col);
         }
@@ -46,7 +45,7 @@ public class Maze {
 
     //path retun in arraylist.
     public static ArrayList<String> pathRet (String p,int row, int col){
-        //when both of row and col becomes 1 just print the ans, we found our 1 path.
+        //when any of row and col becomes 1 just return 1.
         if(row == 1 && col==1){
             ArrayList<String> list = new ArrayList<>();
             list.add(p);
@@ -66,7 +65,7 @@ public class Maze {
 
     //Diagonal-path retun in arraylist.
     public static ArrayList<String> pathRetDiagonal (String p,int row, int col){
-        //when both of row and col becomes 1 just print the ans, we found our 1 path.
+        //when any of row and col becomes 1 just return 1.
         if(row == 1 && col==1){
             ArrayList<String> list = new ArrayList<>();
             list.add(p);
