@@ -1,6 +1,6 @@
 package _14_Recursion_Questions.Backtracking;
-
 import java.util.ArrayList;
+
 //https://leetcode.com/problems/unique-paths/description/
 //62. Unique Paths
 
@@ -63,7 +63,7 @@ public class Maze {
         return ans;
     }
 
-    //path retun in arraylist.
+    //Diagonal-path retun in arraylist.
     public static ArrayList<String> pathRetDiagonal (String p,int row, int col){
         //when any of row and col becomes 1 just return 1.
         if(row == 1 && col==1){
