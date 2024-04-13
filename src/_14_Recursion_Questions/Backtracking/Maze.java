@@ -47,7 +47,9 @@ public class Maze {
             list.add(p);
             return list;
         }
+
         ArrayList<String> ans = new ArrayList<>();
+
         if(row>1){
            ans.addAll(pathRet(p+"D",row-1,col));
         }
