@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 public class Maze {
     public static void main(String[] args) {
-//        System.out.println(count(3,3));
-//         path("",3,3);
+        System.out.println(count(3,3));
+         path("",3,3);
         System.out.println(pathRet("",3,3));
 
         System.out.println(pathRetDiagonal("",3,3));
