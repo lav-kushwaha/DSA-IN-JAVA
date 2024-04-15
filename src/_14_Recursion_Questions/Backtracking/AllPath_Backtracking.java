@@ -17,6 +17,7 @@ public class AllPath_Backtracking {
 
     }
     static void allPath(String p, boolean[][] maze, int r, int c) {
+        // Base case: reached the bottom-right corner - v.imp
         if (r == maze.length - 1 && c == maze[0].length - 1) {
             System.out.println(p);
             return;
