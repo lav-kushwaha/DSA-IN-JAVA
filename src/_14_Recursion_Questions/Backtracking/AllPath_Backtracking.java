@@ -55,7 +55,8 @@ public class AllPath_Backtracking {
 
     static void allPathPrint(String p, boolean[][] maze, int r, int c, int[][] path, int step) {
         if (r == maze.length - 1 && c == maze[0].length - 1) {
-            //it will add last element => if u did not understand, comment this line and print and uncomment print u will understand.
+            //it will add last element.
+            // if u did not understand, comment this line and print and uncomment print u will understand.
             path[r][c] = step;
             for(int[] arr : path) {
                 System.out.println(Arrays.toString(arr));
