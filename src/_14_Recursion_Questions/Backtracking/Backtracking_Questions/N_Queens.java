@@ -6,7 +6,6 @@ public class N_Queens {
         boolean[][] board = new boolean[n][n];
         System.out.println(queens(board, 0));
     }
-
     static int queens(boolean[][] board, int row) {
         // If all queens are placed, display the board and return 1 to count the valid placement
         if (row == board.length) {
@@ -14,6 +13,7 @@ public class N_Queens {
             System.out.println();
             return 1;
         }
+
         int count = 0;
         // Place the queen and check for every column in the current row
         for (int col = 0; col < board.length; col++) {
@@ -57,6 +57,7 @@ public class N_Queens {
         return true;
     }
 
+    //display
     private static void display(boolean[][] board) {
         // Display the current configuration of the board
         for (boolean[] row : board) {
