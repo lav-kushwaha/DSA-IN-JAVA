@@ -6,6 +6,7 @@ public class N_Queens {
         boolean[][] board = new boolean[n][n];
         System.out.println(queens(board, 0));
     }
+
     static int queens(boolean[][] board, int row) {
         // If all queens are placed, display the board and return 1 to count the valid placement
         if (row == board.length) {
@@ -30,6 +31,7 @@ public class N_Queens {
     }
 
     private static boolean isSafe(boolean[][] board, int row, int col) {
+
         // Check if there is no queen in the same column
         for (int i = 0; i < row; i++) {
             if (board[i][col]) {
