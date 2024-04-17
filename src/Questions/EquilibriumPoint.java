@@ -23,6 +23,6 @@ public class EquilibriumPoint {
             Lsum += a[i];
             sum -= a[i];
         }
-        return -1;// No equilibrium index found
+        return -1;// No equilibrium index found.
     }
 }
