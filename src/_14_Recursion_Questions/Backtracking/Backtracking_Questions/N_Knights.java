@@ -10,7 +10,7 @@ public class N_Knights {
         knights(board, 0, 0, 4);
     }
 
-    // Method to place knights on the chessboard using backtracking
+    // Method to place knights on the chessboard using backtracking.
     static void knights(boolean[][] board, int row, int col, int knights) {
         // Base case: All knights have been placed
         if (knights == 0) {
