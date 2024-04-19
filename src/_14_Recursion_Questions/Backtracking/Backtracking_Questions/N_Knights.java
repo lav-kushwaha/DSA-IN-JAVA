@@ -4,7 +4,7 @@ public class N_Knights {
     public static void main(String[] args) {
         // Initialize the board size
         int n = 4;
-        // Initialize the chessboard
+        // Initialize the chessboard.
         boolean[][] board = new boolean[n][n];
         // Start placing knights on the chessboard
         knights(board, 0, 0, 4);
@@ -41,9 +41,9 @@ public class N_Knights {
         knights(board, row, col + 1, knights);
     }
 
-    // Method to check if it's safe to place a knight at a given position
+    // Method to check if it's safe to place a knight at a given position.
     static boolean isSafe(boolean[][] board, int row, int col) {
-         // Check if neighboring positions have already been occupied by knights
+         // Check if neighboring positions have already been occupied by knights.
          if(isValid(board,row-2,col-1)){
                 if(board[row-2][col-1]){
                     return false;
