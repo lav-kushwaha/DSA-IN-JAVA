@@ -26,7 +26,6 @@ public class SudokuSolver {
                 board[row][col] = '.';
             }
         }
-
         return false; // No valid number found for this cell
     }
 
