@@ -20,8 +20,9 @@ public class N_Knights {
             return;
         }
 
-        // Base case: Reached end of board
+        // Base case: Reached end of board.
         if (row == board.length - 1 && col == board.length) {
+            //when its Reached end of board start backtracking
             return;
         }
 
