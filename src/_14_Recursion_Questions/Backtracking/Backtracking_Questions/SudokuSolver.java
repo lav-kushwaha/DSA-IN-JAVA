@@ -17,7 +17,7 @@ public class SudokuSolver {
             if (isValid(board, row, col, num)) {
                 board[row][col] = num;
 
-                // Recursively solve the rest of the puzzle
+                // Recursively solve the rest of the puzzle.
                 if (solveSudoku(board)) {
                     return true;
                 }
