@@ -1,4 +1,4 @@
-package _11_MathsForDSA.Maths;
+package _13_MathsForDSA.Maths;
 //find sqrt in decimal
 public class BinarySearchSQRT {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package _11_MathsForDSA.Maths;
+package _13_MathsForDSA.Maths;
 //sqrt using binary search
 public class Sqrt {
     public static void main(String[] args) {

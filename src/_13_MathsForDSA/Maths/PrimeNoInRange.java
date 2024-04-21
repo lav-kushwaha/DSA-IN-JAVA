@@ -1,4 +1,4 @@
-package _11_MathsForDSA.Maths;
+package _13_MathsForDSA.Maths;
 
 public class PrimeNoInRange {
     public static void main(String[] args) {
