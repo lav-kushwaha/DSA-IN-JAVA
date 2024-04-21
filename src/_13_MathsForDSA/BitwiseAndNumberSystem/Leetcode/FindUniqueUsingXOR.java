@@ -1,4 +1,4 @@
-package _11_MathsForDSA.BitwiseAndNumberSystem.Leetcode;
+package _13_MathsForDSA.BitwiseAndNumberSystem.Leetcode;
 
 public class FindUniqueUsingXOR {
     public static void main(String[] args) {

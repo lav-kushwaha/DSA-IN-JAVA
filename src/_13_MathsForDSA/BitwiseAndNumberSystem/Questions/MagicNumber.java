@@ -1,4 +1,4 @@
-package _11_MathsForDSA.BitwiseAndNumberSystem.Questions;
+package _13_MathsForDSA.BitwiseAndNumberSystem.Questions;
 public class MagicNumber {
     public static void main(String[] args) {
         int n = 6;

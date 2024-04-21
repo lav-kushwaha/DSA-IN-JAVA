@@ -1,4 +1,4 @@
-package _11_MathsForDSA.BitwiseAndNumberSystem.Questions;
+package _13_MathsForDSA.BitwiseAndNumberSystem.Questions;
 //Q.Count no. of set bits.
 public class CountNoOfSetBits {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package _11_MathsForDSA.BitwiseAndNumberSystem.Questions;
+package _13_MathsForDSA.BitwiseAndNumberSystem.Questions;
 public class RangeXOR {
     public static void main(String[] args) {
         //range XOR for a,b= XOR(b) ^ XOR(a-1);

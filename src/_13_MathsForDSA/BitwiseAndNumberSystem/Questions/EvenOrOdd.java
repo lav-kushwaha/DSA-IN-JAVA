@@ -1,4 +1,4 @@
-package _11_MathsForDSA.BitwiseAndNumberSystem.Questions;
+package _13_MathsForDSA.BitwiseAndNumberSystem.Questions;
 import java.util.Scanner;
 public class EvenOrOdd {
     public static void main(String[] args) {

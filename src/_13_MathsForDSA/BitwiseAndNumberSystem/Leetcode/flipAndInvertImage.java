@@ -1,4 +1,4 @@
-package _11_MathsForDSA.BitwiseAndNumberSystem.Leetcode;
+package _13_MathsForDSA.BitwiseAndNumberSystem.Leetcode;
 import java.util.Arrays;
 //https://leetcode.com/problems/flipping-an-image/description/
 //832. Flipping an Image

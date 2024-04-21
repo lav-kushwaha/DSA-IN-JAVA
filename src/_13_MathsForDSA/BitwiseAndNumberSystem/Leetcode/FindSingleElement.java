@@ -1,4 +1,4 @@
-package _11_MathsForDSA.BitwiseAndNumberSystem.Leetcode;
+package _13_MathsForDSA.BitwiseAndNumberSystem.Leetcode;
 
 public class FindSingleElement {
     public static int findSingle(int[] nums) {
