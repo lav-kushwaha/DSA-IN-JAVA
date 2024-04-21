@@ -16,6 +16,6 @@ public class sqrt {
                 return i;
             }
         }
-        return -1; // Not a perfect square
+        return -1; // Not a perfect square.
     }
 }
