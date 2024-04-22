@@ -1,6 +1,5 @@
 package _17_LinkedList;
 
-import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,13 +8,15 @@ public class Main {
 //        list.add(12);
 //        System.out.println(list);//[12]
 
-        LinkedListConcept list = new LinkedListConcept();
-        list.insertFirst(10);
-        list.insertFirst(20);
-        list.insertFirst(30);
 
-        //display the element
-        list.display();
+        // Create a new singly linked list
+//        LinkedListConcept list = new LinkedListConcept();
+//        list.insertFirst(10);
+//        list.insertFirst(20);
+//        list.insertFirst(30);
+//
+//        //display the element
+//        list.display();
 
     }
 }
