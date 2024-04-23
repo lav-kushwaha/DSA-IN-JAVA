@@ -1,7 +1,6 @@
 package _17_LinkedList;
 
 public class LinkedListConcept {
-
     // Every linked list has a head and tail.
     // Private because we don't want to access anyone.
     private Node head; // Head of the linked list.
@@ -60,6 +59,8 @@ public class LinkedListConcept {
             this.value = value;
             this.next = next;
         }
+
+
 
     }
 
