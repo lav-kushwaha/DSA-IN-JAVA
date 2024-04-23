@@ -10,6 +10,7 @@ public class LinkedListConcept {
 
     // Constructor
     public LinkedListConcept() {
+
         this.size = 0;
     }
 
