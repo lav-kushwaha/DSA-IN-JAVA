@@ -59,7 +59,6 @@ public class LinkedListConcept {
             this.value = value;
             this.next = next;
         }
-
     }
 
     public static void main(String[] args) {
