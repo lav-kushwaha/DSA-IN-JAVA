@@ -55,7 +55,7 @@ public class LinkedListConcept {
             this.value = value;
         }
 
-        // Constructor
+        // Constructor.
         public Node(int value, Node next) {
             this.value = value;
             this.next = next;
@@ -63,7 +63,7 @@ public class LinkedListConcept {
     }
 
     public static void main(String[] args) {
-        // Creating a new linked list
+        // Creating a new linked list.
         LinkedListConcept linkedList = new LinkedListConcept();
 
         // Adding some elements to the list
