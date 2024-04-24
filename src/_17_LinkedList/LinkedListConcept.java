@@ -14,7 +14,7 @@ public class LinkedListConcept {
         this.size = 0;
     }
 
-    // Method to add a new node at the beginning of the linked list
+    // Method to add a new node at the beginning of the linked list.
     public void insertFirst(int val) {
         // Inserting new node
         Node newNode = new Node(val);
@@ -23,7 +23,7 @@ public class LinkedListConcept {
         // Here head comes to the first position.
         head = newNode;
 
-        // If the list was empty, update the tail reference as well
+        // If the list was empty, update the tail reference as well.
         if (tail == null) {
             tail = head;
         }
