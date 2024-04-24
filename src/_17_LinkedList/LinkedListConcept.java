@@ -8,7 +8,7 @@ public class LinkedListConcept {
 
     private int size;
 
-    // Constructor
+    // Constructor.
     public LinkedListConcept() {
 
         this.size = 0;
