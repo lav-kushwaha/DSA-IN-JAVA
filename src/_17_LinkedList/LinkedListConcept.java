@@ -50,7 +50,7 @@ public class LinkedListConcept {
         private int value; // By default node value is null.
         private Node next; // By default node value is null.
 
-        // Constructor
+        // Constructor.
         public Node(int value) {
             this.value = value;
         }
