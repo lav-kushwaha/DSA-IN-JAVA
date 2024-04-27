@@ -61,7 +61,6 @@ public class LinkedListConcept {
             this.next = next;
         }
     }
-
     public static void main(String[] args) {
         // Creating a new linked list.
         LinkedListConcept linkedList = new LinkedListConcept();
