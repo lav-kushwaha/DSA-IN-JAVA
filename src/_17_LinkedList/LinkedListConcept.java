@@ -64,7 +64,6 @@ public class LinkedListConcept {
     public static void main(String[] args) {
         // Creating a new linked list.
         LinkedListConcept linkedList = new LinkedListConcept();
-
         // Adding some elements to the list
         linkedList.insertFirst(3);
         linkedList.insertFirst(5);
