@@ -31,7 +31,6 @@ public class LinkedListConcept {
         // Increase the size.
         size++;
     }
-
     // Method to print all elements of the linked list
     public void display() {
         Node temp = head;
