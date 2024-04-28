@@ -10,13 +10,13 @@ public class Main {
 
 
         // Create a new singly linked list
-//        LinkedListConcept list = new LinkedListConcept();
-//        list.insertFirst(10);
-//        list.insertFirst(20);
-//        list.insertFirst(30);
-//
-//        //display the element
-//        list.display();
+        LinkedListConcept list = new LinkedListConcept();
+        list.insertFirst(10);
+        list.insertFirst(20);
+        list.insertFirst(30);
+
+        //display the element
+        list.display();
 
     }
 }
