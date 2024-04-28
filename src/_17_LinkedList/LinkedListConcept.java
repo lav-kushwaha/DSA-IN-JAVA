@@ -60,16 +60,16 @@ public class LinkedListConcept {
             this.next = next;
         }
     }
-    public static void main(String[] args) {
-        // Creating a new linked list.
-        LinkedListConcept linkedList = new LinkedListConcept();
-        // Adding some elements to the list
-        linkedList.insertFirst(3);
-        linkedList.insertFirst(5);
-        linkedList.insertFirst(7);
-        linkedList.insertFirst(9);
-
-        // Displaying the linked list
-        linkedList.display();
-    }
+//    public static void main(String[] args) {
+//        // Creating a new linked list.
+//        LinkedListConcept linkedList = new LinkedListConcept();
+//        // Adding some elements to the list
+//        linkedList.insertFirst(3);
+//        linkedList.insertFirst(5);
+//        linkedList.insertFirst(7);
+//        linkedList.insertFirst(9);
+//
+//        // Displaying the linked list
+//        linkedList.display();
+//    }
 }
