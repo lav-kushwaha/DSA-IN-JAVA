@@ -52,7 +52,7 @@ public class LinkedListConcept {
         size++;
     }
 
-    //Insert Last
+    //Insert element into the last of linkedlist.
     public void insertLast(int val){
         if(tail==null){
             insertFirst(val);
