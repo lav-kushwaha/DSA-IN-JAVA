@@ -52,6 +52,17 @@ public class LinkedListConcept {
         size++;
     }
 
+    //Insert Last
+    public void insertLast(int val){
+        if(tail==null){
+            insertFirst(val);
+            return;
+        }
+        Node node = new Node(val);
+        tail.next = node;
+        size++;
+    }
+
     // Method to print all elements of the linked list.
     public void display() {
         // Start from the head of the list.
@@ -81,6 +92,9 @@ public class LinkedListConcept {
         linkedList.insertFirst(5);
         linkedList.insertFirst(7);
         linkedList.insertFirst(9);
+
+        //inserting element into the last
+        linkedList.insertLast(22);
 
         // Displaying the linked list
         linkedList.display();
