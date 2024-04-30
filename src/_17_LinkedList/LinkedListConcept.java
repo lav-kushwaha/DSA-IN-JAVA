@@ -96,6 +96,22 @@ public class LinkedListConcept {
             size++;
     }
 
+    //Delete First Element from LL.
+    public int DeleteFirst(){
+        int val = head.value;
+        head = head.next;
+
+        if (head==null){
+            tail = tail.next;
+        }
+
+        size--;
+
+        //return the value which is deleted.
+        return val;
+
+    }
+
     // Method to print all elements of the linked list.
     public void display() {
         // Start from the head of the list.
@@ -129,15 +145,21 @@ public class LinkedListConcept {
         linkedList.insertFirst(3);
 
         //inserting element from the last
-        linkedList.insertLast(22);
+//        linkedList.insertLast(22);
 
         //Inserting element at any index;
-        linkedList.insert(100,3);
+//        linkedList.insert(100,3);
+
+        // Displaying the linked list
+        linkedList.display();
+
+        // Delete first element from the linked list.
+        System.out.println(linkedList.DeleteFirst());
 
         // Displaying the linked list
         linkedList.display();
 
         // Print the count of elements
-        linkedList.printCount();
+//        linkedList.printCount();
     }
 }
