@@ -3,7 +3,11 @@ package _17_LinkedList;
 public class LinkedListConcept {
     // Every linked list has a head and tail.
     // Private because we don't want to access anyone.
+   // head: This would be null, indicating that there are no elements in the list yet.
     private Node head; // Head of the linked list.
+
+    //Benefit of taking this extra variable is we can add element from the last.
+    //tail: This would also be null, as there are no elements in the list to have a tail.
     private Node tail; // Tail of the linked list.
 
     private int size; // Size of the linked list.
@@ -13,9 +17,12 @@ public class LinkedListConcept {
     private class Node {
 
         private int value; // Value of the node.
-        private Node next; // Reference to the next node. By default, it is null
 
-//        // Constructor with value parameter.
+        // Reference to the next node.
+        //next would typically be null, indicating that there is no next node.
+        private Node next;
+
+        // Constructor with value parameter.
         public Node(int value) {
             this.value = value;
         }
@@ -63,6 +70,32 @@ public class LinkedListConcept {
         size++;
     }
 
+    //Insert element at any index.
+    public void insert (int val,int index){
+
+            //if index is 0 insert element at the 0 index
+            if(index==0){
+                insertFirst(val);
+                return;
+            }
+
+            //if index is last(size) then insert element into the last.
+            if (index==size){
+                insertLast(val);
+                return;
+            }
+
+            Node temp = head;
+            for(int i=1;i<index;i++){
+               temp = temp.next;
+            }
+
+            Node node = new Node(val, temp.next); //100,8
+            temp.next = node; //100,8
+
+            size++;
+    }
+
     // Method to print all elements of the linked list.
     public void display() {
         // Start from the head of the list.
@@ -88,13 +121,18 @@ public class LinkedListConcept {
         // Creating a new linked list.
         LinkedListConcept linkedList = new LinkedListConcept();
         // Adding some elements to the list
-        linkedList.insertFirst(3);
-        linkedList.insertFirst(5);
-        linkedList.insertFirst(7);
+        linkedList.insertFirst(18);
+        linkedList.insertFirst(12);
+        linkedList.insertFirst(8);
         linkedList.insertFirst(9);
+        linkedList.insertFirst(5);
+        linkedList.insertFirst(3);
 
-        //inserting element into the last
+        //inserting element from the last
         linkedList.insertLast(22);
+
+        //Inserting element at any index;
+        linkedList.insert(100,3);
 
         // Displaying the linked list
         linkedList.display();
