@@ -101,7 +101,9 @@ public class LinkedListConcept {
         int val = head.value;
         head = head.next;
 
+
         if (head==null){
+            //if head is null, then tail should also be null.
             tail = tail.next;
         }
 
@@ -109,7 +111,30 @@ public class LinkedListConcept {
 
         //return the value which is deleted.
         return val;
+    }
 
+    //Delete Last Element from LL.
+    public int DeleteLast(){
+        if(size<=1){
+            return DeleteFirst();
+        }
+
+        Node secondLast = get(size-2);
+        int val = tail.value;
+        tail = secondLast;
+        tail.next = null;
+        return val;
+    }
+
+    public Node get(int index){
+        //node start from head.
+        Node node = head;
+        for(int i=0;i<index;i++){
+            node = node.next;
+        }
+
+        //it will return reference pointer to that node.
+        return node;
     }
 
     // Method to print all elements of the linked list.
@@ -150,11 +175,15 @@ public class LinkedListConcept {
         //Inserting element at any index;
 //        linkedList.insert(100,3);
 
+
         // Displaying the linked list
         linkedList.display();
 
         // Delete first element from the linked list.
-        System.out.println(linkedList.DeleteFirst());
+//        System.out.println(linkedList.DeleteFirst());
+
+        //Delete element from last.
+        System.out.println(linkedList.DeleteLast());
 
         // Displaying the linked list
         linkedList.display();
