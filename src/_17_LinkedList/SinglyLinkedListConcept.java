@@ -1,6 +1,6 @@
 package _17_LinkedList;
 
-public class LinkedListConcept {
+public class SinglyLinkedListConcept {
     // Every linked list has a head and tail.
     // Private because we don't want to access anyone.
    // head: This would be null, indicating that there are no elements in the list yet.
@@ -35,7 +35,7 @@ public class LinkedListConcept {
     }
 
     // Constructor of the LinkedListConcept class.
-    public LinkedListConcept() {
+    public SinglyLinkedListConcept() {
         // Initialize size to 0.
         this.size = 0;
     }
@@ -196,7 +196,7 @@ public class LinkedListConcept {
     // Main method to test the LinkedListConcept class.
     public static void main(String[] args) {
         // Creating a new linked list.
-        LinkedListConcept linkedList = new LinkedListConcept();
+        SinglyLinkedListConcept linkedList = new SinglyLinkedListConcept();
         // Adding some elements to the list
         linkedList.insertFirst(18);
         linkedList.insertFirst(12);
@@ -224,7 +224,7 @@ public class LinkedListConcept {
         //Delete any particular node.
 //        System.out.println(linkedList.delete(4));
 
-        //find
+        //find the particular element
         System.out.println(linkedList.find(5));
 
         // Displaying the linked list
