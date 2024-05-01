@@ -101,7 +101,6 @@ public class LinkedListConcept {
         int val = head.value;
         head = head.next;
 
-
         if (head==null){
             //if head is null, then tail should also be null.
             tail = tail.next;
@@ -123,6 +122,27 @@ public class LinkedListConcept {
         int val = tail.value;
         tail = secondLast;
         tail.next = null;
+        return val;
+    }
+
+    //Delete a particuar index.
+    public int delete(int index){
+        //delete first
+        if(index==0){
+            return DeleteFirst();
+        }
+
+        //delete last
+        if(index== size-1){
+            return DeleteLast();
+        }
+
+        //Jo bhi node delete karna hai usse ek previous node pe chala ja.
+        Node prev = get(index-1);
+        int val = prev.next.value;
+
+        //yaha pe delete node se ek pehle node ke baad delete hone wala node ke baad chala ja.
+        prev.next = prev.next.next;
         return val;
     }
 
@@ -183,7 +203,10 @@ public class LinkedListConcept {
 //        System.out.println(linkedList.DeleteFirst());
 
         //Delete element from last.
-        System.out.println(linkedList.DeleteLast());
+//        System.out.println(linkedList.DeleteLast());
+
+        //Delete any particular node.
+        System.out.println(linkedList.delete(4));
 
         // Displaying the linked list
         linkedList.display();
