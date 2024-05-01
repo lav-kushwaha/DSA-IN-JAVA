@@ -146,6 +146,22 @@ public class LinkedListConcept {
         return val;
     }
 
+    //find the particular element.
+    //complexity is o(n) where n is the total no. of node.
+    public Node find(int value){
+        //node start from head.
+        Node node = head;
+        while (node!=null){
+            if(node.value == value){
+                return node;
+            }
+            //if node.value is not equal to value move forward.
+            node = node.next;
+        }
+        //if not found element return null.
+        return null;
+    }
+
     public Node get(int index){
         //node start from head.
         Node node = head;
@@ -206,7 +222,10 @@ public class LinkedListConcept {
 //        System.out.println(linkedList.DeleteLast());
 
         //Delete any particular node.
-        System.out.println(linkedList.delete(4));
+//        System.out.println(linkedList.delete(4));
+
+        //find
+        System.out.println(linkedList.find(5));
 
         // Displaying the linked list
         linkedList.display();
