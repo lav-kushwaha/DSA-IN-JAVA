@@ -10,7 +10,7 @@ public class Main {
 
 
         // Create a new singly linked list
-        LinkedListConcept list = new LinkedListConcept();
+        SinglyLinkedListConcept list = new SinglyLinkedListConcept();
         list.insertFirst(10);
         list.insertFirst(20);
         list.insertFirst(30);
