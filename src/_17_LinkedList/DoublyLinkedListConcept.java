@@ -149,10 +149,10 @@ public class DoublyLinkedListConcept {
         DLL.display();
 
 
-        System.out.println(DLL.delete(12));
+        System.out.println(DLL.delete(2));
 
         //insert 100 after 12
-        DLL.insert(12,100);
+        DLL.insert(2,100);
         DLL.display();
     }
 }
