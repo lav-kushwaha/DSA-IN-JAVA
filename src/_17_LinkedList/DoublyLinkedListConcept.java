@@ -38,6 +38,8 @@ public class DoublyLinkedListConcept {
         //we have taken extra node bcs we don't want to change the structure of LL.
         //we have taken node to traverse the dll.
         Node node = head;
+
+        //This extra variable for reverse dll.
         Node last = null;
         while(node!=null){
             System.out.print(node.val+" => ");
@@ -54,7 +56,7 @@ public class DoublyLinkedListConcept {
             System.out.print(last.val+" <= ");
             last = last.prev;
         }
-        System.out.print("START");
+        System.out.println("START");
     }
 
     public void insertLast(int val){
@@ -94,6 +96,35 @@ public class DoublyLinkedListConcept {
         }
     }
 
+    public int delete(int valToDelete) {
+        // Find the node to delete
+        Node nodeToDelete = find(valToDelete);
+
+        // If nodeToDelete is null, the element doesn't exist in the list
+        if (nodeToDelete == null) {
+            System.out.println("Element does not exist in the list");
+            return -1; // Return some default value indicating failure
+        }
+
+        // If the node to delete is the head
+        if (nodeToDelete == head) {
+            head = nodeToDelete.next; // Move head to the next node
+        }
+
+        // Adjusting pointers for the previous node
+        if (nodeToDelete.prev != null) {
+            nodeToDelete.prev.next = nodeToDelete.next;
+        }
+
+        // Adjusting pointers for the next node
+        if (nodeToDelete.next != null) {
+            nodeToDelete.next.prev = nodeToDelete.prev;
+        }
+
+        return nodeToDelete.val; // Return the value of the deleted node
+    }
+
+
     public Node find(int value){
         //node start from head.
         Node node = head;
@@ -115,6 +146,10 @@ public class DoublyLinkedListConcept {
         DLL.insertFirst(2);
         DLL.insertFirst(32);
         DLL.insertFirst(57);
+        DLL.display();
+
+
+        System.out.println(DLL.delete(12));
 
         //insert 100 after 12
         DLL.insert(12,100);
