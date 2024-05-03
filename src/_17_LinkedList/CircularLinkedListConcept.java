@@ -18,16 +18,17 @@ public class CircularLinkedListConcept {
     }
 
     public void insert(int val) {
-        Node newNode = new Node(val);
+        Node node = new Node(val);
         if (head == null) {
-            head = newNode;
-            tail = newNode;
+            head = node;
+            tail = node;
             tail.next = head; // Circular connection
-        } else {
-            tail.next = newNode; // Connect new node to the end
-            tail = newNode; // Update tail to the new node
-            tail.next = head; // Circular connection
+            return;
         }
+
+        tail.next = node;
+        node.next = head; //circular connection
+        tail = node;
     }
 
     public void display() {
@@ -35,12 +36,11 @@ public class CircularLinkedListConcept {
             System.out.println("List is empty");
             return;
         }
-
-        Node current = head;
+        Node node = head;
         do {
-            System.out.print(current.val + " => ");
-            current = current.next;
-        } while (current != head);
+            System.out.print(node.val + " => ");
+            node = node.next;
+        } while (node != head);
         System.out.println("Head");
     }
 
