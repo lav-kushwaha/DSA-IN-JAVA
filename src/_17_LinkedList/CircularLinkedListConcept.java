@@ -75,7 +75,7 @@ public class CircularLinkedListConcept {
             return;
         }
 
-        Node prev = get(index - 1);
+        Node prev = get(index - 1); //why here index-1, bcs in get method inside there is temp = temp.next
         if (prev.next != null) {
             prev.next = prev.next.next;
         }
@@ -120,8 +120,8 @@ public class CircularLinkedListConcept {
         cll.insert(14);
         cll.display(); // Output: 12 => 13 => 14 =>
 
-//        cll.delete(1); // Delete element at index 1
-//        cll.display(); // Output: 12 => 14 =>
+        cll.delete(1); // Delete element at index 1
+        cll.display(); // Output: 12 => 14 =>
 //
 //        cll.deleteElement(14); // Delete element 14
 //        cll.display(); // Output: 12 =>
