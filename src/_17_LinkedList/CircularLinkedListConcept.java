@@ -102,6 +102,15 @@ public class CircularLinkedListConcept {
             node = node.next;
         } while (node != head);
         System.out.println("Head");
+
+        //While-Loop, will not work bcz node is equal to head and condition will become false,
+        //that's why we have used, do while loop - in do while loop first it will print value,
+        //and node will be move forward, i.e, node = node.next
+//        while (node != head){
+//            System.out.print(node.val + " => ");
+//            node = node.next;
+//        }
+//        System.out.println("Head");
     }
 
     public static void main(String[] args) {
@@ -111,10 +120,10 @@ public class CircularLinkedListConcept {
         cll.insert(14);
         cll.display(); // Output: 12 => 13 => 14 =>
 
-        cll.delete(1); // Delete element at index 1
-        cll.display(); // Output: 12 => 14 =>
-
-        cll.deleteElement(14); // Delete element 14
-        cll.display(); // Output: 12 =>
+//        cll.delete(1); // Delete element at index 1
+//        cll.display(); // Output: 12 => 14 =>
+//
+//        cll.deleteElement(14); // Delete element 14
+//        cll.display(); // Output: 12 =>
     }
 }
