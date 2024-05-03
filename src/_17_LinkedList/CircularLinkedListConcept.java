@@ -35,7 +35,29 @@ public class CircularLinkedListConcept {
         tail = node;
     }
 
-    // Delete
+    //Delete element.
+    public void deleteElement(int val){
+        Node node = head;
+
+        //if head value we want to delete.
+        if(node.val==val){
+            head = head.next;
+            tail.next = head;
+            return;
+        }
+
+        do{
+            Node n = node.next;
+            if(n.val == val){
+                node.next = n.next;
+                break;
+            }
+            node = node.next;
+        } while (node!=head);
+
+    }
+
+    // Delete element by using index.
     public void delete(int index) {
         if (head == null) {
             System.out.println("List is empty");
@@ -92,7 +114,7 @@ public class CircularLinkedListConcept {
         cll.delete(1); // Delete element at index 1
         cll.display(); // Output: 12 => 14 =>
 
-        cll.delete(1); // Delete element at index 1
+        cll.deleteElement(14); // Delete element 14
         cll.display(); // Output: 12 =>
     }
 }
