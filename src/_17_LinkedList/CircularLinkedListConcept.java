@@ -1,11 +1,14 @@
 package _17_LinkedList;
 
-import java.util.SortedMap;
-
 public class CircularLinkedListConcept {
 
     private Node head;
     private Node tail;
+
+    CircularLinkedListConcept() {
+        this.head = null;
+        this.tail = null;
+    }
 
     class Node {
         private int val;
@@ -17,6 +20,7 @@ public class CircularLinkedListConcept {
         }
     }
 
+    // Insert
     public void insert(int val) {
         Node node = new Node(val);
         if (head == null) {
@@ -27,10 +31,44 @@ public class CircularLinkedListConcept {
         }
 
         tail.next = node;
-        node.next = head; //circular connection
+        node.next = head; // circular connection
         tail = node;
     }
 
+    // Delete
+    public void delete(int index) {
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        if (index == 0) {
+            if (head == tail) { // if there's only one element
+                head = null;
+                tail = null;
+            } else {
+                tail.next = head.next;
+                head = head.next;
+            }
+            return;
+        }
+
+        Node prev = get(index - 1);
+        if (prev.next != null) {
+            prev.next = prev.next.next;
+        }
+    }
+
+    // Get node at index
+    public Node get(int index) {
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
+    // Display
     public void display() {
         if (head == null) {
             System.out.println("List is empty");
@@ -50,5 +88,11 @@ public class CircularLinkedListConcept {
         cll.insert(13);
         cll.insert(14);
         cll.display(); // Output: 12 => 13 => 14 =>
+
+        cll.delete(1); // Delete element at index 1
+        cll.display(); // Output: 12 => 14 =>
+
+        cll.delete(1); // Delete element at index 1
+        cll.display(); // Output: 12 =>
     }
 }
