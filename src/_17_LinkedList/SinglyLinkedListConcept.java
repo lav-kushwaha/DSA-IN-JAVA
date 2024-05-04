@@ -205,6 +205,7 @@ public class SinglyLinkedListConcept {
             return temp;
         }
 
+        //keep moving forward
         node.next = insertRec(val,index-1,node.next);
         return node;
     }
@@ -214,12 +215,10 @@ public class SinglyLinkedListConcept {
         // Creating a new linked list.
         SinglyLinkedListConcept linkedList = new SinglyLinkedListConcept();
         // Adding some elements to the list
-        linkedList.insertFirst(18);
-        linkedList.insertFirst(12);
-        linkedList.insertFirst(8);
-        linkedList.insertFirst(9);
-        linkedList.insertFirst(5);
         linkedList.insertFirst(3);
+        linkedList.insertFirst(5);
+        linkedList.insertFirst(9);
+        linkedList.insertFirst(1);
 
         //inserting element from the last
 //        linkedList.insertLast(22);
@@ -251,7 +250,7 @@ public class SinglyLinkedListConcept {
 
 
         //insert element using recursion
-        linkedList.insertRecursion(6,2);
+        linkedList.insertRecursion(7,3);
 
         // Displaying the linked list
         linkedList.display();
