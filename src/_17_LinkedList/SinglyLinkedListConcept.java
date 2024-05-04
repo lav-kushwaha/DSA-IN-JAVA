@@ -193,6 +193,22 @@ public class SinglyLinkedListConcept {
         System.out.println("Count: " + size);
     }
 
+    //insert element using recursion
+    public void insertRecursion(int val, int index){
+        head = insertRec(val,index,head);
+    }
+
+    private Node insertRec(int val, int index, Node node){
+        if(index == 0){
+            Node temp = new Node(val,node);
+            size++;
+            return temp;
+        }
+
+        node.next = insertRec(val,index-1,node.next);
+        return node;
+    }
+
     // Main method to test the LinkedListConcept class.
     public static void main(String[] args) {
         // Creating a new linked list.
@@ -213,7 +229,7 @@ public class SinglyLinkedListConcept {
 
 
         // Displaying the linked list
-        linkedList.display();
+//        linkedList.display();
 
         // Delete first element from the linked list.
 //        System.out.println(linkedList.DeleteFirst());
@@ -225,12 +241,20 @@ public class SinglyLinkedListConcept {
 //        System.out.println(linkedList.delete(4));
 
         //find the particular element
-        System.out.println(linkedList.find(5));
+//        System.out.println(linkedList.find(5));
 
         // Displaying the linked list
         linkedList.display();
 
         // Print the count of elements
 //        linkedList.printCount();
+
+
+        //insert element using recursion
+        linkedList.insertRecursion(6,2);
+
+        // Displaying the linked list
+        linkedList.display();
+
     }
 }
