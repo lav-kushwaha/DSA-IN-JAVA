@@ -35,12 +35,12 @@ public class Remove_Duplicates {
     }
 
     public ListNode deleteDuplicates(ListNode head) {
-        ListNode current = head;
-        while (current != null && current.next != null) {
-            if (current.val == current.next.val) {
-                current.next = current.next.next; // Skip duplicate
+        ListNode node = head;
+        while (node != null && node.next != null) {
+            if (node.val == node.next.val) {
+                node.next = node.next.next; // Skip duplicate
             } else {
-                current = current.next; // Move to the next distinct element
+                node = node.next; // Move to the next distinct element
             }
         }
         return head;
