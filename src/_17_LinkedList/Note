@@ -10,3 +10,6 @@ while (current != null) {
 Q.What is the Difference btw both while loop condition ?
 => So, the difference is that the first loop stops when current reaches the last node,
  while the second loop goes one step further, continuing until "current becomes null", signifying the end of the list.
+
+
+NOTE : head == null, means no element and head.next == null means there is one element on head.
