@@ -2,7 +2,6 @@ package _17_LinkedList.LinkedListQuestions;
 //https://leetcode.com/problems/merge-two-sorted-lists/description/
 //21. Merge Two Sorted Lists
 
-
 public class MergeTwoSortedList {
     private ListNode head;
 
