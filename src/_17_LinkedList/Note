@@ -1,0 +1,12 @@
+while (current.next != null) {
+    current = current.next; //Stops when: current.next becomes null, meaning current is the last node in the list.
+}
+
+
+while (current != null) {
+    current = current.next; //Stops when: current becomes null, meaning it has reached the end of the list (one step beyond the last node).
+}
+
+Q.What is the Difference btw both while loop condition ?
+=> So, the difference is that the first loop stops when current reaches the last node,
+ while the second loop goes one step further, continuing until "current becomes null", signifying the end of the list.
