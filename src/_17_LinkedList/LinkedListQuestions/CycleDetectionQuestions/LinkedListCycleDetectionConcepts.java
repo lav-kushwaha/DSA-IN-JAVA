@@ -1,7 +1,7 @@
 package _17_LinkedList.LinkedListQuestions.CycleDetectionQuestions;
 
 //https://leetcode.com/problems/linked-list-cycle/description/
-//141. Linked List Cycle.
+//141.Linked List Cycle.
 
 //Slow and fast pointer.
 //Floyd’s Cycle Algorithm or Tortoise And Hare algorithm.
@@ -19,6 +19,7 @@ public class LinkedListCycleDetectionConcepts {
         }
     }
 
+    //check in the list there is cycle or not.
     public boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) {
             return false; // No cycle if there are less than two nodes
@@ -39,6 +40,8 @@ public class LinkedListCycleDetectionConcepts {
         return false; // If fast or its next is null, it means end of the list reached, so no cycle
     }
 
+
+    //count the length of the cycle.
     public int lengthCycle(ListNode head) {
 
         // If head is null, there can't be a cycle.
@@ -80,9 +83,9 @@ public class LinkedListCycleDetectionConcepts {
         node3.next = node1; // Creating a cycle
 
         LinkedListCycleDetectionConcepts solution = new LinkedListCycleDetectionConcepts(); // corrected the object creation
-//        System.out.println(solution.hasCycle(head)); // Output: true
+        System.out.println(solution.hasCycle(head)); // Output: true
 
-        //count of cycle
+        //count the length of the cycle.
         System.out.println(solution.lengthCycle(head));
     }
 }
