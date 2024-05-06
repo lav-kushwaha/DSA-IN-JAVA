@@ -1,11 +1,15 @@
 package _17_LinkedList.LinkedListQuestions.CycleDetectionQuestions;
 
 //https://leetcode.com/problems/linked-list-cycle/description/
-//141. Linked List Cycle
+//141. Linked List Cycle.
 
-public class LinkedListCycle {
+//Slow and fast pointer.
+//Floyd’s Cycle Algorithm or Tortoise And Hare algorithm.
+
+public class LinkedListCycleDetectionConcepts {
+
     // Definition for singly-linked list.
-    static class ListNode {
+     static class ListNode {
         int val;
         ListNode next;
 
@@ -35,10 +39,37 @@ public class LinkedListCycle {
         return false; // If fast or its next is null, it means end of the list reached, so no cycle
     }
 
+    public int lengthCycle(ListNode head) {
+
+        // If head is null, there can't be a cycle.
+        if (head == null) return 0;
+
+        ListNode slow = head;
+        ListNode fast = head;
+
+        int size = 0; // Initialize size
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            // If slow and fast meet at the same node, there's a cycle.
+            if (slow == fast) {
+                // calculate the length.
+                do {
+                    slow = slow.next;
+                    size++;
+                } while (slow != fast);
+                return size;
+            }
+        }
+        return 0; // No cycle found
+    }
+
     public static void main(String[] args) {
 
         // Example usage
-        ListNode head = new ListNode(3);
+        ListNode head =  new ListNode(3);
         ListNode node1 = new ListNode(2);
         ListNode node2 = new ListNode(0);
         ListNode node3 = new ListNode(-4);
@@ -48,7 +79,10 @@ public class LinkedListCycle {
         node2.next = node3;
         node3.next = node1; // Creating a cycle
 
-        LinkedListCycle solution = new LinkedListCycle(); // corrected the object creation
-        System.out.println(solution.hasCycle(head)); // Output: true
+        LinkedListCycleDetectionConcepts solution = new LinkedListCycleDetectionConcepts(); // corrected the object creation
+//        System.out.println(solution.hasCycle(head)); // Output: true
+
+        //count of cycle
+        System.out.println(solution.lengthCycle(head));
     }
 }
