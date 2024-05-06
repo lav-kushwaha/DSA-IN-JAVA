@@ -2,7 +2,6 @@ while (current.next != null) {
     current = current.next; //Stops when: current.next becomes null, meaning current is the last node in the list.
 }
 
-
 while (current != null) {
     current = current.next; //Stops when: current becomes null, meaning it has reached the end of the list (one step beyond the last node).
 }
@@ -13,3 +12,35 @@ Q.What is the Difference btw both while loop condition ?
 
 
 NOTE : head == null, means no element and head.next == null means there is one element on head.
+
+
+#Some common linked list patterns along with examples:
+
+1. Two Pointers Technique:
+   - Use two pointers to traverse the list at different speeds, often to find the midpoint, detect cycles, or solve problems requiring reverse traversal.
+   - Example: Finding the middle of a linked list, detecting cycles in a linked list.
+
+2. Runner Technique:
+   - Similar to the Two Pointers Technique, but with one pointer moving faster than the other.
+   - Example: Checking for intersection or finding the start of the loop in a cyclic linked list.
+
+3. Sliding Window Technique:
+   - Uses a fixed-size window that slides through the list, often to find sublists or subsequences that satisfy certain conditions.
+   - Example: Finding the maximum sum of a contiguous subarray in a linked list.
+
+4. Floyd's Tortoise and Hare Algorithm:
+   - A cycle detection algorithm using two pointers moving at different speeds to detect cycles in a linked list.
+   - Example: Detecting cycles in a linked list.
+
+5. Recursion:
+   - Use recursive calls to solve problems, often involving traversal or modification of the linked list.
+   - Example: Reversing a linked list recursively, merging two sorted linked lists recursively.
+
+6. Dummy Node Technique:
+   - Introduce a dummy node to simplify operations, especially at the beginning or end of the list.
+   - Example: Adding two numbers represented by linked lists, where each node contains a single digit.
+
+7. Reverse Technique:
+   - Reverse the linked list or a portion of it to simplify operations.
+   - Example: Reversing a linked list, reversing nodes in k-group.
+
