@@ -1,4 +1,4 @@
-package _17_LinkedList;
+package _17_LinkedList.LinkedListConcepts;
 
 public class SinglyLinkedListConcept {
     // Every linked list has a head and tail.
