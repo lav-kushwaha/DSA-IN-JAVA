@@ -1,4 +1,4 @@
-package _17_LinkedList;
+package _17_LinkedList.LinkedListConcepts;
 
 public class CircularLinkedListConcept {
 
@@ -105,7 +105,7 @@ public class CircularLinkedListConcept {
 
         //While-Loop, will not work bcz node is equal to head and condition will become false,
         //that's why we have used, do while loop - in do while loop first it will print value,
-        //and node will be move forward, i.e, node = node.next
+        //and node will be not move forward, i.e, node = node.next
 //        while (node != head){
 //            System.out.print(node.val + " => ");
 //            node = node.next;
