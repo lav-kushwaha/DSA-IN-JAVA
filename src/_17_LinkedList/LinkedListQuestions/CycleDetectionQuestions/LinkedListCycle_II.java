@@ -6,7 +6,7 @@ package _17_LinkedList.LinkedListQuestions.CycleDetectionQuestions;
 public class LinkedListCycle_II {
 
     // Definition for singly-linked list.
-    public class ListNode {
+    static class ListNode {
         int val;
         ListNode next;
         ListNode(int x) {
@@ -16,7 +16,7 @@ public class LinkedListCycle_II {
     }
 
     // Method to detect the start of a cycle in a linked list.
-    public ListNode detectCycle(ListNode head) {
+    public static ListNode detectCycle(ListNode head) {
         // If head is null, there's no cycle.
         if (head == null) return null;
 
@@ -43,5 +43,21 @@ public class LinkedListCycle_II {
             }
         }
         return null; // No cycle found.
+    }
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(3);
+        ListNode node1 = new ListNode(2);
+        ListNode node2 = new ListNode(0);
+        ListNode node3 = new ListNode(-4);
+
+        head.next = node1;
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = node1; //creating a cycle.
+
+        ListNode ans = detectCycle(head);
+        System.out.println(ans.val); //cycle node start from node 2
+
     }
 }
