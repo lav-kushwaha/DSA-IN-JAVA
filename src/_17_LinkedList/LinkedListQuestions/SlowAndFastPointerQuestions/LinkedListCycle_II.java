@@ -1,4 +1,4 @@
-package _17_LinkedList.LinkedListQuestions.CycleDetectionQuestions;
+package _17_LinkedList.LinkedListQuestions.SlowAndFastPointerQuestions;
 
 //https://leetcode.com/problems/linked-list-cycle-ii/
 //142. Linked List Cycle II
