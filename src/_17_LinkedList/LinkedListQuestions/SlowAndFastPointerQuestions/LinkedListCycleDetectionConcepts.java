@@ -82,7 +82,7 @@ public class LinkedListCycleDetectionConcepts {
         node2.next = node3;
         node3.next = node1; // Creating a cycle
 
-        LinkedListCycleDetectionConcepts solution = new LinkedListCycleDetectionConcepts(); // corrected the object creation
+        LinkedListCycleDetectionConcepts solution = new LinkedListCycleDetectionConcepts();
         System.out.println(solution.hasCycle(head)); // Output: true
 
         //count the length of the cycle.
