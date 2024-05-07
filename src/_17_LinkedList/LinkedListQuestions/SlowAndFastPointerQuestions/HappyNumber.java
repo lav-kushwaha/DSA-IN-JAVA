@@ -1,4 +1,4 @@
-package _17_LinkedList.LinkedListQuestions.CycleDetectionQuestions;
+package _17_LinkedList.LinkedListQuestions.SlowAndFastPointerQuestions;
 
 //https://leetcode.com/problems/happy-number/
 //202. Happy Number
