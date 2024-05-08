@@ -1,6 +1,7 @@
 package _17_LinkedList.LinkedListQuestions;
 
-import java.sql.SQLOutput;
+//https://leetcode.com/problems/sort-list/
+//148. Sort List
 
 class MergeSort {
 
@@ -12,10 +13,6 @@ class MergeSort {
             this.val = val;
         }
 
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
     }
 
     //Merge-Sort
