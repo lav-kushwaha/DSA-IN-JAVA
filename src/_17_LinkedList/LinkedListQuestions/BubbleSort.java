@@ -1,6 +1,5 @@
 package _17_LinkedList.LinkedListQuestions;
 
-
 public class BubbleSort {
 
     private Node head;
