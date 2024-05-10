@@ -73,9 +73,9 @@ public class BubbleSort {
                 } else if (second == tail) {
                     Node prev = get(col - 1);
                     prev.next = second;
-                    tail = first;
+                    second.next = first;
                     first.next = null;
-                    second.next = tail;
+                    tail = first;
                 } else {
                     Node prev = get(col - 1);
                     prev.next = second;
