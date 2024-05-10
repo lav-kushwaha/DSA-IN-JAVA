@@ -1,5 +1,8 @@
 package _17_LinkedList.LinkedListQuestions;
 
+//https://leetcode.com/problems/reverse-linked-list/solutions/
+//206. Reverse Linked List
+
 class ReverseLinkedList {
 
     private ListNode head;
@@ -52,7 +55,6 @@ class ReverseLinkedList {
     //In place reverse linked list.
     //Use three pointers
     public void reverse() {
-
         //K.k solution.
 //        ListNode prev = null;
 //        ListNode current = head;
@@ -67,31 +69,30 @@ class ReverseLinkedList {
 //                next = next.next;
 //            }
 //        }
-//
 //        //In the end prev will came to end node.
 //        head = prev;
 
         //Another way.(Best)
+        //Use three pointers and so you can change the next of the mid to the first one
+        // without losing the track of the original left.
         ListNode prev = null;
         ListNode current = head;
+        ListNode next;
 
-        while(current != null) {
-            ListNode next = current.next;
-            current.next = prev;
-            prev = current;
+        while (current != null) {
+            next = current.next; // Store the next node
+            current.next = prev; // Reverse the current node's pointer
+            prev = current; // Move pointers one position ahead
             current = next;
         }
+        head = prev; // New head of the reversed list
 
-        head = prev;
-
-        //Another way.
-        //Use three pointers and so you can change the next of the mid to the first one without losing the track of the original left.
+        //Another way.(Best)
 //        ListNode prev = null;
 //        ListNode current = head;
-//        ListNode next = null;
 //
 //        while(current != null) {
-//            next = current.next;
+//            ListNode next = current.next;
 //            current.next = prev;
 //            prev = current;
 //            current = next;
