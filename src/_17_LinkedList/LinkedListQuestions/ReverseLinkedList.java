@@ -37,7 +37,7 @@ class ReverseLinkedList {
         System.out.println("END");
     }
 
-    // Recursion reverse
+    // Reverse Linked List Using Recursion.
     public void reverseList(ListNode node) {
         if (node.next == null) { // Termination condition: When the next node is null
             head = node;
@@ -53,7 +53,7 @@ class ReverseLinkedList {
     }
 
     //In place reverse linked list.
-    //Use three pointers
+    //Using three pointers.
     public void reverse() {
         //K.k solution.
 //        ListNode prev = null;
@@ -87,7 +87,7 @@ class ReverseLinkedList {
         }
         head = prev; // New head of the reversed list
 
-        //Another way.(Best)
+        //Another way.
 //        ListNode prev = null;
 //        ListNode current = head;
 //
@@ -101,7 +101,6 @@ class ReverseLinkedList {
 //        head = prev;
 
     }
-
 
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
