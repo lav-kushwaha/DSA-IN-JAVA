@@ -33,7 +33,7 @@ class ReverseLinkedList_II {
 
         // current will be after prev node.
         ListNode current = prev.next; // Start reversing from the node next to prev
-        ListNode nextNode;
+        ListNode nextNode; //creating nextNode to store the current.next node.
 
         // Reverse the sublist from left to right
         for (int i = left; i < right; i++) {
