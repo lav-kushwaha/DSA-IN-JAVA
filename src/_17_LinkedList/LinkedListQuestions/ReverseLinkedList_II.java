@@ -16,6 +16,11 @@ class ReverseLinkedList_II {
 
     public ListNode reverseBetween(ListNode head, int left, int right) {
 
+        // If there is no head or there is only one node, return head
+        if (head == null || head.next == null) {
+            return head;
+        }
+
         // Create a dummy node to facilitate reversal
         ListNode dummy = new ListNode(0);
         dummy.next = head; // Connect dummy to the head of the list
