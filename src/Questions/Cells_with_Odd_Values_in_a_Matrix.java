@@ -1,5 +1,7 @@
 package Questions;
+
 //https://leetcode.com/problems/cells-with-odd-values-in-a-matrix/
+
 public class Cells_with_Odd_Values_in_a_Matrix {
     public static void main(String[] args) {
         int[][] indices = {
@@ -12,6 +14,7 @@ public class Cells_with_Odd_Values_in_a_Matrix {
         int ans = oddCells(m, n, indices);
         System.out.println(ans);
     }
+
     static int oddCells(int m, int n, int[][] indices){
            int [] rows = new int[m];
            int [] cols = new int[n];
@@ -26,6 +29,7 @@ public class Cells_with_Odd_Values_in_a_Matrix {
            }
 
            int oddElementCount = 0;
+
            for(int i=0;i<m;i++){
                for(int j=0;j<n;j++){
                    if(rows[i] + cols[j] % 2 !=0){
