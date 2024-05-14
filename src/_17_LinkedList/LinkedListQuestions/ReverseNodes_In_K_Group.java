@@ -1,5 +1,7 @@
 package _17_LinkedList.LinkedListQuestions;
 
+//https://leetcode.com/problems/reverse-nodes-in-k-group/
+//25. Reverse Nodes in k-Group(Fav Question).
 
 public class ReverseNodes_In_K_Group {
     static class ListNode {
@@ -36,8 +38,9 @@ public class ReverseNodes_In_K_Group {
 
         ListNode tail = prev.next; // First node of the group before reversing.
         ListNode curr = prev.next.next; // Second node of the group before reversing.
+        ListNode next;
         while (curr != last) {
-            ListNode next = curr.next;
+            next = curr.next;
             curr.next = prev.next;
             prev.next = curr;
             tail.next = next;
