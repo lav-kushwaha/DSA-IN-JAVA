@@ -1,7 +1,7 @@
-package _17_LinkedList.LinkedListQuestions;
+package _17_LinkedList.LinkedListQuestions.LinkedListRecursionQuestion;
 
 //https://www.geeksforgeeks.org/problems/reverse-a-linked-list-in-groups-of-given-size/1
-//Reverse a Linked List in groups of given size
+//Reverse a Linked List in groups of given size.
 
 //Question solve via using recursion.
 
