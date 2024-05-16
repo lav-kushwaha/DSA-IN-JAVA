@@ -1,7 +1,7 @@
-package _17_LinkedList;
+package _17_LinkedList.LinkedListQuestions.LinkedListRecursionQuestion;
 
 //https://www.geeksforgeeks.org/reverse-alternate-k-nodes-in-a-singly-linked-list/
-
+//Reverse alternate K nodes in a Singly Linked List.
 
 public class ReverseAlternateKNodes {
 
@@ -16,7 +16,8 @@ public class ReverseAlternateKNodes {
 
     public ListNode kAltReverse(ListNode head, int k) {
         ListNode current = head;
-        ListNode next = null, prev = null;
+        ListNode prev = null;
+        ListNode next;
         int count = 0;
 
         /* 1) reverse first k nodes of the linked list */
@@ -28,13 +29,13 @@ public class ReverseAlternateKNodes {
             count++;
         }
 
-        /* 2) Now head points to the kth node. So change next 
+        /* 2) Now head points to the kth node. So change next
         of head to (k+1)th node*/
         if (head != null) {
             head.next = current;
         }
 
-        /* 3) We do not want to reverse next k nodes. So move the current 
+        /* 3) We do not want to reverse next k nodes. So move the current
         pointer to skip next k nodes */
         count = 0;
         while (count < k - 1 && current != null) {
