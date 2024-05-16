@@ -19,7 +19,7 @@ public class ReverseNodes_In_K_Group {
         ListNode prev = dummy;
 
         while (prev != null) {
-            prev = reverseNextK(prev, k); // tail becomes prev here.
+            prev = reverseNextK(prev, k); // tail becomes prev here when reverseNext return tail.
         }
 
         return dummy.next;
