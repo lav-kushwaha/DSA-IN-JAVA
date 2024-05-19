@@ -10,3 +10,17 @@
 ->Use queues for problems requiring First In, First Out (FIFO) access.
 ->Common operations: add/offer, poll/remove, and peek.
 ->Typical use cases: task scheduling, breadth-first search, implementing caches, and handling order-sensitive operations.
+
+
+
+#Stack Patterns:
+
+Use for problems requiring LIFO access.
+Common operations: push, pop, and peek.
+Typical use cases: balanced parentheses, reversing strings, evaluating expressions, next greater element.
+
+#Queue Patterns:
+
+Use for problems requiring FIFO access.
+Common operations: add/offer, poll/remove, and peek.
+Typical use cases: level order traversal, implementing caches, task scheduling, sliding window problems.
