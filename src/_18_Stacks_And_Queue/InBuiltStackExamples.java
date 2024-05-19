@@ -2,7 +2,7 @@ package _18_Stacks_And_Queue;
 
 import java.util.Stack;
 
-public class InBuiltStackAndQueueExamples {
+public class InBuiltStackExamples {
     public static void main(String[] args) {
         //Example 1: stack example
 //        Stack<Integer> stack = new Stack<>();
@@ -21,10 +21,10 @@ public class InBuiltStackAndQueueExamples {
 //        // System.out.println(stack.pop());
 
 
-        //Example 2 : using try and catch
+        //Example 2 : using try and catch for exceptional handling.
         Stack<Integer> stack2 = new Stack<>();
 
-        // Push elements onto the stack
+        // Push elements onto the stack.
         stack2.push(1);
         stack2.push(2);
         stack2.push(3);
