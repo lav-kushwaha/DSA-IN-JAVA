@@ -5,6 +5,8 @@ import java.util.Queue;
 
 public class InBuiltQueueExamples {
     public static void main(String[] args) {
+
+        //Example 1: Queue example.
         Queue<Integer> queue = new LinkedList<>();
 
         // Add elements to the queue
@@ -21,7 +23,7 @@ public class InBuiltQueueExamples {
         System.out.println(queue.poll());  // Output: 3
 
 
-        //it will returns null if this queue is empty.
+        //it will return null if this queue is empty.
         System.out.println(queue.poll());  // Output: null
 
 
