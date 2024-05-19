@@ -24,3 +24,24 @@ Typical use cases: balanced parentheses, reversing strings, evaluating expressio
 Use for problems requiring FIFO access.
 Common operations: add/offer, poll/remove, and peek.
 Typical use cases: level order traversal, implementing caches, task scheduling, sliding window problems.
+
+
+#Questions.
+
+Q : What is a deque in Java?
+=>A linear collection that supports element insertion and removal at both ends.
+=>The name deque is short for "double ended queue" and is usually pronounced "deck".
+
+Q: What is the difference between queue and deque in Java?
+#Key Differences Between Queues and Deques.
+=>As the table summarizes, queues only allow access from one end, enforcing FIFO order.
+=>Deques are more flexible – they provide access at both ends and can maintain both FIFO and LIFO order.
+
+Q : What is the difference between ArrayList and ArrayDeque?
+=>In ArrayList when we add an object in front end. then every object shift towards right.
+But in ArrayDeque we we add an object in front end, memory expands toward left and no object shift towards right.
+
+Q : Why use ArrayDeque?
+=>In terms of efficiency, ArrayDeque is more efficient than the LinkedList for add and remove operation at both ends.
+The best operation in a LinkedList implementation is removing the current element during the iteration.
+=>LinkedList implementations are not ideal structures to iterate.
