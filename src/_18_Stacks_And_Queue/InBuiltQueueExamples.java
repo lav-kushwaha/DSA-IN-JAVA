@@ -18,9 +18,14 @@ public class InBuiltQueueExamples {
         // The front element is still there after peek
         System.out.println(queue.poll());  // Output: 1
         System.out.println(queue.poll());  // Output: 2
-//        System.out.println(queue.poll());  // Output: 3
+        System.out.println(queue.poll());  // Output: 3
 
-        System.out.println(queue.remove());
+
+        //it will returns null if this queue is empty.
+        System.out.println(queue.poll());  // Output: null
+
+
+//        System.out.println(queue.remove()); // it will throw an exception if this queue is empty.
 
         // Peek on an empty queue returns null
 //        System.out.println(queue.peek());  // Output: null
