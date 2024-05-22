@@ -1,6 +1,7 @@
 package _18_Stacks_And_Queue.CustomStacks;
 
 public class CustomStacks {
+
     protected int[] data;
     private static final int DEFAULT_SIZE = 10;
     int top = -1;
@@ -17,11 +18,13 @@ public class CustomStacks {
 
     // Inserting an element into the stack.
     public boolean push(int item) {
+
         // If the array (data) is full, we cannot insert the element.
         if (isFull()) {
             System.out.println("Stack is full!!");
             return false;
         }
+
         // Increase the pointer and add the item.
         top++;
         data[top] = item;
@@ -42,9 +45,8 @@ public class CustomStacks {
        top--;
         */
 
-
         //In simple term :
-        // Return and remove the item.
+        //Return and remove the item.
         return data[top--];
     }
 
@@ -59,16 +61,15 @@ public class CustomStacks {
     }
 
     // Checking if the stack is full.
-    private boolean isFull() {
+    public boolean isFull() {
         return top == data.length - 1; // top is at the last index.
     }
 
     // Checking if the stack is empty.
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return top == -1; // top is at the default -1.
     }
 }
-
 
 /*
  Key Points:
