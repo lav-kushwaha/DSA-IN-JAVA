@@ -43,6 +43,8 @@ public class CustomStacks {
 
        removing element from the last in stack
        top--;
+
+        return remove;
         */
 
         //In simple term :
