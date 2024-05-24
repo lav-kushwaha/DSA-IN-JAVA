@@ -1,5 +1,8 @@
 package Questions;
 
+//https://www.geeksforgeeks.org/problems/sum-of-digit-is-pallindrome-or-not2751/0
+//Sum of Digit is Pallindrome or not
+
 class DigitSumPallindrome {
    static int isDigitSumPalindrome(int N) {
         // code here
@@ -26,7 +29,7 @@ class DigitSumPallindrome {
     }
 
     public static void main(String[] args) {
-        int ans = isDigitSumPalindrome(56);
+        int ans = isDigitSumPalindrome(56); //sum : 5+6 = 11
         System.out.println(ans);
     }
 }
