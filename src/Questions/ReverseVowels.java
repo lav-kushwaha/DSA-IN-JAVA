@@ -1,5 +1,7 @@
 package Questions;
 
+//https://www.geeksforgeeks.org/problems/reversing-the-vowels5304/0
+
 class ReverseVowels
 {
     static String modify(String s)
