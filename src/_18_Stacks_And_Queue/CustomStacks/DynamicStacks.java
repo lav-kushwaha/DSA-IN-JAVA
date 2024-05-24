@@ -2,10 +2,12 @@ package _18_Stacks_And_Queue.CustomStacks;
 
 //This dynamic stacks never get full.
 public class DynamicStacks extends CustomStacks {
+    //constructor
    public DynamicStacks(){
        super(); //it will call parent constructor CustomStack()
    }
 
+   //constructor with parameter
     public DynamicStacks(int size){
         super(size); //it will call parent constructor CustomStack(int size)
     }
@@ -34,9 +36,8 @@ public class DynamicStacks extends CustomStacks {
      }
 }
 
-
 //Note :
 /*
 In dynamic stacks everything will remain the same as CustomStacks the only problems we faced in push.
-so, In dynamic stacks we will double the size of array.
+so, In dynamic stacks we will double the size of the array.
 */
