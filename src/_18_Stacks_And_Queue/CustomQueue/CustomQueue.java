@@ -56,7 +56,7 @@ public class CustomQueue {
         if (isEmpty()) {
             throw new Exception("Queue is empty");
         }
-        return data[0];
+        return data[front];
     }
 
     // Display the elements of the queue
