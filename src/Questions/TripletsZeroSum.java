@@ -1,6 +1,8 @@
 package Questions;
-
 import java.util.Arrays;
+
+//https://www.geeksforgeeks.org/problems/find-triplets-with-zero-sum/0
+//Find triplets with zero sum.
 
 class TripletsZeroSum
 {
