@@ -9,6 +9,7 @@ public class EquilibriumPoint {
         long ans = equilibriumPoint(A,A.length);
         System.out.println(ans);
     }
+    
     public static int equilibriumPoint(int[] a, int n) {
         // Your code here
         long sum = 0;
