@@ -1,4 +1,5 @@
 package Questions;
+
 //Q.Equilibrium Point
 //https://www.geeksforgeeks.org/problems/equilibrium-point-1587115620/1?page=1&category=Arrays,Strings,Sorting,Matrix,Searching,Recursion,Binary%20Search&sortBy=submissions
 
