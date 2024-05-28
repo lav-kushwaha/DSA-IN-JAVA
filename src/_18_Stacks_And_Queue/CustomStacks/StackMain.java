@@ -9,6 +9,8 @@ public class StackMain {
         stack.push(40);
         stack.push(50);
 
+        stack.display(); // Should display the elements in the stack
+
 //        stack.push(30); //This will give msg stack is full!! bcs we can't push value more than size 5.
 
         // Pop elements from the stack.
