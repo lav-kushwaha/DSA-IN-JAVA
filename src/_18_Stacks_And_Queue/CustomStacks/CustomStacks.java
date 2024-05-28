@@ -71,6 +71,14 @@ public class CustomStacks {
     public boolean isEmpty() {
         return top == -1; // top is at the default -1.
     }
+
+    // Display the elements of the queue
+    public void display() {
+        for (int i = 0; i <=top; i++) {
+            System.out.print(data[i] + " <- ");
+        }
+        System.out.println("END");
+    }
 }
 
 /*
