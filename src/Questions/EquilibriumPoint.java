@@ -1,4 +1,5 @@
 package Questions;
+
 //Q.Equilibrium Point
 //https://www.geeksforgeeks.org/problems/equilibrium-point-1587115620/1?page=1&category=Arrays,Strings,Sorting,Matrix,Searching,Recursion,Binary%20Search&sortBy=submissions
 
@@ -8,6 +9,7 @@ public class EquilibriumPoint {
         long ans = equilibriumPoint(A,A.length);
         System.out.println(ans);
     }
+    
     public static int equilibriumPoint(int[] a, int n) {
         // Your code here
         long sum = 0;

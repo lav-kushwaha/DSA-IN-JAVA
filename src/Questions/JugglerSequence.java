@@ -12,7 +12,8 @@ public class JugglerSequence {
         arr.add(n);
         return recursiveHelper(n, arr);
     }
-
+    
+    //recursion helper function.
     private static List<Long> recursiveHelper(long n, List<Long> arr) {
         if (n <= 1) {
             return arr;
