@@ -1,6 +1,5 @@
 package _18_Stacks_And_Queue.CircularQueue;
 
-
 public class CircularQueue {
     private int[] data;
     private static final int DEFAULT_SIZE = 10;
@@ -76,17 +75,33 @@ public class CircularQueue {
 
     // Display the elements of the queue
     public void display() {
+
+        //1st way of printing circular queue.
+//        if (isEmpty()) {
+//            System.out.println("Queue is empty");
+//            return;
+//        }
+//        int i = front;
+//        int count = size;
+//        while (count > 0) {
+//            System.out.print(data[i] + " <- ");
+//            i = (i) % data.length;// Move to the next position in circular manner
+//            count--;
+//        }
+//        System.out.println("END");
+
+
+        //2nd way of printing circular queue.
         if (isEmpty()) {
             System.out.println("Queue is empty");
             return;
         }
         int i = front;
-        int count = size;
-        while (count > 0) {
+        do{
             System.out.print(data[i] + " <- ");
-            i = (i + 1) % data.length;// Move to the next position in circular manner
-            count--;
-        }
+            i++;
+            i = i % data.length;
+        }while (i!=end);
         System.out.println("END");
     }
 
