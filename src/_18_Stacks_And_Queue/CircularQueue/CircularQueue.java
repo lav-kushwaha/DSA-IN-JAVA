@@ -1,6 +1,7 @@
 package _18_Stacks_And_Queue.CircularQueue;
 
 public class CircularQueue {
+
     private int[] data;
     private static final int DEFAULT_SIZE = 10;
     private int front = 0;
@@ -28,7 +29,7 @@ public class CircularQueue {
     }
 
     // Insert an item to the queue
-    public boolean insert(int item) {
+    public boolean Enqueue(int item) {
         if (isFull()) {
             System.out.println("Queue is full");
             return false;
@@ -47,7 +48,7 @@ public class CircularQueue {
     }
 
     // Remove an item from the queue
-    public int remove() throws Exception {
+    public int Dequeue() throws Exception {
         if (isEmpty()) {
             throw new Exception("Queue is empty");
         }
@@ -55,7 +56,7 @@ public class CircularQueue {
         //Remove the item at the front position and then increment front
         int removed = data[front++];
 
-        // Forming the circular loop: if end reaches the length of the data array, reset it to 0
+        // Forming the circular loop: if front reaches the length of the data array, reset it to 0
         front = front % data.length;
 
         //Here, we have decreases size of the queue bcz if you don't decrease size and when size is equal to data.length it will throw queue is full.
@@ -108,18 +109,27 @@ public class CircularQueue {
     public static void main(String[] args) throws Exception {
         CircularQueue queue = new CircularQueue(5); // Instantiate the CircularQueue with size 5
 
-        queue.insert(10);
-        queue.insert(20);
-        queue.insert(30);
-        queue.insert(40);
-        queue.insert(50);
+        queue.Enqueue(10);
+        queue.Enqueue(20);
+        queue.Enqueue(30);
+        queue.Enqueue(40);
+        queue.Enqueue(50);
 
         queue.display(); // Should display the elements in the queue
 
-        System.out.println(queue.remove() + " removed from queue");
+        System.out.println(queue.Dequeue() + " removed from queue");
         queue.display(); // Should display the remaining elements
 
         System.out.println("Front item is " + queue.front());
         queue.display();
     }
 }
+
+
+/*
+Q:What is dequeue and enqueue?
+Enqueue: Adds an item from the back of the queue.
+Dequeue: Removes an item from the front of the queue.
+Front/Peek: Returns the value of the item in front of the queue without dequeuing (removing) the item.
+IsEmpty: Checks if the queue is empty. IsFull: Checks if the queue is full.
+ */
