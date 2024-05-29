@@ -1,5 +1,8 @@
 package Questions;
 
+//https://www.geeksforgeeks.org/problems/check-if-an-array-is-sorted0701/0
+//Check if array is sorted
+
 class Checkarrayissorted {
     static boolean arraySortedOrNot(int[] arr, int n) {
          // code here
