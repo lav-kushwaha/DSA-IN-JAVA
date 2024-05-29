@@ -1,10 +1,11 @@
 package _18_Stacks_And_Queue.CustomQueue;
 
 public class CustomQueue {
-    private int[] data;
+
+    protected int[] data;
     private static final int DEFAULT_SIZE = 10;
-    private int front = 0;
-    private int end = 0;
+    protected int front = 0;
+    protected int end = 0;
 
     // Default constructor
     public CustomQueue() {
@@ -27,7 +28,7 @@ public class CustomQueue {
     }
 
     // Insert an item to the queue
-    public boolean insert(int item) {
+    public boolean Enqueue(int item) {
         if (isFull()) {
             System.out.println("Queue is full");
             return false;
@@ -37,7 +38,7 @@ public class CustomQueue {
     }
 
     // Remove an item from the queue
-    public int remove() throws Exception {
+    public int Dequeue() throws Exception {
         if (isEmpty()) {
             throw new Exception("Queue is empty");
         }
@@ -69,10 +70,16 @@ public class CustomQueue {
 }
 
 /*
-
 #Notes.
 The current implementation uses an array and shifts elements to the left on each removal, which has a time complexity of𝑂(𝑛)
 For more efficient operations, consider implementing a circular queue.
 If you need to track both the front and rear indices, the implementation can be extended to handle circular array logic, avoiding the need to shift elements on every dequeue operation.
-
 */
+
+/*
+Q:What is dequeue and enqueue?
+Enqueue: Adds an item from the back of the queue.
+Dequeue: Removes an item from the front of the queue.
+Front/Peek: Returns the value of the item in front of the queue without dequeuing (removing) the item.
+IsEmpty: Checks if the queue is empty. IsFull: Checks if the queue is full.
+* */
