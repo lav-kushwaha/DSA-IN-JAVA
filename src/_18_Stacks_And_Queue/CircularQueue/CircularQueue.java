@@ -1,5 +1,6 @@
 package _18_Stacks_And_Queue.CircularQueue;
 
+//Implemented CircularQueue using array.
 public class CircularQueue {
 
     private int[] data;
