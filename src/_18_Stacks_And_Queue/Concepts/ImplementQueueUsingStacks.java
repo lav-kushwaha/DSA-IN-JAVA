@@ -52,3 +52,18 @@ class ImplementQueueUsingStacks {
         System.out.println(queue.empty()); // returns false
     }
 }
+
+/*
+#Amortised meaning.
+Amortised means that only one time, when we move stack1 to stack2, it will take O(n) time complexity;
+after that, it will take O(1) for push and pop.
+*/
+
+/*
+#Amortised Analysis
+In the worst-case scenario, during the first dequeue operation, we moved 2 elements from stack1 to stack2, costing O(n) time (where n is the number of elements moved).
+However, each element is only moved once from stack1 to stack2 in its lifetime.
+Therefore, over a sequence of n enqueue and dequeue operations, the total cost of moving elements is O(n).
+Each enqueue operation is O(1).
+Each dequeue operation, except for the transfers, is O(1).
+ */
