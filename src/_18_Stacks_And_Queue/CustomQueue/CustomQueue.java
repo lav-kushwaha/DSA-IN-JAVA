@@ -1,5 +1,6 @@
 package _18_Stacks_And_Queue.CustomQueue;
 
+//Implemented Custom CustomQueue Using array.
 public class CustomQueue {
 
     protected int[] data;
