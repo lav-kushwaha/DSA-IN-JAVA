@@ -1,5 +1,6 @@
 package _18_Stacks_And_Queue.CustomStacks;
 
+//Implemented Custom Stacks Using array.
 public class CustomStacks {
 
     protected int[] data;
