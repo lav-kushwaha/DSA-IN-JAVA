@@ -18,7 +18,7 @@ class AddDigits {
         // Loop through each digit of the number
         while (num != 0) {
             sum += num % 10; // Add the last digit to the sum
-            num /= 10;       // Remove the last digit from the number
+            num /= 10; // Remove the last digit from the number
         }
         return sum;
     }
