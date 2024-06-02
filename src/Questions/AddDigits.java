@@ -3,6 +3,7 @@ package Questions;
 //https://leetcode.com/problems/add-digits/
 //258. Add Digits
 
+
 class AddDigits {
 
     public static int addDigits(int num) {
