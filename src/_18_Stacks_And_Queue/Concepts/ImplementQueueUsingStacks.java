@@ -54,7 +54,7 @@ class ImplementQueueUsingStacks {
 }
 
 //Note : we have to convert stack that gives the output like queues, and we will use all stacks method.
-//FIFO(Queue) -> LIFO(Stack)
+//LIFO(Stack)->FIFO(Queue)
 
 /*
 #Amortised meaning.
