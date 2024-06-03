@@ -64,6 +64,17 @@ public class InBuiltQueueExamples {
     }
 }
 
+/*
+Queue Methods in Java
+add(E e): Inserts an element, throws if capacity is exceeded.
+offer(E e): Inserts an element, returns false if capacity is exceeded.
+remove(): Retrieves and removes the head element, throws if the queue is empty.
+poll(): Retrieves and removes the head element, returns null if the queue is empty.
+element(): Retrieves but does not remove the head element, throws if the queue is empty.
+peek(): Retrieves but does not remove the head element, returns null if the queue is empty.
+queue.size() returns the number of elements in the queue.
+ */
+
 
 //Note : In example 2
 /*
