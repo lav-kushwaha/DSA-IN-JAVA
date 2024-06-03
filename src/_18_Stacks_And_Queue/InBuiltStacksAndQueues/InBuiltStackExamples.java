@@ -42,3 +42,13 @@ public class InBuiltStackExamples {
 //        }
     }
 }
+
+/*
+Stack Methods in Java
+empty(): Checks if the stack is empty.
+peek(): Looks at the top element without removing it.
+pop(): Removes and returns the top element.
+push(E item): Adds an item to the top of the stack.
+search(Object o): Finds the position of an element in the stack (1-based index).
+stack.size() returns the number of elements in the stack.
+ */
