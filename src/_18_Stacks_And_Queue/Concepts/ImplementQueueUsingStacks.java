@@ -53,6 +53,9 @@ class ImplementQueueUsingStacks {
     }
 }
 
+//Note : we have to convert stack that gives the output like queues, and we will use all stacks method.
+//FIFO(Queue) -> LIFO(Stack)
+
 /*
 #Amortised meaning.
 Amortised means that only one time, when we move stack1 to stack2, it will take O(n) time complexity;
