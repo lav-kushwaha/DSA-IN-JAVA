@@ -11,7 +11,20 @@
 ->Common operations: add/offer, poll/remove, and peek.
 ->Typical use cases: task scheduling, breadth-first search, implementing caches, and handling order-sensitive operations.
 
+#Stack Methods in Java
+empty(): Checks if the stack is empty.
+peek(): Looks at the top element without removing it.
+pop(): Removes and returns the top element.
+push(E item): Adds an item to the top of the stack.
+search(Object o): Finds the position of an element in the stack (1-based index).
 
+#Queue Methods in Java
+add(E e): Inserts an element, throws if capacity is exceeded.
+offer(E e): Inserts an element, returns false if capacity is exceeded.
+remove(): Retrieves and removes the head element, throws if the queue is empty.
+poll(): Retrieves and removes the head element, returns null if the queue is empty.
+element(): Retrieves but does not remove the head element, throws if the queue is empty.
+peek(): Retrieves but does not remove the head element, returns null if the queue is empty.
 
 #Stack Patterns:
 
@@ -45,3 +58,4 @@ Q : Why use ArrayDeque?
 =>In terms of efficiency, ArrayDeque is more efficient than the LinkedList for add and remove operation at both ends.
 The best operation in a LinkedList implementation is removing the current element during the iteration.
 =>LinkedList implementations are not ideal structures to iterate.
+
