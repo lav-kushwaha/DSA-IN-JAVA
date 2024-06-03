@@ -7,12 +7,12 @@ import java.util.Queue;
 //225. Implement Stack using Queues
 
 // Define a class named ImplementStacksUsingQueues to implement a stack using two queues
-class ImplementStacksUsingQueues {
+class ImplementStacksUsingTwoQueues {
     Queue<Integer> que1; // First queue
     Queue<Integer> que2; // Second queue
 
     // Constructor to initialize the queues as linked lists
-    public ImplementStacksUsingQueues() {
+    public ImplementStacksUsingTwoQueues() {
         que1 = new LinkedList<>(); // Initialize que1 as an empty linked list
         que2 = new LinkedList<>(); // Initialize que2 as an empty linked list
     }
@@ -49,7 +49,7 @@ class ImplementStacksUsingQueues {
 
 
     public static void main(String[] args) {
-        ImplementStacksUsingQueues obj = new ImplementStacksUsingQueues();
+        ImplementStacksUsingTwoQueues obj = new ImplementStacksUsingTwoQueues();
         obj.push(1);
         obj.push(2);
         System.out.println(obj.pop()); // Output: 2
