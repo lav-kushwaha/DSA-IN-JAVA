@@ -70,4 +70,4 @@ public class ImplementStackUsingOneQueue {
 }
 
 //Note : we have to convert queue that gives the output like stack, and we will used all queue method.
-//LIFO(Stack)->FIFO(Queue)
+//FIFO(Queue) -> LIFO(Stack)
