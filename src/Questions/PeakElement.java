@@ -11,7 +11,7 @@ class PeakElement {
 
         while (start < end) {
 
-            int mid = start + (end - start) / 2;
+            int mid = start + (end - start) / 2; //To find mid
 
             // Compare middle element with its end neighbor
             if (arr[mid] < arr[mid + 1]) {
@@ -42,7 +42,6 @@ class PeakElement {
         System.out.println("Peak index for arr3: " + peakIndex3 + " (Expected: any of 1, 5)");
     }
 }
-
 
 /*
 A peak element in an array is an element that is greater than or equal to its adjacent elements;
