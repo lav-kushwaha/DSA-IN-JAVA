@@ -1,4 +1,4 @@
-package _18_Stacks_And_Queue.CustomStacks;
+package _18_Stacks_And_Queues.CustomStacks;
 
 //This dynamic stacks never get full.
 public class DynamicStacks extends CustomStacks {

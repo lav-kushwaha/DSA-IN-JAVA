@@ -1,4 +1,4 @@
-package _18_Stacks_And_Queue.CustomStacks;
+package _18_Stacks_And_Queues.CustomStacks;
 
 public class StackMain {
     public static void main(String[] args) throws StackException {

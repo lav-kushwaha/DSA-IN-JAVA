@@ -1,4 +1,4 @@
-package _18_Stacks_And_Queue.InBuiltStacksAndQueues;
+package _18_Stacks_And_Queues.InBuiltStacksAndQueues;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,4 +1,4 @@
-package _18_Stacks_And_Queue.CircularQueue;
+package _18_Stacks_And_Queues.CircularQueue;
 
 //Implemented CircularQueue using array.
 public class CircularQueue {

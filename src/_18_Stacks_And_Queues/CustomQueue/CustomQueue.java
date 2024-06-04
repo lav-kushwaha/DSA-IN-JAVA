@@ -1,4 +1,4 @@
-package _18_Stacks_And_Queue.CustomQueue;
+package _18_Stacks_And_Queues.CustomQueue;
 
 //Implemented Custom CustomQueue Using array.
 public class CustomQueue {

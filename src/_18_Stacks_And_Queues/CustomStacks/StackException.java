@@ -1,4 +1,4 @@
-package _18_Stacks_And_Queue.CustomStacks;
+package _18_Stacks_And_Queues.CustomStacks;
 
 //creating seprated class for Exception
 public class StackException extends Exception { //class StackException that extends the built-in Exception class.

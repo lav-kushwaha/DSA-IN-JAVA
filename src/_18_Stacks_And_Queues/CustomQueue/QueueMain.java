@@ -1,4 +1,4 @@
-package _18_Stacks_And_Queue.CustomQueue;
+package _18_Stacks_And_Queues.CustomQueue;
 
 public class QueueMain {
     public static void main(String[] args) throws Exception {
