@@ -15,7 +15,7 @@ public class swapped {
 
 }
 
-//Note:
+//Note: Java passes arguments by value, not by reference.
 //class Swapped {
 //
 //    public static void main(String[] args) {
