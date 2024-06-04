@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 class RotateImage {
     private static void transpose(int[][] matrix) {
+        //transpose
         for(int i=0; i<matrix.length; i++) {
             for(int j=i; j<matrix[0].length; j++) {
                 int temp = matrix[i][j];
@@ -14,8 +15,9 @@ class RotateImage {
             }
         }
     }
-    private static void reverseRows(int[][] matrix) {
 
+    private static void reverseRows(int[][] matrix) {
+        //reverse rows
         for(int row=0; row<matrix.length; row++) {
             int left = 0;
             int right = matrix.length-1;
