@@ -22,6 +22,7 @@ class AddDigits {
         }
         return sum;
     }
+    
     public static void main(String[] args) {
         // Test the addDigits method with an example input
         System.out.println(addDigits(38));
