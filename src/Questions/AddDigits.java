@@ -6,7 +6,7 @@ package Questions;
 class AddDigits {
 
     public static int addDigits(int num) {
-        // Repeat until the number becomes a single digit
+        // Repeat until the number becomes a single digit.
         while (num >= 10) {
             num = digitsSum(num);
         }
