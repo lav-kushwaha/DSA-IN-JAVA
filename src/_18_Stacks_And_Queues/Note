@@ -5,7 +5,6 @@
 ->Common operations: push, pop, and peek.
 ->Typical use cases: parsing expressions, backtracking, managing function calls, and handling undo operations.
 
-
 #When to Use Queues:
 ->Use queues for problems requiring First In, First Out (FIFO) access.
 ->Common operations: add/offer, poll/remove, and peek.
