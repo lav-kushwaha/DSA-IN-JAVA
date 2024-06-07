@@ -1,4 +1,4 @@
-//When to used stack and queues.
+//When to used stack and queues?.
 
 #When to Use Stacks:
 ->Use stacks for problems requiring Last In, First Out (LIFO) access.
