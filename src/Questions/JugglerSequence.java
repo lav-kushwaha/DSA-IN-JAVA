@@ -25,7 +25,7 @@ public class JugglerSequence {
             n = (long) Math.pow(n, (float) 3 / 2);
             arr.add(n);
         }
-        return recursiveHelper(n, arr);
+        return recursiveHelper(n, arr); //recursive call
     }
 
     public static void main(String[] args) {
