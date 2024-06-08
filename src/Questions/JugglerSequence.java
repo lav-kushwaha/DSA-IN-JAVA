@@ -10,7 +10,7 @@ public class JugglerSequence {
     public static List<Long> recursiveFunction(long n) {
         List<Long> arr = new ArrayList<>();
         arr.add(n);
-        return recursiveHelper(n, arr);
+        return recursiveHelper(n, arr);//recursive call
     }
     
     //recursion helper function.
