@@ -18,6 +18,7 @@ public class JugglerSequence {
         if (n <= 1) {
             return arr;
         }
+        
         if (n % 2 == 0) {
             n = (long) Math.pow(n, (float) 1 / 2);
             arr.add(n);
