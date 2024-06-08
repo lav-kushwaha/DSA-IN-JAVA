@@ -6,7 +6,7 @@ package Questions;
 class AddDigits {
 
     public static int addDigits(int num) {
-        // Repeat until the number becomes a single digit
+        // Repeat until the number becomes a single digit.
         while (num >= 10) {
             num = digitsSum(num);
         }
@@ -22,7 +22,7 @@ class AddDigits {
         }
         return sum;
     }
-
+    
     public static void main(String[] args) {
         // Test the addDigits method with an example input
         System.out.println(addDigits(38));

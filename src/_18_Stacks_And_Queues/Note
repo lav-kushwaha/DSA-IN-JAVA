@@ -1,10 +1,9 @@
-//When to used stack and queues.
+//When to used stack and queues?.
 
 #When to Use Stacks:
 ->Use stacks for problems requiring Last In, First Out (LIFO) access.
 ->Common operations: push, pop, and peek.
 ->Typical use cases: parsing expressions, backtracking, managing function calls, and handling undo operations.
-
 
 #When to Use Queues:
 ->Use queues for problems requiring First In, First Out (FIFO) access.

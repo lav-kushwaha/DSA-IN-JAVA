@@ -61,6 +61,7 @@ public class GameofTwoStacks {
 }
 
 /*
+Note :
 The program handles multiple test cases to determine the maximum number of elements that can be taken from two stacks without exceeding a specified sum.
 It uses a recursive approach to explore all possible combinations of taking elements from the two stacks.
 The result is adjusted to account for the initial call setup before being printed for each test case.
