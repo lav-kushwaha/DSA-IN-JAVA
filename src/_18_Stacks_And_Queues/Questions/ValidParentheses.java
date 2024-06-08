@@ -33,7 +33,7 @@ public class ValidParentheses {
                     }
                 } else if (ch == ']') {
                     // Check if the stack is empty or if the top element is not '[', return false
-                    if (stack.isEmpty() || stack.pop() != '[') {
+                    if (stack.isEmpty() || stack.pop() != '[') { //agar stack.pop() equal hai brackets ke toh pop() kar-do. nhi toh return false kar-do.
                         return false;
                     }
                 }
@@ -46,9 +46,8 @@ public class ValidParentheses {
     }
 }
 
-
 /*
 Note :
 Only "({[" these brackets are PUSH into the stack "]})" these brackets are used to check the matching brackets.
-if all brackets are match to each other empty the stack and return true. otherwise, if it's not match return false.
+if all opening and closing brackets are match to each other empty the stack by doing pop() and return true. otherwise, if it's not match return false.
  */
