@@ -38,3 +38,7 @@ public class InsertionsBalanceParenthesesString {
         }
     }
 
+/*
+NOTE : The line count += 2 * stack.size(); is written to account for any
+unmatched opening parentheses '(' that remain in the stack after processing the entire input string s.
+ */
