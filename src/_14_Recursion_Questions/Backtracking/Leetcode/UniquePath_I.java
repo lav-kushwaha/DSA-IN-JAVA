@@ -43,7 +43,7 @@ public class UniquePath_I {
         }
     }
 
-    //path retun in arraylist.
+    //path return in arraylist.
     public static ArrayList<String> pathRet (String p,int row, int col){
         //when any of row and col becomes 1 just return 1.
         if(row == 1 && col==1){
@@ -63,7 +63,7 @@ public class UniquePath_I {
         return ans;
     }
 
-    //Diagonal-path retun in arraylist.
+    //Diagonal-path return in arraylist.
     public static ArrayList<String> pathRetDiagonal (String p,int row, int col){
         //when any of row and col becomes 1 just return 1.
         if(row == 1 && col==1){
