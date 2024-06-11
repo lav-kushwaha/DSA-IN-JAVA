@@ -27,5 +27,6 @@ public class MakeParenthesesValid {
 }
 
 /*
-NOTE : Just pop() the valid "()" parenthesis from the stack and return the size of remaining parenthesis.
+NOTE :
+=> Just pop() the valid "()" parenthesis from the stack and return the size of remaining parenthesis.
  */
