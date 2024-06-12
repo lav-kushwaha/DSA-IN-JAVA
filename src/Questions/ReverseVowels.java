@@ -25,8 +25,7 @@ class ReverseVowels
                 j--;
             }
         }
-
-        return new String(chars);
+        return new String(chars); //return Sting 
     }
 
     public static void main(String[] args) {
