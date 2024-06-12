@@ -1,6 +1,7 @@
 package Questions;
 
 //https://www.geeksforgeeks.org/problems/reversing-the-vowels5304/0
+//Reversing the vowels
 
 class ReverseVowels
 {
@@ -25,8 +26,7 @@ class ReverseVowels
                 j--;
             }
         }
-
-        return new String(chars);
+        return new String(chars); //return Sting 
     }
 
     public static void main(String[] args) {
