@@ -2,7 +2,7 @@ package _19_Binary_Trees;
 
 import java.util.Scanner;
 
-public class BinaryTrees {
+public class BinaryTree {
 
     // Node class representing each node in the binary tree
     private static class Node {
@@ -20,7 +20,7 @@ public class BinaryTrees {
     private Node root; // Root node of the binary tree
 
     // Constructor to initialize an empty binary tree
-    public BinaryTrees() {
+    public BinaryTree() {
         this.root = null;
     }
 
@@ -101,7 +101,7 @@ public class BinaryTrees {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        BinaryTrees tree = new BinaryTrees();
+        BinaryTree tree = new BinaryTree();
         tree.populate(scanner); // Populate the binary tree from user input
         tree.display(); // Display the binary tree
         tree.prettyDisplay();// Display the binary tree with nodes and pointers
