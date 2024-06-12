@@ -115,3 +115,9 @@ Start at the head of the list.
 Follow the next references to move from one node to the next.
 Continue until the end of the list (where the next reference is null).
 
+
+● Key Points
+Flexibility: Linked lists allow for efficient insertions and deletions, especially at the beginning or end of the list.
+Memory Usage: Linked lists use more memory than arrays because of the storage required for the next (and possibly previous) references.
+Traversal Time: Access time for elements is linear (O(n)) since elements are accessed sequentially.
+
