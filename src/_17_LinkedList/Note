@@ -44,3 +44,74 @@ NOTE : head == null, means no element and head.next == null means there is one e
    - Reverse the linked list or a portion of it to simplify operations.
    - Example: Reversing a linked list, reversing nodes in k-group.
 
+
+====================================================Linked_List_Notes==========================================================
+
+A linked list is a linear data structure in which elements are stored in nodes, and each node points to the next node in the sequence.
+Internally, a linked list is implemented using nodes where each node contains two parts: the data and a reference (or pointer) to the next node in the sequence.
+
+Here's a breakdown of how a linked list works internally:
+
+#Structure of a Node
+In a singly linked list, each node contains:
+
+1.Data: The actual value stored in the node.
+2.Next: A reference to the next node in the list.
+
+In a doubly linked list, each node contains:
+
+1.Data: The actual value stored in the node.
+2.Next: A reference to the next node in the list.
+3.Previous: A reference to the previous node in the list.
+
+#Types of Linked Lists
+
+1.Singly Linked List: Each node points to the next node in the sequence.
+2.Doubly Linked List: Each node points to both the next and the previous node, allowing traversal in both directions.
+3.Circular Linked List: The last node points back to the first node, forming a circle.
+
+# Basic Operations
+
+1. Insertion
+
+● At the Beginning:
+
+Create a new node.
+Set the new node's next reference to the current head of the list.
+Update the head of the list to be the new node.
+
+● At the End:
+
+Create a new node.
+Traverse the list to find the last node.
+Set the last node's next reference to the new node.
+
+
+● At a Given Position:
+
+Traverse the list to the node just before the desired position.
+Create a new node.
+Set the new node's next reference to the next node of the current node.
+Update the current node's next reference to the new node.
+
+2. Deletion
+
+● From the Beginning:
+
+Update the head of the list to be the next node of the current head.
+
+● From the End:
+
+Traverse the list to find the second-to-last node.
+Set the second-to-last node's next reference to null.
+
+● From a Given Position:
+
+Traverse the list to the node just before the desired position.
+Update the next reference of the current node to skip over the node to be deleted.
+
+3. Traversal
+Start at the head of the list.
+Follow the next references to move from one node to the next.
+Continue until the end of the list (where the next reference is null).
+
