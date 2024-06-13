@@ -3,6 +3,7 @@ package Questions;
 //Binary Array Sorting.
 
 import java.util.Arrays;
+
 public class BinaryArraySorting {
     public static void main(String[] args) {
         int [] arr = {1,0,1,1,0};
