@@ -97,20 +97,20 @@ public class BinarySearchTree {
 
     //Method to display tree.
     public void display(){
-        display(root, "Root Node");
+        display(root, "Root Node : ");
     }
 
     //helper method to display tree.
-    private void display(Node node, String details){
-        if(node == null){
+    private void display(Node root, String details){
+        if(root == null){
             return;
         }
 
-        System.out.println(details + node.getValue());
+        System.out.println(details + root.getValue());
 
-        display(node.left,"Left child of " + node.getValue() + " : ");
+        display(root.left,"Left child of " + root.getValue() + " : ");
 
-        display(node.right,"Right child of " + node.getValue() + " : ");
+        display(root.right,"Right child of " + root.getValue() + " : ");
 
     }
 
