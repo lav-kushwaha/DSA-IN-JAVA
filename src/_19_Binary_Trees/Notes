@@ -1,0 +1,91 @@
+#How Heights of tree is working :
+
+public class Node {
+        private int value;  // Value stored in the node
+        private int height; // Height of the node
+        private Node left;  // Left child
+        private Node right; // Right child
+
+        // Constructor to initialize the node with a value
+        public Node(int value) {
+            this.value = value;
+        }
+
+        // Getter for the node's value
+        public int getValue() {
+            return value;
+        }
+    }
+
+===============================================================+++++++++++++++++++++++++++++++++++++++++++==============================
+
+#Height Method :
+  public int height(Node node) {
+        // If the node is null, its height is considered -1
+        if (node == null) {
+            return -1;
+        }
+        // Return the height of the node
+        return node.height;  //Here, null to 0 comes after inserting node root node 15
+    }
+
+#code for calculating height(Insert Method) :
+=> node.height = Math.max(height(node.left), height(node.right)) + 1; // +1 to account for the new node
+
+NOTE : initially, height is null
+For Node 15 height calculating :
+height(null) = max(height(null), height(null)) + 1
+             = max(-1, -1) + 1
+             = -1 + 1
+height(null) = 0 height for root node 15
+
+
+for Node 15 and left side node 10 height calculating :
+height(15) = max(height(10), height(null)) + 1
+           = max(0, -1) + 1
+           = 0 + 1
+           = 1
+
+Final Heights
+
+Node 15: Height is 1.
+Node 10: Height is 0.
+
+Conclusion
+After inserting 10 into the tree with root node 15, the updated tree structure and heights are as follows:
+
+      15 (Height: 1)
+     /
+    10 (Height: 0)
+
+The height of the root node 15 is now 1, and the height of the node 10 is 0.
+This correctly follows the definition where the height of a leaf node is 0 and the height of an internal node is one more than the maximum height of its children.
+
+======================================================++++++++++++++++++++++++=============================================================
+#Simple method to calculate height.
+
+   // Method to calculate the height of the BST
+    int height() {
+        return heightRec(root);
+    }
+
+    // Recursive method to calculate the height of the BST
+    int heightRec(Node root) {
+        if (root == null) {
+            return 0;
+        } else {
+            // Compute the height of each subtree
+            int leftHeight = heightRec(root.left);
+            int rightHeight = heightRec(root.right);
+
+            // Use the larger one
+            return Math.max(leftHeight, rightHeight) + 1;
+        }
+    }
+
+
+#Balanced Tree Definition:
+
+A binary tree is balanced if, for every node in the tree, the height difference between the left subtree and the right subtree is at most one.
+A binary tree is balanced if the height difference between the left and right subtrees of every node is at most one.
+This ensures efficient operations and maintains the tree's overall structure. The provided code checks for balance by comparing subtree heights and ensuring the difference is within the acceptable range.
