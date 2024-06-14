@@ -49,30 +49,30 @@ public class BinarySearchTree {
         root = insert(value, root); // Insert starting from the root
     }
 
-    private Node insert(int value, Node node){// (Here, Node node) initially it is root and the int value which is we are inserting.
+    private Node insert(int value, Node root){// (Here, Node node) initially it is root and the int value which is we are inserting.
 
         //if node is equal to null then it will create node and return node from the function where it called.
-        if(node == null){
-            node = new Node(value);
-            return node;//now, this return will be return the node from where the function is called. i.e : 8
+        if(root == null){
+            root = new Node(value);
+            return root;//now, this return will be return the node from where the function is called. i.e : 8
         }
 
         //for left node.(Here, node.value) initially, it is root value and the value which is we are inserting.
-        if(value < node.value){
+        if(value < root.value){
             //node.left is also initially null, null pass hoga tab he jaake upar, if condition true hoga aur node create hoga aur return hoga node, ye insert method ke pas, then it will insert node in node.left.
-            node.left = insert(value, node.left); //i.e, now, here node.left will be null to 8.
+            root.left = insert(value, root.left); //i.e, now, here node.left will be null to 8.
         }
 
         //for right node.
-        if(value > node.value){
-            node.right = insert(value, node.right);
+        if(value > root.value){
+            root.right = insert(value, root.right);
         }
 
         // Update the height of the current node
-        node.height = Math.max(height(node.left), height(node.right)) + 1; // +1 to account for the new node
+        root.height = Math.max(height(root.left), height(root.right)) + 1; // +1 to account for the new node
 
-        // Return the current node after insertion
-        return node;// return node from where function is called.
+        // Return the current node after insertion. (Return the (unchanged) node pointer)
+        return root;// return node from where function is called.
     }
 
     public boolean balanced(){
@@ -86,12 +86,8 @@ public class BinarySearchTree {
             return true;
         }
 
-        // Calculate the height difference between left and right subtrees
-        int leftHeight = height(node.left);
-        int rightHeight = height(node.right);
-
         // If the height difference is more than 1, the tree is not balanced
-        if (Math.abs(leftHeight - rightHeight) > 1) {//height should be less than or equal to 1.
+        if (Math.abs(height(node.left) - height(node.right)) > 1) {//height should be less than or equal to 1.
             return false;
         }
 
@@ -116,7 +112,27 @@ public class BinarySearchTree {
 
         display(node.right,"Right child of " + node.getValue() + " : ");
 
-
     }
 
+    // Driver program to test the above functions
+    public static void main(String[] args) {
+        BinarySearchTree tree = new BinarySearchTree();
+
+        // Insert nodes
+        tree.insert(50);
+        tree.insert(30);
+        tree.insert(20);
+        tree.insert(40);
+        tree.insert(70);
+        tree.insert(60);
+        tree.insert(80);
+
+        // Display the tree
+        System.out.println("Display the tree:");
+        tree.display();
+
+        // Check if the tree is balanced
+        System.out.println("\nIs the tree balanced? " + tree.balanced());
+    }
 }
+
