@@ -78,7 +78,7 @@ public class BinaryTree {
     }
 
     public void prettyDisplay(){
-        prettyDisplay(root," ",true);
+        prettyDisplay(root,"",true);
     }
 
     private void prettyDisplay(Node node, String indent, boolean last){
@@ -99,11 +99,33 @@ public class BinaryTree {
         }
     }
 
+    //preOrder Traversals (N->L->R)
+    public void preOrder(){
+        preOrder(root);
+    }
+
+    private void preOrder(Node node){
+        if(node == null){
+            return;
+        }
+
+        System.out.print(node.value + " ");
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         BinaryTree tree = new BinaryTree();
         tree.populate(scanner); // Populate the binary tree from user input
+        System.out.println("\nBinary Tree:");
         tree.display(); // Display the binary tree
-        tree.prettyDisplay();// Display the binary tree with nodes and pointers
+
+        System.out.println("\nPretty Display of Binary Tree:");
+        tree.prettyDisplay(); // Display the binary tree with nodes and pointers
+
+        System.out.println("\nPre-order Traversal:");
+        tree.preOrder(); // Pre-order traversal
+        System.out.println();
     }
 }
