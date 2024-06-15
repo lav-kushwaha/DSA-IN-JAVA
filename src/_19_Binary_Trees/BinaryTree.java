@@ -129,6 +129,21 @@ public class BinaryTree {
         inOrder(node.right);
     }
 
+    //postOrder Traversals (L->R->N)
+    public void postOrder(){
+        postOrder(root);
+    }
+
+    private void postOrder(Node node){
+        if(node == null){
+            return;
+        }
+
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.print(node.value + " ");
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         BinaryTree tree = new BinaryTree();
@@ -147,5 +162,8 @@ public class BinaryTree {
         tree.inOrder(); // In-order traversal
         System.out.println();
 
+        System.out.println("\nPost-order Traversal:");
+        tree.postOrder(); // Post-order traversal
+        System.out.println();
     }
 }
