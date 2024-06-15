@@ -121,6 +121,7 @@ public class BinarySearchTree {
     }
 
     //helper method to display tree.
+    // Method to perform preorder traversal and print the values.
     private void display(Node root, String details){
         if(root == null){
             return;
