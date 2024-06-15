@@ -75,6 +75,26 @@ public class BinarySearchTree {
         return root;// return node from where function is called.
     }
 
+    // Method to populate the BST with a sorted array
+    public void populateSorted(int[] nums){
+        populateSorted(nums, 0, nums.length-1);
+    }
+
+    private void populateSorted(int[] nums, int start, int end){
+        if(start > end){
+            return;
+        }
+
+        int mid = (start + end) / 2;
+
+        // Insert the middle element
+        this.insert(nums[mid]);
+
+        // Recursively populate the left and right subtrees
+        populateSorted(nums, start, mid-1);
+        populateSorted(nums, mid + 1, end);
+    }
+
     public boolean balanced(){
         return balanced(root);
     }
@@ -119,20 +139,29 @@ public class BinarySearchTree {
         BinarySearchTree tree = new BinarySearchTree();
 
         // Insert nodes
-        tree.insert(50);
-        tree.insert(30);
-        tree.insert(20);
-        tree.insert(40);
-        tree.insert(70);
-        tree.insert(60);
-        tree.insert(80);
+//        tree.insert(50);
+//        tree.insert(30);
+//        tree.insert(20);
+//        tree.insert(40);
+//        tree.insert(70);
+//        tree.insert(60);
+//        tree.insert(80);
 
-        // Display the tree
-        System.out.println("Display the tree:");
-        tree.display();
+//        // Display the tree
+//        System.out.println("Display the tree:");
+//        tree.display();
 
         // Check if the tree is balanced
         System.out.println("\nIs the tree balanced? " + tree.balanced());
+
+
+        // Populate the tree with a sorted array
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        tree.populateSorted(arr);
+
+        // Display the tree again
+        System.out.println("\nDisplay the tree after populating with sorted array:");
+        tree.display();
     }
 }
 
