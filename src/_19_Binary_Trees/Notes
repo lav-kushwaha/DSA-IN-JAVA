@@ -89,3 +89,71 @@ This correctly follows the definition where the height of a leaf node is 0 and t
 A binary tree is balanced if, for every node in the tree, the height difference between the left subtree and the right subtree is at most one.
 A binary tree is balanced if the height difference between the left and right subtrees of every node is at most one.
 This ensures efficient operations and maintains the tree's overall structure. The provided code checks for balance by comparing subtree heights and ensuring the difference is within the acceptable range.
+
+
+========================================================+++++++++++++++++++++++++++++++++++++++++++================================================
+#Traversals :
+
+1. Preorder Traversals : -
+
+// Method to perform preorder traversal and print the values
+public void preorderTraversal() {
+    preorderTraversal(root);
+}
+
+private void preorderTraversal(Node node) {
+    if (node == null) {
+        return;
+    }
+
+    // Visit the root node
+    System.out.print(node.getValue() + " ");
+
+    // Recursively visit the left subtree
+    preorderTraversal(node.left);
+
+    // Recursively visit the right subtree
+    preorderTraversal(node.right);
+}
+
+// Driver program to test preorder traversal
+public static void main(String[] args) {
+    BinarySearchTree tree = new BinarySearchTree();
+
+    // Insert nodes
+    tree.insert(50);
+    tree.insert(30);
+    tree.insert(20);
+    tree.insert(40);
+    tree.insert(70);
+    tree.insert(60);
+    tree.insert(80);
+
+    // Display the tree
+    System.out.println("Display the tree:");
+    tree.display();
+
+    // Perform preorder traversal
+    System.out.println("\nPreorder traversal of the tree:");
+    tree.preorderTraversal();
+}
+
+#uses of preorder traversals :
+
+Preorder traversal is a method of visiting all the nodes in a binary tree in a specific order: root node first, followed by the left subtree, and then the right subtree.
+This traversal is particularly useful in several scenarios:
+
+#Creating a Copy of the Tree :
+When you want to duplicate a tree, you can use preorder traversal to visit each node and create a new node with the same value in the new tree.
+
+#Expression Trees :
+In expression trees (used in compilers and expression evaluation), preorder traversal can be used to generate the prefix notation (Polish notation) of the expression.
+
+#Serialization and Deserialization :
+Preorder traversal is often used in serialization (converting a tree to a string or array)
+and deserialization (reconstructing a tree from a string or array).
+This is because the root-first order is easy to serialize and deserialize while maintaining the tree structure.
+
+#Tree Modifications:
+When performing operations that need to modify the tree, like mirroring or flattening the tree, preorder traversal can be used to visit and modify nodes in a structured way.
+
