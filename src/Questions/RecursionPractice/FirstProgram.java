@@ -3,7 +3,6 @@ package Questions.RecursionPractice;
 public class FirstProgram {
     public static void main(String[] args) {
         print(1);
-
     }
 
     static void print(int n){
