@@ -12,7 +12,7 @@ public class FirstProgram {
         }
 
         print(n+1);//recursive call
-        System.out.println(n);
+        System.out.println(n); //print
 
     }
 }
