@@ -17,9 +17,10 @@ public class Node {
         }
     }
 
-===============================================================+++++++++++++++++++++++++++++++++++++++++++==============================
+===============================================================+++++++++++++++++++++++++++++++++++++++++++=====================================================================================
 
 #Height Method :
+
   public int height(Node node) {
         // If the node is null, its height is considered -1
         if (node == null) {
@@ -46,12 +47,12 @@ height(15) = max(height(10), height(null)) + 1
            = 0 + 1
            = 1
 
-Final Heights
+#Final Heights
 
 Node 15: Height is 1.
 Node 10: Height is 0.
 
-Conclusion
+#Conclusion
 After inserting 10 into the tree with root node 15, the updated tree structure and heights are as follows:
 
       15 (Height: 1)
