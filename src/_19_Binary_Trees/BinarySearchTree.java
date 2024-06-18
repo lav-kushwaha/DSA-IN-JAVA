@@ -28,14 +28,31 @@ public class BinarySearchTree {
         this.root = null;
     }
 
-    // Method to return the height of a given node
-    public int height(Node node) {
-        // If the node is null, its height is considered -1
+//    // Method to return the height of a given node
+//    public int height(Node node) {
+//        // If the node is null, its height is considered -1
+//        if (node == null) {
+//            return -1;
+//        }
+//        // Return the height of the node
+//        return node.height;
+//    }
+
+
+    // Calculate the height of the tree
+    public int height() {
+        return height(root);
+    }
+
+    private int height(Node node) {
         if (node == null) {
-            return -1;
+            return 0;
         }
-        // Return the height of the node
-        return node.height;
+
+        int leftHeight = height(node.left);
+        int rightHeight = height(node.right);
+
+        return Math.max(leftHeight, rightHeight) + 1;
     }
 
     // Method to check if the tree is empty
@@ -69,7 +86,7 @@ public class BinarySearchTree {
         }
 
         // Update the height of the current node
-        root.height = Math.max(height(root.left), height(root.right)) + 1; // +1 to account for the new node
+//        root.height = Math.max(height(root.left), height(root.right)) + 1; // +1 to account for the new node
 
         // Return the current node after insertion. (Return the (unchanged) node pointer)
         return root;// return node from where function is called.
@@ -152,17 +169,25 @@ public class BinarySearchTree {
 //        System.out.println("Display the tree:");
 //        tree.display();
 
-        // Check if the tree is balanced
-        System.out.println("\nIs the tree balanced? " + tree.balanced());
+        // Check if the tree is balanced before insertion
+        System.out.println("Is the tree balanced? " + tree.balanced());
 
+        // Get the height of the tree before insertion
+        System.out.println("Height of the tree before insertion: " + tree.height());
 
         // Populate the tree with a sorted array
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         tree.populateSorted(arr);
 
-        // Display the tree again
+        // Display the tree after populating with sorted array
         System.out.println("\nDisplay the tree after populating with sorted array:");
         tree.display();
+
+        // Get the height of the tree after insertion
+        System.out.println("\nHeight of the tree after insertion: " + tree.height());
+
+        // Check if the tree is balanced after insertion
+        System.out.println("\nIs the tree balanced after populating? " + tree.balanced());
     }
 }
 
