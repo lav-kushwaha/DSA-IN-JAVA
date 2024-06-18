@@ -62,7 +62,7 @@ After inserting 10 into the tree with root node 15, the updated tree structure a
 The height of the root node 15 is now 1, and the height of the node 10 is 0.
 This correctly follows the definition where the height of a leaf node is 0 and the height of an internal node is one more than the maximum height of its children.
 
-======================================================++++++++++++++++++++++++=============================================================
+==========================================================================++++++++++++++++++++++++========================================================================================================
 #Simple method to calculate height.
 
    // Method to calculate the height of the BST
@@ -92,7 +92,7 @@ A binary tree is balanced if the height difference between the left and right su
 This ensures efficient operations and maintains the tree's overall structure. The provided code checks for balance by comparing subtree heights and ensuring the difference is within the acceptable range.
 
 
-========================================================+++++++++++++++++++++++++++++++++++++++++++================================================
+========================================================+++++++++++++++++++++++++++++++++++++++++++===============================================================================================
 #Traversals :
 
 1. Preorder Traversals : -
