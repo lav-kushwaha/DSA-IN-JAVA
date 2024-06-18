@@ -5,7 +5,7 @@ public class BinarySearchTree {
     // Nested Node class representing each node in the BST
     public class Node {
         private int value;  // Value stored in the node
-        private int height; // Height of the node
+//        private int height; // Height of the node
         private Node left;  // Left child
         private Node right; // Right child
 
