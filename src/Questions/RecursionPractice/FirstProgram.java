@@ -3,7 +3,6 @@ package Questions.RecursionPractice;
 public class FirstProgram {
     public static void main(String[] args) {
         print(1);
-
     }
 
     static void print(int n){
@@ -13,7 +12,7 @@ public class FirstProgram {
         }
 
         print(n+1);//recursive call
-        System.out.println(n);
+        System.out.println(n); //print
 
     }
 }
