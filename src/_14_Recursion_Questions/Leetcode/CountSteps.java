@@ -29,7 +29,7 @@ public class CountSteps {
         if(num%2==0){
             return helper(num/2,count+1);//recursive call
         }else{
-            return helper(num-1,count+1);
+            return helper(num-1,count+1);//recursive call
         }
     }
 
