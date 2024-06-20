@@ -37,8 +37,8 @@ class CombinationSum {
 
         for (int i = start; i < arr.length; i++) {
             current.add(arr[i]);
-            result.addAll(combinations(arr, current, target - arr[i], i));
-            current.remove(current.size() - 1);
+            result.addAll(combinations(arr, current, target - arr[i], i));//addAll method
+            current.remove(current.size() - 1);//remove
         }
 
         return result;
