@@ -49,6 +49,7 @@ public class PatternQuestions {
         }
     }
 
+    //pattern 04
     public static void pattern4(int n){
         for(int row = 1; row<=n;row++){
             for(int column = 1; column<=row; column++){
@@ -58,6 +59,7 @@ public class PatternQuestions {
         }
     }
 
+    //pattern 05
     public static void pattern5(int n){
         for(int row = 1; row<=n;row++){
             for(int column = 1; column<=row; column++){
