@@ -75,6 +75,7 @@ public class PatternQuestions {
         }
     }
 
+    //pattern 06
     public static void pattern6(int n){
         for(int row = 1; row<=n;row++) {
             //spaces
