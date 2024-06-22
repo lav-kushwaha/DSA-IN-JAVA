@@ -7,7 +7,7 @@ public class FactorsOfNum {
         int n = 20;
 //       Factors(n);
 //        factors2(n);
-        factors3(n);
+        factors3(n);//calling function
     }
 
     //time:O(n)
