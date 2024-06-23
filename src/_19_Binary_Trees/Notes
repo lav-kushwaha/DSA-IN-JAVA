@@ -92,7 +92,7 @@ A binary tree is balanced if the height difference between the left and right su
 This ensures efficient operations and maintains the tree's overall structure. The provided code checks for balance by comparing subtree heights and ensuring the difference is within the acceptable range.
 
 
-========================================================+++++++++++++++++++++++++++++++++++++++++++===============================================================================================
+============================================================================+++++++++++++++++++++++++++++++++++++++++++===============================================================================================
 #Binary Tree Traversals :
 
 1. Preorder Traversals : -
