@@ -55,6 +55,6 @@ But in ArrayDeque we we add an object in front end, memory expands toward left a
 
 Q : Why use ArrayDeque?
 =>In terms of efficiency, ArrayDeque is more efficient than the LinkedList for add and remove operation at both ends.
-The best operation in a LinkedList implementation is removing the current element during the iteration.
+=>The best operation in a LinkedList implementation is removing the current element during the iteration.
 =>LinkedList implementations are not ideal structures to iterate.
 
