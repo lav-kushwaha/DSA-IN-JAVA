@@ -31,7 +31,7 @@ public class Node {
     }
 
 #code for calculating height(Insert Method) :
-=> node.height = Math.max(height(node.left), height(node.right)) + 1; // +1 to account for the new node
+=> node.height = Math.max(height(node.left), height(node.right)) + 1; // +1 to account for the new node.
 
 NOTE : initially, height is null
 For Node 15 height calculating :
@@ -89,10 +89,11 @@ This correctly follows the definition where the height of a leaf node is 0 and t
 
 A binary tree is balanced if, for every node in the tree, the height difference between the left subtree and the right subtree is at most one.
 A binary tree is balanced if the height difference between the left and right subtrees of every node is at most one.
-This ensures efficient operations and maintains the tree's overall structure. The provided code checks for balance by comparing subtree heights and ensuring the difference is within the acceptable range.
+This ensures efficient operations and maintains the tree's overall structure. 
+The provided code checks for balance by comparing subtree heights and ensuring the difference is within the acceptable range.
 
 
-========================================================+++++++++++++++++++++++++++++++++++++++++++===============================================================================================
+============================================================================+++++++++++++++++++++++++++++++++++++++++++===============================================================================================
 #Binary Tree Traversals :
 
 1. Preorder Traversals : -

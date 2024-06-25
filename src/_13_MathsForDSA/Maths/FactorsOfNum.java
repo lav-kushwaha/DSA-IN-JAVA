@@ -7,7 +7,7 @@ public class FactorsOfNum {
         int n = 20;
 //       Factors(n);
 //        factors2(n);
-        factors3(n);
+        factors3(n);//calling function
     }
 
     //time:O(n)
@@ -48,7 +48,7 @@ public class FactorsOfNum {
             }
         }
         for(int i=list.size()-1;i>=0;i--){
-            System.out.print(list.get(i)+" ");
+            System.out.print(list.get(i)+" ");//get element from list
         }
 
     }

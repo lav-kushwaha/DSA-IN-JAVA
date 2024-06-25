@@ -31,7 +31,7 @@ public class flipAndInvertImage {
                 image[row][col] = image[row][col] ^ 1;
             }
         }
-        return image;
+        return image;//return image
 
 
         //2nd way.

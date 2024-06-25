@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class QuickSortAlgo {
     public static void main(String[] args) {
         int [] arr = {10,80,30,90,40,50,70};
-        QuickSort(arr,0,arr.length-1);
+        QuickSort(arr,0,arr.length-1); //passing arrays and length.
         System.out.println(Arrays.toString(arr));
 
         // Arrays.sort(arr);=>This method is used quick sort behind the scene.
