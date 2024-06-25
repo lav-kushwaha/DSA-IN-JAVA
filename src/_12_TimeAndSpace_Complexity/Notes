@@ -62,3 +62,9 @@ Example: Merge sort (due to auxiliary arrays).
 5. O(n^2) - Quadratic Space:
 The space used grows quadratically with the input size.
 Example: Dynamic programming solutions that use a 2D table.
+
+#Analyzing Algorithms
+When analyzing an algorithm, follow these steps:
+1. Identify the input size: Let n be the size of the input.
+2. Count the basic operations: Focus on the most significant operations, ignoring constant factors and lower-order terms.
+3. Express the time/space complexity: Use Big O notation to describe the asymptotic behavior.
