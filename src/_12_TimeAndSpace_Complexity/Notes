@@ -35,3 +35,30 @@ Example: Solving the traveling salesman problem using brute force.
 8.O(n!) - Factorial Time:
 The running time grows factorially with the size of the input.
 Example: Solving the traveling salesman problem using brute force.
+
+
+#Space Complexity
+Space complexity measures the amount of memory an algorithm uses relative to the input size.
+It includes both the memory needed to hold the input data and the auxiliary space required by the algorithm.
+
+#Common Space Complexities:
+
+1. O(1) - Constant Space:
+The algorithm uses a fixed amount of space regardless of the input size.
+Example: In-place array sorting algorithms like insertion sort.
+
+2. O(log n) - Logarithmic Space:
+The space used by the algorithm grows logarithmically with the input size.
+Example: Recursive algorithms that divide the input in half at each step.
+
+3. O(n) - Linear Space:
+The space used grows linearly with the input size.
+Example: Storing elements in an array or a list.
+
+4. O(n log n) - Linearithmic Space:
+The space complexity is a product of linear and logarithmic terms.
+Example: Merge sort (due to auxiliary arrays).
+
+5. O(n^2) - Quadratic Space:
+The space used grows quadratically with the input size.
+Example: Dynamic programming solutions that use a 2D table.
