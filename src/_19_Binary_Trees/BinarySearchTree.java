@@ -46,7 +46,7 @@ public class BinarySearchTree {
 
     private int height(Node node) {
         if (node == null) {
-            return 0;
+            return -1;
         }
 
         int leftHeight = height(node.left);
@@ -157,30 +157,16 @@ public class BinarySearchTree {
         BinarySearchTree tree = new BinarySearchTree();
 
         // Insert nodes
-//        tree.insert(50);
-//        tree.insert(30);
-//        tree.insert(20);
-//        tree.insert(40);
-//        tree.insert(70);
+        tree.insert(15);
+        tree.insert(10);
+        tree.insert(2);
+        tree.insert(14);
+        tree.insert(25);
 //        tree.insert(60);
 //        tree.insert(80);
 
-//        // Display the tree
-//        System.out.println("Display the tree:");
-//        tree.display();
-
-        // Check if the tree is balanced before insertion
-        System.out.println("Is the tree balanced? " + tree.balanced());
-
-        // Get the height of the tree before insertion
-        System.out.println("Height of the tree before insertion: " + tree.height());
-
-        // Populate the tree with a sorted array
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        tree.populateSorted(arr);
-
-        // Display the tree after populating with sorted array
-        System.out.println("\nDisplay the tree after populating with sorted array:");
+        // Display the tree
+        System.out.println("Display the tree:");
         tree.display();
 
         // Get the height of the tree after insertion
@@ -188,6 +174,29 @@ public class BinarySearchTree {
 
         // Check if the tree is balanced after insertion
         System.out.println("\nIs the tree balanced after populating? " + tree.balanced());
+
+
+       //=====================================Sorted Array======================================================
+
+//        // Check if the tree is balanced before insertion
+//        System.out.println("Is the tree balanced? " + tree.balanced());
+
+//        // Get the height of the tree before insertion
+//        System.out.println("Height of the tree before insertion: " + tree.height());
+
+        // Populate the tree with a sorted array
+//        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//        tree.populateSorted(arr);
+//
+//        // Display the tree after populating with sorted array
+//        System.out.println("\nDisplay the tree after populating with sorted array:");
+//        tree.display();
+
+        // Get the height of the tree after insertion
+//        System.out.println("\nHeight of the tree after insertion: " + tree.height());
+//
+//        // Check if the tree is balanced after insertion
+//        System.out.println("\nIs the tree balanced after populating? " + tree.balanced());
     }
 }
 
