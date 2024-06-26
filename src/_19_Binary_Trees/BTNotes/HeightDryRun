@@ -1,0 +1,109 @@
+#The height Method
+
+The height method calculates the height of a binary tree.
+The height of a binary tree is defined as the number of edges on the longest path from the root to a leaf node.
+An empty tree has a height of -1.
+
+#Method Definition
+
+private int height(Node node) {
+    if (node == null) {
+        return -1;
+    }
+
+    int leftHeight = height(node.left);
+    int rightHeight = height(node.right);
+
+    return Math.max(leftHeight, rightHeight) + 1;
+}
+
+#Example Binary Tree
+Let's use the following binary tree for the dry run:
+
+      1
+     / \
+    2   3
+   / \
+  4   5
+
+
+#Dry Run :
+
+Let's go through the steps for computing the height of this tree.
+
+1. Call height on the root node (1):
+Node is not null.
+Compute leftHeight by calling height(node.left) (node 2).
+
+2. Call height on node 2:
+Node is not null.
+Compute leftHeight by calling height(node.left) (node 4).
+
+3. Call height on node 4:
+Node is not null.
+Compute leftHeight by calling height(node.left) (null).
+
+4. Call height on null (left child of node 4):
+Node is null, return -1.
+leftHeight of node 4 is -1.
+Compute rightHeight by calling height(node.right) (null).
+
+5. Call height on null (right child of node 4):
+Node is null, return -1.
+rightHeight of node 4 is -1.
+Compute height of node 4: Math.max(-1, -1) + 1 = 0.
+Return 0.
+
+6. Return to node 2:
+leftHeight of node 2 is 0 (from node 4).
+Compute rightHeight by calling height(node.right) (node 5).
+
+7. Call height on node 5:
+Node is not null.
+Compute leftHeight by calling height(node.left) (null).
+
+8. Call height on null (left child of node 5):
+Node is null, return -1.
+leftHeight of node 5 is -1.
+Compute rightHeight by calling height(node.right) (null).
+
+9. Call height on null (right child of node 5):
+Node is null, return -1.
+rightHeight of node 5 is -1.
+Compute height of node 5: Math.max(-1, -1) + 1 = 0.
+Return 0.
+
+10. Return to node 2:
+rightHeight of node 2 is 0 (from node 5).
+Compute height of node 2: Math.max(0, 0) + 1 = 1.
+Return 1.
+
+11. Return to root node (1):
+leftHeight of root is 1 (from node 2).
+Compute rightHeight by calling height(node.right) (node 3).
+
+12. Call height on node 3:
+Node is not null.
+Compute leftHeight by calling height(node.left) (null).
+
+13. Call height on null (left child of node 3):
+Node is null, return -1.
+leftHeight of node 3 is -1.
+Compute rightHeight by calling height(node.right) (null).
+
+14. Call height on null (right child of node 3):
+Node is null, return -1.
+rightHeight of node 3 is -1.
+Compute height of node 3: Math.max(-1, -1) + 1 = 0.
+Return 0.
+
+15. Return to root node (1):
+rightHeight of root is 0 (from node 3).
+Compute height of root: Math.max(1, 0) + 1 = 2.
+Return 2.
+
+
+#Summary
+The height of the binary tree is 2.
+The method works by recursively calculating the height of the left and right subtrees and then using the maximum of the two heights plus one to determine the height at each node.
+
