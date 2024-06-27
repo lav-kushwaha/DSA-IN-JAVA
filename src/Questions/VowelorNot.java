@@ -21,7 +21,7 @@ class VowelorNot {
     }
 
     public static void main(String[] args) {
-        String ans = isVowel('l');
-        System.out.println(ans);
+        String ans = isVowel('l'); //calling a method
+        System.out.println(ans); //print vowels or not
     }
 }
