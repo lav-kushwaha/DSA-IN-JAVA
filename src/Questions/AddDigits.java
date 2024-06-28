@@ -8,7 +8,7 @@ class AddDigits {
     public static int addDigits(int num) {
         // Repeat until the number becomes a single digit.
         while (num >= 10) {
-            num = digitsSum(num);
+            num = digitsSum(num);//function calls
         }
         return num;
     }
