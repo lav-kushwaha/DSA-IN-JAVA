@@ -38,23 +38,6 @@ public class BinarySearchTree {
 //        return node.height;
 //    }
 
-
-    // Calculate the height of the tree
-    public int height() {
-        return height(root);
-    }
-
-    private int height(Node node) {
-        if (node == null) {
-            return -1;
-        }
-
-        int leftHeight = height(node.left);
-        int rightHeight = height(node.right);
-
-        return Math.max(leftHeight, rightHeight) + 1;
-    }
-
     // Method to check if the tree is empty
     public boolean isEmpty() {
         // If the root is null, the tree is empty
@@ -112,6 +95,22 @@ public class BinarySearchTree {
         populateSorted(nums, mid + 1, end);
     }
 
+    // Calculate the height of the tree
+    public int height() {
+        return height(root);
+    }
+
+    private int height(Node node) {
+        if (node == null) {
+            return -1;
+        }
+
+        int leftHeight = height(node.left);
+        int rightHeight = height(node.right);
+
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
+
     public boolean balanced(){
         return balanced(root);
     }
@@ -124,7 +123,7 @@ public class BinarySearchTree {
         }
 
         // If the height difference is more than 1, the tree is not balanced
-        if (Math.abs(height(node.left) - height(node.right)) > 1) {//height should be less than or equal to 1.
+        if (Math.abs(height(node.left) - height(node.right)) > 1) {//height should be less than or equal to 1 for balanced tree.
             return false;
         }
 
