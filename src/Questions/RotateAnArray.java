@@ -10,9 +10,9 @@ class RotateAnArray {
      static void leftRotate(int[] arr, int n, int d) {
 
         d=d%n;
-        reverse(arr,0,d-1);
-        reverse(arr,d,n-1);
-        reverse(arr,0,n-1);
+        reverse(arr,0,d-1);//function call
+        reverse(arr,d,n-1);//function call
+        reverse(arr,0,n-1);//function call
     }
 
     //Reverse method.
