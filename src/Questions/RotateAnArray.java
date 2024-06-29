@@ -27,7 +27,7 @@ class RotateAnArray {
 
     public static void main(String[] args) {
        int arr [] = {-1, -2, -3, 4, 5, 6, 7};
-        leftRotate(arr,7,2);
-        System.out.println(Arrays.toString(arr));
+        leftRotate(arr,7,2);//calling a method
+        System.out.println(Arrays.toString(arr));//print array
     }
 }

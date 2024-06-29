@@ -32,6 +32,6 @@ class TripletsZeroSum
     public static void main(String[] args) {
         int arr[] = {0, -1, 2, -3, 1};
         int n = 5;
-        System.out.println(findTriplets(arr,n));
+        System.out.println(findTriplets(arr,n));//print ans
     }
 }

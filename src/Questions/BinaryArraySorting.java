@@ -8,8 +8,8 @@ public class BinaryArraySorting {
     public static void main(String[] args) {
         int [] arr = {1,0,1,1,0};
         int N = 5;
-        binSort(arr,N);
-        System.out.println(Arrays.toString(arr));
+        binSort(arr,N);//function call
+        System.out.println(Arrays.toString(arr));//print ans
     }
     static void binSort(int A[], int N)
     {

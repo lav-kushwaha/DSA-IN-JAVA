@@ -11,8 +11,8 @@ public class Cells_with_Odd_Values_in_a_Matrix {
         int m = 2;
         int n = 3;
 
-        int ans = oddCells(m, n, indices);
-        System.out.println(ans);
+        int ans = oddCells(m, n, indices);//calling a functions with arguments
+        System.out.println(ans);//print ans
     }
 
     static int oddCells(int m, int n, int[][] indices){
