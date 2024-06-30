@@ -1,0 +1,107 @@
+Q. How "private TreeNode root;" can access of  root.left and root.right.
+=> The ability of a root node to access its left and right children in a binary tree is facilitated by references within the "TreeNode objects".
+=> Each TreeNode contains references to its left and right children, allowing traversal and manipulation of the tree structure.
+
+
+#TreeNode Class and References
+ Let's break down the TreeNode class and how it uses references:
+
+ class TreeNode {
+     int value;      // The value stored in the node
+     TreeNode left;  // Reference to the left child node
+     TreeNode right; // Reference to the right child node
+
+     // Constructor to initialize the node with a value
+     TreeNode(int value) {
+         this.value = value;
+         this.left = null;  // Initially, the left child is null
+         this.right = null; // Initially, the right child is null
+     }
+ }
+
+ #Accessing Left and Right Children
+ =>When you create a TreeNode object, you can set its left and right properties to point to other TreeNode objects.
+ =>This creates the links between nodes. Here’s how the root node accesses its left and right children:
+
+ 1.Create the Root Node:(IMP)
+ => TreeNode root = new TreeNode(10);
+ • A new TreeNode object is created with the value 10.
+ • Initially, root.left and root.right are null.
+
+ 2.Add Left and Right Children:
+  • root.left = new TreeNode(5);
+  • root.right = new TreeNode(15);
+
+  A new TreeNode object with value 5 is created and assigned to root.left.
+  Another TreeNode object with value 15 is created and assigned to root.right.
+
+ 3.Accessing the Children:
+ => You can access the left child using root.left and the right child using root.right.
+
+#Visualization
+
+       [10]       <-- root
+      /    \
+  [5]      [15]
+
+  root.left points to the TreeNode with value 5.
+  root.right points to the TreeNode with value 15.
+
+
+#Complete Example :
+
+Let’s put it all together in a complete example:
+
+class TreeNode {
+    int value;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode(int value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+public class BinaryTreeDemo {
+    public static void main(String[] args) {
+        // Create the root node
+        TreeNode root = new TreeNode(10);
+
+        // Create and link the left child
+        root.left = new TreeNode(5);
+
+        // Create and link the right child
+        root.right = new TreeNode(15);
+
+        // Optionally, add more nodes to build a larger tree
+        root.left.left = new TreeNode(3);
+        root.left.right = new TreeNode(7);
+        root.right.left = new TreeNode(13);
+        root.right.right = new TreeNode(17);
+
+        // Print the tree in in-order traversal to verify
+        inOrderTraversal(root);
+    }
+
+    // In-order traversal to print the tree nodes
+    public static void inOrderTraversal(TreeNode node) {
+        if (node != null) {
+            inOrderTraversal(node.left);    // Visit the left subtree
+            System.out.print(node.value + " "); // Visit the root
+            inOrderTraversal(node.right);   // Visit the right subtree
+        }
+    }
+}
+
+
+#How Root Accesses Children.
+• When root.left is accessed, it points to the TreeNode with value 5.
+• When root.right is accessed, it points to the TreeNode with value 15.
+
+=>Each TreeNode object internally holds references to its left and right children, allowing the root node to access and interact with its children nodes directly.
+=>This setup creates a linked structure where each node can reference its descendants, facilitating tree operations such as traversal, insertion, and deletion.
+
+
+
