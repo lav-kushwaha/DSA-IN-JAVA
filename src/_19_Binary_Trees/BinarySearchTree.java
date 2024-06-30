@@ -21,6 +21,7 @@ public class BinarySearchTree {
     }
 
     // Root node of the BST
+    //It is a object of Node class. i.e, private Node root = new Node(10); something like this, when we do root.left = 10, then it will assign value 10 to left root.
     private Node root;
 
     // Constructor to initialize the BST with an empty root
