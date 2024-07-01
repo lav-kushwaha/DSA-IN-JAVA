@@ -15,6 +15,8 @@ public class MissingNumber {
                 i++;
             }
         }
+
+        //return element if its not equal to nums element.
         for(int index=0; index<nums.length;index++){
             if(index!=nums[index]){
                 return index;
