@@ -3,6 +3,7 @@ import java.util.Arrays;
 //https://leetcode.com/problems/missing-number/
 //268. Missing Number
 //Amazon Question very easy.
+
 public class MissingNumber {
     static int MissingNumber(int[] nums){
         int i=0;
@@ -31,10 +32,10 @@ public class MissingNumber {
         arr[i] = arr[correct];
         arr[correct] = temp;
     }
+    
     public static void main(String[] args) {
         int [] nums = {0,1,2};
-        int ans = MissingNumber(nums);
-        System.out.println(ans);
-
+        int ans = MissingNumber(nums);//passed nums array as an argument.
+        System.out.println(ans);//print ans
     }
 }
