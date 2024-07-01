@@ -9,7 +9,7 @@ public class MissingNumber {
         while(i<nums.length){
             int correct = nums[i];
             if(nums[i]<nums.length&&nums[i]!=nums[correct]){
-                Swap(nums,i,correct);
+                Swap(nums,i,correct);//swap
             }
             else{
                 i++;
@@ -22,6 +22,8 @@ public class MissingNumber {
         }
         return nums.length;
     }
+
+    //method to swap
     static void Swap(int[] arr,int i, int correct){
         int temp = arr[i];
         arr[i] = arr[correct];
