@@ -107,6 +107,12 @@ public class AVL {
         return node;
     }
 
+    private Node rightRotation(Node right) {
+    }
+
+    private Node leftRotation(Node node) {
+        
+    }
 
 
     // Method to populate the AVL tree with a sorted array
