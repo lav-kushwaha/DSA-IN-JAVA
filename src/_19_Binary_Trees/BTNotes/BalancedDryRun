@@ -1,20 +1,30 @@
+code : Balanced Tree
 
+    public boolean balanced() {
+        return balanced(root);
+    }
 
+    private boolean balanced(Node node) {
+        if (node == null) {
+            return true;
+        }
 
+        int balance = height(node.left) - height(node.right);
+        if (Math.abs(balance) > 1) {
+            return false;
+        }
 
+        return balanced(node.left) && balanced(node.right);
+    }
 
+let's go through the dry run of the `balanced` method step-by-step again with detailed explanations.
+We'll use the same binary tree example:
 
-
-Alright, let's go through the dry run of the `balanced` method step-by-step again with detailed explanations. We'll use the same binary tree example:
-
-```
     1
-   / \\
+   / \
   2   3
- / \\
+ / \
 4   5
-
-```
 
 ### Node Definitions:
 
@@ -91,4 +101,5 @@ Alright, let's go through the dry run of the `balanced` method step-by-step agai
 
 ### Conclusion
 
-The tree is balanced. The `balanced` method would return `true` for the root Node 1. This means every node's subtrees have a height difference of no more than 1 and all subtrees themselves are balanced.
+The tree is balanced. The `balanced` method would return `true` for the root Node 1.
+This means every node's subtrees have a height difference of no more than 1 and all subtrees themselves are balanced.
