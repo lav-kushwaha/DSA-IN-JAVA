@@ -1,0 +1,78 @@
+ private Node rotate(Node node){
+        if(height(node.left) - height(node.right)>1){
+            //left heavy
+            //height positive
+           if(height(node.left.left) - height(node.left.right)>0){
+               //left-left case1
+
+               //right rotation
+               return rightRotate(node);
+           }
+
+           //height negative
+            if(height(node.left.left) - height(node.left.right)<0){
+                //left-right case 2
+                //left rotate
+                node.left = leftRotate(node.left);
+
+                //right rotate
+                return rightRotate(node);
+            }
+        }
+
+        if(height(node.left) - height(node.right) < -1) {
+            //right heavy
+            if (height(node.right.left) - height(node.right.right) < 0) {
+                //right-right case 3
+
+                //left rotate
+                return leftRotation(node);
+            }
+
+            //height positive
+            if (height(node.left.left) - height(node.left.right) > 0) {
+                //right-left case 4
+
+                //right rotate.
+                node.right = rightRotation(node.right);
+
+                //left rotate.
+                return leftRotation(node);
+            }
+        }
+
+        //remaining unchanged node.
+        return node;
+    }
+
+     private Node rightRotate(Node p) {
+            Node c = p.left;
+            Node T2 = c.right;
+
+            //right rotation
+            c.right = p;
+            p.left = T2;
+
+            //update the height. bcs c and p are right rotate.
+            p.height = Math.max(height(p.left), height(p.right)) + 1;
+            c.height = Math.max(height(c.left), height(c.right)) + 1;
+
+            //new node will be return which is c (after rotation c becomes parent node).
+            return c;
+        }
+
+        private Node leftRotate(Node c) {
+            Node p = c.right;
+            Node T2 = p.left;
+
+            //left rotation
+            p.left = c;
+            c.right = T2;
+
+            //update the height. bcs c and p are left rotated.
+            c.height = Math.max(height(c.left), height(c.right)) + 1;
+            p.height = Math.max(height(p.left), height(p.right)) + 1;
+
+            //new node will be return which is c (after rotation p becomes parent node).
+            return p;
+        }

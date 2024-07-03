@@ -159,3 +159,68 @@ This is because the root-first order is easy to serialize and deserialize while 
 #Tree Modifications:
 When performing operations that need to modify the tree, like mirroring or flattening the tree, preorder traversal can be used to visit and modify nodes in a structured way.
 
+
+#Difference between & and &&
+The operators & and && are both used in Java, but they serve different purposes and have different behaviors.
+Here's a detailed explanation of the differences between them:
+
+& (Bitwise AND and Logical AND)
+
+1.Bitwise AND:
+
+When used with integer types (e.g., int, long), & performs a bitwise AND operation.
+This means it compares each bit of its two operands and returns a new value whose bits are set to 1 only if both corresponding bits of the operands are 1.
+
+i.e,
+int a = 5;  // binary: 0101
+int b = 3;  // binary: 0011
+int result = a & b;  // result: 0001 (binary), which is 1(decimal)
+
+2.Logical AND:
+
+When used with boolean types, & acts as a logical AND operator. It evaluates both operands and returns true only if both operands are true.
+Unlike &&, the & operator does not short-circuit. This means both operands are always evaluated, regardless of the value of the first operand.
+
+i.e,
+boolean a = true;
+boolean b = false;
+boolean result = a & b;  // result: false
+
+
+&& (Logical AND with Short-Circuiting)
+
+1. Logical AND:
+
+The && operator is used exclusively with boolean types and acts as a logical AND operator. It returns true only if both operands are true.
+The key difference is that && is a short-circuit operator. This means if the first operand is false, the second operand is not evaluated because the result is already determined to be false.
+
+i.e,
+boolean a = true;
+boolean b = false;
+boolean result = a && b;  // result: false
+
+2. Short-Circuiting:
+
+Short-circuiting can improve performance and prevent unnecessary evaluation of expressions, which can be important if the second operand involves a method call or a complex expression.
+
+i.e,
+boolean a = false;
+boolean result = a && someMethod();  // someMethod() is never called
+
+// where someMethod() is defined as:
+public boolean someMethod() {
+    System.out.println("Method called");
+    return true;
+}
+
+#Summary
+Bitwise AND (&): Operates on individual bits of integer operands.
+Logical AND (&): Operates on boolean operands and evaluates both expressions.
+Logical AND with Short-Circuiting (&&): Operates on boolean operands and short-circuits, evaluating only as much as needed to determine the result.
+Choosing between & and && depends on the specific use case:
+
+Use & for bitwise operations or when you need both boolean operands to be evaluated.
+Use && when working with boolean expressions and you want the benefits of short-circuit evaluation.
+
+
+
