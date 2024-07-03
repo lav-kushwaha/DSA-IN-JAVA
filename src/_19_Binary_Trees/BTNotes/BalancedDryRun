@@ -1,0 +1,94 @@
+
+
+
+
+
+
+
+Alright, let's go through the dry run of the `balanced` method step-by-step again with detailed explanations. We'll use the same binary tree example:
+
+```
+    1
+   / \\
+  2   3
+ / \\
+4   5
+
+```
+
+### Node Definitions:
+
+- Node 1: Root
+- Node 2: Left child of Node 1
+- Node 3: Right child of Node 1
+- Node 4: Left child of Node 2
+- Node 5: Right child of Node 2
+
+### Dry Run of `balanced` Method
+
+1. **Start with Node 1**:
+    - Call `balanced(Node 1)`
+2. **Check if Node 1 is null**:
+    - It's not null.
+3. **Compute Heights of Left and Right Subtrees of Node 1**:
+    - Call `height(Node 2)` for the left subtree.
+    - Call `height(Node 3)` for the right subtree.
+4. **Compute `height(Node 2)`**:
+    - Call `height(Node 4)` for the left subtree of Node 2.
+    - Call `height(Node 5)` for the right subtree of Node 2.
+5. **Compute `height(Node 4)`**:
+    - Node 4 is a leaf node with no children.
+    - Call `height(null)` for both left and right children of Node 4, which returns 0.
+    - Height of Node 4 is `max(0, 0) + 1 = 1`.
+6. **Compute `height(Node 5)`**:
+    - Node 5 is a leaf node with no children.
+    - Call `height(null)` for both left and right children of Node 5, which returns 0.
+    - Height of Node 5 is `max(0, 0) + 1 = 1`.
+7. **Compute Height of Node 2**:
+    - Heights of left and right subtrees of Node 2 are both 1.
+    - Height of Node 2 is `max(1, 1) + 1 = 2`.
+8. **Compute `height(Node 3)`**:
+    - Node 3 is a leaf node with no children.
+    - Call `height(null)` for both left and right children of Node 3, which returns 0.
+    - Height of Node 3 is `max(0, 0) + 1 = 1`.
+9. **Back to Node 1**:
+    - Heights of left and right subtrees of Node 1 are 2 (from Node 2) and 1 (from Node 3), respectively.
+    - Check if the height difference is more than 1:
+        - `Math.abs(2 - 1) = 1` which is ≤ 1, so it's balanced so far.
+10. **Recursively Check Subtrees of Node 1**:
+    - Call `balanced(Node 2)` to check if the left subtree is balanced.
+    - Call `balanced(Node 3)` to check if the right subtree is balanced.
+11. **Check `balanced(Node 2)`**:
+    - Node 2 is not null.
+    - Compute heights of its subtrees again:
+        - Heights are 1 for both left (Node 4) and right (Node 5) subtrees (from previous calculations).
+    - Check if the height difference is more than 1:
+        - `Math.abs(1 - 1) = 0` which is ≤ 1.
+    - Recursively check subtrees of Node 2:
+        - Call `balanced(Node 4)`
+        - Call `balanced(Node 5)`
+12. **Check `balanced(Node 4)`**:
+    - Node 4 is a leaf node with no children.
+    - Both left and right children are null:
+        - `balanced(null)` returns true for both.
+    - Node 4 is balanced.
+13. **Check `balanced(Node 5)`**:
+    - Node 5 is a leaf node with no children.
+    - Both left and right children are null:
+        - `balanced(null)` returns true for both.
+    - Node 5 is balanced.
+14. **Back to Node 2**:
+    - Both left (Node 4) and right (Node 5) subtrees are balanced.
+    - Node 2 is balanced.
+15. **Check `balanced(Node 3)`**:
+    - Node 3 is a leaf node with no children.
+    - Both left and right children are null:
+        - `balanced(null)` returns true for both.
+    - Node 3 is balanced.
+16. **Back to Node 1**:
+    - Both left (Node 2) and right (Node 3) subtrees are balanced.
+    - Node 1 is balanced.
+
+### Conclusion
+
+The tree is balanced. The `balanced` method would return `true` for the root Node 1. This means every node's subtrees have a height difference of no more than 1 and all subtrees themselves are balanced.
