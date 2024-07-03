@@ -10,7 +10,7 @@ public class AVLTree {
 
         public Node(int value) {
             this.value = value;
-            this.height = 1; // Initially, a new node is at height 1
+            this.height = 0; // Initially, a new node is at height 0
         }
 
         public int getValue() {
@@ -53,9 +53,13 @@ public class AVLTree {
     }
 
     private Node rotate(Node node) {
-        int balance = height(node.left) - height(node.right);
 
-        if (balance > 1) {
+        //balance factor cannot be greater than 1 and less than -1. if its greater than 1 and less than -1 then rotate the subtree and balance it.
+        int balanceFactor = height(node.left) - height(node.right);
+
+        //BF > 1: This indicates that the left subtree is taller than the right subtree by more than one level,
+        // causing the tree to be left-heavy.
+        if (balanceFactor > 1) {
             if (height(node.left.left) >= height(node.left.right)) {
                 return rightRotate(node); // Left-Left case
             } else {
@@ -64,7 +68,9 @@ public class AVLTree {
             }
         }
 
-        if (balance < -1) {
+        //BF < -1: This indicates that the right subtree is taller than the left subtree by more than one level,
+        // causing the tree to be right-heavy.
+        if (balanceFactor < -1) {
             if (height(node.right.right) >= height(node.right.left)) {
                 return leftRotate(node); // Right-Right case
             } else {
@@ -108,28 +114,13 @@ public class AVLTree {
         return p;
     }
 
-    public void populateSorted(int[] nums) {
-        populateSorted(nums, 0, nums.length - 1);
-    }
-
-    private void populateSorted(int[] nums, int start, int end) {
-        if (start > end) {
-            return;
-        }
-
-        int mid = (start + end) / 2;
-        this.insert(nums[mid]);
-        populateSorted(nums, start, mid - 1);
-        populateSorted(nums, mid + 1, end);
-    }
-
     public int height() {
         return height(root);
     }
 
     private int height(Node node) {
         if (node == null) {
-            return 0;
+            return -1; // Base case: empty tree
         }
         return node.height;
     }
@@ -169,15 +160,19 @@ public class AVLTree {
     public static void main(String[] args) {
         AVLTree tree = new AVLTree();
 
-        tree.insert(15);
-        tree.insert(10);
-        tree.insert(2);
-        tree.insert(14);
-        tree.insert(25);
-        tree.insert(12);
+//        tree.insert(15);
+//        tree.insert(10);
+//        tree.insert(2);
+//        tree.insert(14);
+//        tree.insert(25);
+//        tree.insert(12);
+//
+//        System.out.println("Display the tree:");
+//        tree.display();
 
-        System.out.println("Display the tree:");
-        tree.display();
+        for (int i=0;i<1000;i++){
+            tree.insert(i);
+        }
 
         System.out.println("\nHeight of the tree after insertion: " + tree.height());
         System.out.println("\nIs the tree balanced after populating? " + tree.balanced());
