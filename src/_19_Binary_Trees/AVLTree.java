@@ -18,6 +18,7 @@ public class AVLTree {
         }
     }
 
+    //root of avl tree
     private Node root;
 
     public AVLTree() {
