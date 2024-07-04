@@ -54,7 +54,8 @@ public class AVLTree {
 
     private Node rotate(Node node) {
 
-        //balance factor cannot be greater than 1 and less than -1. if its greater than 1 and less than -1 then rotate the subtree and balance it.
+        //balance factor cannot be greater than 1 and less than -1.
+        // if it's greater than 1 and less than -1 then rotate the subtree and balance it.
         int balanceFactor = height(node.left) - height(node.right);
 
         //BF > 1: This indicates that the left subtree is taller than the right subtree by more than one level,
