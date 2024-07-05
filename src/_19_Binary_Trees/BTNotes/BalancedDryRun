@@ -103,3 +103,13 @@ We'll use the same binary tree example:
 
 The tree is balanced. The `balanced` method would return `true` for the root Node 1.
 This means every node's subtrees have a height difference of no more than 1 and all subtrees themselves are balanced.
+
+
+#Balanced Factor
+The balance factor of a node in an AVL tree is defined as the difference between the heights of its left and right subtrees. Formally, for a node 𝑁 :
+
+Balance Factor(BF)=Height(LeftSubtree)− Height(RightSubtree)
+
+Properties of Balance Factor:
+Range: The balance factor of any node in an AVL tree must be -1, 0, or +1. This property ensures that the tree remains approximately balanced, which guarantees O(logn) time complexity for insertion, deletion, and lookup operations.
+Balanced Tree: An AVL tree is considered balanced if every node in the tree has a balance factor of -1, 0, or +1.
