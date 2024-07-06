@@ -29,6 +29,35 @@ public class AVLTree {
         return root == null;
     }
 
+    public int height() {
+        return height(root);
+    }
+
+    private int height(Node node) {
+        if (node == null) {
+            return -1; // Base case: empty tree
+        }
+        return node.height;
+    }
+
+    public boolean balanced() {
+        return balanced(root);
+    }
+
+    private boolean balanced(Node node) {
+        if (node == null) {
+            return true;
+        }
+
+        int balance = height(node.left) - height(node.right);
+
+        if (Math.abs(balance) > 1) {
+            return false;
+        }
+
+        return balanced(node.left) && balanced(node.right);
+    }
+
     public void insert(int value) {
         root = insert(value, root);
     }
@@ -49,39 +78,44 @@ public class AVLTree {
         // Update the height of the current node
         root.height = 1 + Math.max(height(root.left), height(root.right));
 
-        // Rebalance the node if needed
-        return rotate(root);
-    }
-
-    private Node rotate(Node node) {
-
         //balance factor cannot be greater than 1 and less than -1.
         // if it's greater than 1 and less than -1 then rotate the subtree and balance it.
-        int balanceFactor = height(node.left) - height(node.right);
+        int balanceFactor = height(root.left) - height(root.right);
 
         //BF > 1: This indicates that the left subtree is taller than the right subtree by more than one level,
         // causing the tree to be left-heavy.
         if (balanceFactor > 1) {
-            if (height(node.left.left) >= height(node.left.right)) {
-                return rightRotate(node); // Left-Left case
-            } else {
-                node.left = leftRotate(node.left); // Left-Right case
-                return rightRotate(node);
+            // Left heavy
+            if(height(root.left.left) - height(root.left.right) > 0) {
+                // Left-left case
+                return rightRotate(root);
+            }
+        //we can use here if-else but for more understanding i have not used.
+            if(height(root.left.left) - height(root.left.right) < 0) {
+                // Left-right case
+                root.left = leftRotate(root.left);
+                return rightRotate(root);
             }
         }
 
         //BF < -1: This indicates that the right subtree is taller than the left subtree by more than one level,
         // causing the tree to be right-heavy.
         if (balanceFactor < -1) {
-            if (height(node.right.right) >= height(node.right.left)) {
-                return leftRotate(node); // Right-Right case
-            } else {
-                node.right = rightRotate(node.right); // Right-Left case
-                return leftRotate(node);
+            // Right heavy
+            if(height(root.right.left) - height(root.right.right) < 0) {
+                // Right-right case
+                return leftRotate(root);
+            }
+
+            //we can use here if-else but for more understanding i have not used.
+            if(height(root.right.left) - height(root.right.right) > 0) {
+                // Right-left case
+                root.right = rightRotate(root.right);
+                return leftRotate(root);
             }
         }
 
-        return node; // Node is balanced
+        return root; // Node is balanced
     }
 
     private Node rightRotate(Node p) {
@@ -116,34 +150,6 @@ public class AVLTree {
         return p;
     }
 
-    public int height() {
-        return height(root);
-    }
-
-    private int height(Node node) {
-        if (node == null) {
-            return -1; // Base case: empty tree
-        }
-        return node.height;
-    }
-
-    public boolean balanced() {
-        return balanced(root);
-    }
-
-    private boolean balanced(Node node) {
-        if (node == null) {
-            return true;
-        }
-
-        int balance = height(node.left) - height(node.right);
-        if (Math.abs(balance) > 1) {
-            return false;
-        }
-
-        return balanced(node.left) && balanced(node.right);
-    }
-
     public void display() {
         display(root, "Root Node : ");
     }
@@ -171,12 +177,20 @@ public class AVLTree {
 //
 //        System.out.println("Display the tree:");
 //        tree.display();
+//
+//        for (int i=0;i<1000;i++){
+//            tree.insert(i);
+//        }
 
-        for (int i=0;i<1000;i++){
-            tree.insert(i);
-        }
+        tree.insert(20);
+        tree.insert(30);
+        tree.insert(10);
+        tree.insert(15);
+        tree.insert(5);
+        tree.insert(2);
+        tree.insert(6);
 
         System.out.println("\nHeight of the tree after insertion: " + tree.height());
-        System.out.println("\nIs the tree balanced after populating? " + tree.balanced());
+        System.out.println("\nIs the tree balanced after populating ? : " + tree.balanced());
     }
 }
