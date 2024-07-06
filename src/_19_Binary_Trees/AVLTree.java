@@ -107,7 +107,7 @@ public class AVLTree {
                 return leftRotate(root);
             }
 
-            //we can use here if-else but for more understanding i have not used.
+            //we can use here if-else but for more understanding I have not used.
             if(height(root.right.left) - height(root.right.right) > 0) {
                 // Right-left case
                 root.right = rightRotate(root.right);
@@ -146,7 +146,7 @@ public class AVLTree {
         c.height = Math.max(height(c.left), height(c.right)) + 1;
         p.height = Math.max(height(p.left), height(p.right)) + 1;
 
-        //new node will be return which is c (after rotation p becomes parent node).
+        //new node will be return which is p (after rotation p becomes parent node).
         return p;
     }
 
