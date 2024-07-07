@@ -2,7 +2,7 @@ package _02_First_Java_Program.Questions;
 
 public class PrintingNumber1To10 {
     public static void printNos(int N){
-        if(N>0){
+        if(N>0){//Base conditions
             printNos(N-1);//recursive call
             System.out.print(N+" ");
         }
