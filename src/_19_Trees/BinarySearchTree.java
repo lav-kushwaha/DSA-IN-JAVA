@@ -1,4 +1,4 @@
-package _19_Binary_Trees;
+package _19_Trees;
 
 public class BinarySearchTree {
 
