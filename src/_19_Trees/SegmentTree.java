@@ -1,4 +1,4 @@
-package _19_Binary_Trees;
+package _19_Trees;
 
 public class SegmentTree {
     private static class Node {
@@ -69,6 +69,8 @@ public class SegmentTree {
 
         System.out.println(str);
 
+
+        //recursion call
         if (node.left != null) {
             display(node.left);
         }
