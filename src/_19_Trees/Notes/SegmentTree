@@ -1,0 +1,40 @@
+#Segment Tree
+A segment tree is a binary tree used for storing intervals or segments.
+It allows querying which of the stored segments contain a given point efficiently.
+Segment trees are particularly useful in scenarios where multiple queries of various types (like range minimum, range maximum, sum queries, etc.) are to be performed over an array.
+
+#Structure
+1.Tree Representation: A segment tree for an array of size n is typically represented as a binary tree where each node represents a segment (or interval) of the array.
+The root node represents the entire array, while each leaf node represents a single element of the array.
+2.Balanced Binary Tree: The segment tree is a balanced binary tree.
+Therefore, for an array of size n, the height of the segment tree is O(logn).
+3.Nodes: Each node of the segment tree represents an interval or segment of the array and stores information relevant to the query we want to perform (like sum, minimum, maximum, etc.).
+
+#Construction
+The segment tree is typically built in a bottom-up manner:
+1. Leaf Nodes: Start with the leaf nodes. Each leaf node represents a single element of the array.
+2. Internal Nodes: Each internal node represents the combination (e.g., sum, minimum, maximum) of its children nodes.
+
+#Complexity
+1.Space Complexity:
+• The space complexity of a segment tree is O(2n - 1) = o(n).
+2.Time Complexity:
+• Build: O(n)
+• Query: O(logn)
+• Update: O(logn)
+
+#Applications
+• Range Minimum/Maximum Queries
+• Range Sum Queries
+• Range GCD/LCM Queries
+• Range XOR Queries
+• Range Updates
+
+Segment trees are a powerful data structure that can handle a variety of range queries and updates efficiently.
+They are widely used in competitive programming and scenarios where dynamic range queries and updates are frequent.
+
+#Why Use It?
+• Speed: It answers range queries and updates in O(logn) time, much faster than doing these operations directly on the array.
+• Versatility: You can use it for various types of queries, like finding the minimum, maximum, or greatest common divisor of a range.
+
+In short, a segment tree is a clever way to structure an array to make certain types of queries and updates much faster.
