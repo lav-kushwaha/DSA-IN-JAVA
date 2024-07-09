@@ -30,6 +30,16 @@ The segment tree is typically built in a bottom-up manner:
 • Range XOR Queries
 • Range Updates
 
+#Types of Operations:
+The operations that the segment tree can perform must be binary and associative. Some of the examples of operations are:
+• Finding Range Sum Queries
+• Searching index with given prefix sum
+• Finding Range Maximum/Minimum
+• Counting frequency of Range Maximum/Minimum
+• Finding Range GCD/LCM
+• Finding Range AND/OR/XOR
+• Finding number of zeros in the given range or finding index of Kth zero
+
 Segment trees are a powerful data structure that can handle a variety of range queries and updates efficiently.
 They are widely used in competitive programming and scenarios where dynamic range queries and updates are frequent.
 
