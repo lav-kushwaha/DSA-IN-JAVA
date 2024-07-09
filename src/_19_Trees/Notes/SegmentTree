@@ -40,11 +40,18 @@ The operations that the segment tree can perform must be binary and associative.
 • Finding Range AND/OR/XOR
 • Finding number of zeros in the given range or finding index of Kth zero
 
-Segment trees are a powerful data structure that can handle a variety of range queries and updates efficiently.
-They are widely used in competitive programming and scenarios where dynamic range queries and updates are frequent.
-
 #Why Use It?
 • Speed: It answers range queries and updates in O(logn) time, much faster than doing these operations directly on the array.
 • Versatility: You can use it for various types of queries, like finding the minimum, maximum, or greatest common divisor of a range.
+
+#Disadvantages
+Segment trees require more memory compared to simple arrays. The space complexity is O(2n−1), which is approximately O(n).
+This can be a concern for very large arrays, especially when memory resources are limited.
+Once built, the size of the segment tree is fixed. If the underlying array needs to be dynamically resized (e.g., insertions or deletions of elements), the entire segment tree may need to be rebuilt, which can be inefficient.
+Building the segment tree initially takes O(n) time, which can be significant for large datasets.
+
+#In short :
+Segment trees are a powerful data structure that can handle a variety of range queries and updates efficiently.
+They are widely used in competitive programming and scenarios where dynamic range queries and updates are frequent.
 
 In short, a segment tree is a clever way to structure an array to make certain types of queries and updates much faster.
