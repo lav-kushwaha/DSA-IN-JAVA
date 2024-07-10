@@ -103,26 +103,37 @@ public class SegmentTree {
     }
 
     private void display(Node node){
+
+        // Check if the node is null
+        if (node == null) {
+            return;
+        }
+
+        //string concatenation left,current and right node.
         String str = "";
 
+        // Left node data display
         if (node.left != null) {
             str += "Interval=[" + node.left.startInterval + "-" + node.left.endInterval + "] and data: " + node.left.data + " => ";
         } else {
             str += "No left child => ";
         }
 
+        // Current node data display
         str += "Interval=[" + node.startInterval + "-" + node.endInterval + "] and data: " + node.data + " <= ";
 
+        // Right node data display
         if (node.right != null) {
             str += "Interval=[" + node.right.startInterval + "-" + node.right.endInterval + "] and data: " + node.right.data;
         } else {
             str += "No right child";
         }
 
+        // Print the constructed string
         System.out.println(str);
 
 
-        //recursion call
+        // Recursive calls to display left and right children
         if (node.left != null) {
             display(node.left);
         }
