@@ -26,21 +26,73 @@ public class SegmentTree {
     // construct tree
     private Node constructTree(int[] arr, int start, int end) {
         if (start == end) { // base condition leaf node
-            Node leaf = new Node(start, end);
-            leaf.data = arr[start];
-            return leaf;
+            Node leaf = new Node(start, end); //leaf node interval where start==end. i.e. 0 == 0
+            leaf.data = arr[start];//leaf node start arr[0] data. i.e, 3
+            return leaf;//(3/0) leaf node
         }
 
-        Node node = new Node(start, end);
+        Node node = new Node(start, end); //node interval
 
-        int mid = (start + end) / 2;
+        int mid = (start + end) / 2; //mid
 
         node.left = this.constructTree(arr, start, mid);
         node.right = this.constructTree(arr, mid + 1, end);
 
-        node.data = node.left.data + node.right.data;
+        node.data = node.left.data + node.right.data; //sum query
 
         return node;
+    }
+
+    // sum of query in range.(qsi = query start index, qse = query end index).
+    public int query(int qsi, int qei){
+        return this.query(this.root, qsi, qei);
+    }
+
+    private int query(Node node, int qsi, int qei){
+        if (node == null) {
+            return 0;
+        }
+
+        // case 1: node is completely inside the query range
+        if (node.startInterval >= qsi && node.endInterval <= qei) {
+            return node.data;
+        }
+
+        // case 2: node is completely outside the query range
+        if (node.endInterval < qsi || node.startInterval > qei) {
+            return 0;
+        }
+
+        // case 3: node is partially inside and partially outside the query range.(Overlaping)
+        return this.query(node.left, qsi, qei) + this.query(node.right, qsi, qei);
+    }
+
+    public void update(int index, int value){
+        if (this.root != null) {
+            update(this.root, index, value);
+        }
+    }
+
+    private int update(Node node, int index, int value){
+        if (node == null) {
+            return 0;
+        }
+
+        // case 1: index is within the node's interval
+        if (index >= node.startInterval && index <= node.endInterval) {
+            // base condition: leaf node
+            if (node.startInterval == node.endInterval) {
+                node.data = value;
+                return node.data;
+            }
+
+            int leftAns = update(node.left, index, value);
+            int rightAns = update(node.right, index, value);
+            node.data = leftAns + rightAns;
+            return node.data;
+        }
+
+        return node.data;
     }
 
     // display method
@@ -78,58 +130,6 @@ public class SegmentTree {
         if (node.right != null) {
             display(node.right);
         }
-    }
-
-    // query
-    public int query(int qsi, int qei){
-        return this.query(this.root, qsi, qei);
-    }
-
-    private int query(Node node, int qsi, int qei){
-        if (node == null) {
-            return 0;
-        }
-
-        // case 1: node is completely inside the query range
-        if (node.startInterval >= qsi && node.endInterval <= qei) {
-            return node.data;
-        }
-
-        // case 2: node is completely outside the query range
-        if (node.endInterval < qsi || node.startInterval > qei) {
-            return 0;
-        }
-
-        // case 3: node is partially inside and partially outside the query range
-        return this.query(node.left, qsi, qei) + this.query(node.right, qsi, qei);
-    }
-
-    public void update(int index, int value){
-        if (this.root != null) {
-            update(this.root, index, value);
-        }
-    }
-
-    private int update(Node node, int index, int value){
-        if (node == null) {
-            return 0;
-        }
-
-        // case 1: index is within the node's interval
-        if (index >= node.startInterval && index <= node.endInterval) {
-            // base condition: leaf node
-            if (node.startInterval == node.endInterval) {
-                node.data = value;
-                return node.data;
-            }
-
-            int leftAns = update(node.left, index, value);
-            int rightAns = update(node.right, index, value);
-            node.data = leftAns + rightAns;
-            return node.data;
-        }
-
-        return node.data;
     }
 
     public static void main(String[] args){
