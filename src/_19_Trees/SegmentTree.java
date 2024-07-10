@@ -92,7 +92,7 @@ public class SegmentTree {
             return node.data;
         }
 
-        return node.data;
+        return node.data; // case 2: if index is not within the node's interval just return the value.
     }
 
     // display method
@@ -137,7 +137,6 @@ public class SegmentTree {
         SegmentTree tree = new SegmentTree(arr);
         tree.display();
         System.out.println("Query (1, 6): " + tree.query(1, 6)); //sum of element between the range [1,6] is 15, 1 and 6 are index.
-
 
         tree.update(3, 10);
         System.out.println("After update: ");
