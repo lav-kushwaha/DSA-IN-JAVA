@@ -32,10 +32,7 @@ public class StringBuilderExample {
     }
 }
 
-
-
-
-Common Methods of StringBuilder
+#Common Methods of StringBuilder
 append(String str): Appends the specified string to this character sequence.
 insert(int offset, String str): Inserts the string into this character sequence at the specified position.
 replace(int start, int end, String str): Replaces the characters in a substring of this sequence with characters in the specified string.
