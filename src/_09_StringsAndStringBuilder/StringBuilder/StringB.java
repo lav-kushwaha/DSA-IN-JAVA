@@ -1,8 +1,5 @@
 package _09_StringsAndStringBuilder.StringBuilder;
 
-//Q. What is stringbuilder?
-//StringBuffer objects are mutable, meaning that you can change the contents of the buffer without creating a new object.
-//StringBuffer is a class in Java that represents a mutable sequence of characters. It provides an alternative to the immutable String class, allowing you to modify the contents of a string without creating a new object every time.
 public class StringB {
     public static void main(String[] args) {
         //This is mutable.
@@ -18,7 +15,8 @@ public class StringB {
         System.out.println(sb.delete(0,12));//mnopqrstuvwxyz
 
         //Example-2.
-        //Here you can se string is mutable thats means it is not creating new object everytime. it is modifying current object.
+        //Here you can se string is mutable that's means it is not creating new object everytime.
+        // it is modifying current object.
         StringBuffer sb1 = new StringBuffer();
         sb1.append("Hello");
         sb1.append(" ");
