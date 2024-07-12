@@ -1,5 +1,9 @@
 package _20_StringBuffer;
 
+import java.text.DecimalFormat;
+import java.util.Arrays;
+import java.util.Random;
+
 public class StringBufferExample {
     public static void main(String[] args) {
 
@@ -7,7 +11,7 @@ public class StringBufferExample {
         StringBuffer sb = new StringBuffer();
 
         //checking capacity of string buffer
-        System.out.println(sb.capacity());//16
+//        System.out.println(sb.capacity());//16
 
         //constructor 2
         StringBuffer sb2 = new StringBuffer("Lav Kushwaha");
@@ -15,7 +19,7 @@ public class StringBufferExample {
         //constructor 3
         StringBuffer sb3 = new StringBuffer(30);
         //checking capacity of string buffer after changing 16 to 30
-        System.out.println(sb3.capacity());//30
+//        System.out.println(sb3.capacity());//30
 
         //Different methods :
         sb.append("Hello world");
@@ -31,10 +35,8 @@ public class StringBufferExample {
 
           sb.delete(0,5); //Hello
 
-
-
-        String str = sb.toString();
-        System.out.println(str);
+          String str = sb.toString();
+//        System.out.println(str);
 
     }
 }
