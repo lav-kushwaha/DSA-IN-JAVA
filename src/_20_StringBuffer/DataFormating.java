@@ -10,7 +10,8 @@ public class DataFormating {
         System.out.println(random.nextFloat());//it will give random integer from 0 to 1
 
         //remove whitespaces
-        String sentences = "Hi hello lav kushwhaha";
+        String sentences = "Hi hel" +
+                "lo lav kushwhaha";
         System.out.println(sentences);
         System.out.println(sentences.replaceAll("\s",""));//removing whitespaces
 
@@ -22,9 +23,5 @@ public class DataFormating {
         //rounding off
         DecimalFormat df = new DecimalFormat("00.0000");
         System.out.println(df.format(7.34));//07.3400
-
-
-        String message = "Hello world!";
-        System.out.println(message);
     }
 }
