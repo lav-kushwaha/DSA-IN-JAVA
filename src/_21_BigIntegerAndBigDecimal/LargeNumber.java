@@ -1,4 +1,4 @@
-package _21_LargeNumber;
+package _21_BigIntegerAndBigDecimal;
 import java.math.BigInteger;
 
 //Learn About BigInteger More From Docs.
