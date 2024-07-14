@@ -3,7 +3,7 @@ import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Random;
 
-public class LargeString {
+public class DataFormating {
     public static void main(String[] args) {
         //Generating random float
         Random random = new Random();
@@ -22,5 +22,9 @@ public class LargeString {
         //rounding off
         DecimalFormat df = new DecimalFormat("00.0000");
         System.out.println(df.format(7.34));//07.3400
+
+
+        String message = "Hello world!";
+        System.out.println(message);
     }
 }
