@@ -1,4 +1,4 @@
-package _21_LargeNumber;
+package _21_BigIntegerAndBigDecimal;
 
 import java.math.BigInteger;
 
@@ -9,7 +9,6 @@ public class Factorial {
         for(int i=2;i<=num;i++){
             ans = ans.multiply(BigInteger.valueOf(i));
         }
-
         return ans;
     }
 
