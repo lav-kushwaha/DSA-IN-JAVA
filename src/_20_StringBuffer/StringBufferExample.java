@@ -1,9 +1,6 @@
 package _20_StringBuffer;
 
-import java.text.DecimalFormat;
-import java.util.Arrays;
-import java.util.Random;
-
+//for large string
 public class StringBufferExample {
     public static void main(String[] args) {
 
