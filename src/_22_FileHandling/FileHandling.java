@@ -2,7 +2,7 @@ package _22_FileHandling;
 
 import java.io.*;
 
-public class Output1 {
+public class FileHandling {
     public static void main(String[] args) {
         //creating a file.
         try{
@@ -32,7 +32,7 @@ public class Output1 {
         }
 
 
-        //delete a file.
+        //create a file which is file.txt.
         try{
             File fo = new File("A:/DSA-IN-JAVA/src/_22_FileHandling/file.txt");
             fo.createNewFile();
@@ -40,12 +40,16 @@ public class Output1 {
             System.out.println(e.getMessage());
         }
 
-//        try{
-//            File fo = new File("A:/DSA-IN-JAVA/src/_22_FileHandling/file.txt");
-//            fo.createNewFile();
-//        } catch(IOException e){
-//            System.out.println(e.getMessage());
-//        }
+        //delete a file which is "file.txt"
+        try{
+            File fo = new File("A:/DSA-IN-JAVA/src/_22_FileHandling/file.txt");
+            fo.createNewFile();
+            if(fo.delete()){
+                System.out.println(fo.getName());
+            }
+        } catch(IOException e){
+            System.out.println(e.getMessage());
+        }
 
     }
 }

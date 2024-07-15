@@ -2,7 +2,7 @@ Learn More About File Handling From Official Docs:
 Official Docs Link : https://docs.oracle.com/javase/8/docs/api/java/io/File.html#method.summary
 Official Docs Of Class Writer : https://docs.oracle.com/javase/8/docs/api/java/io/Writer.html
 Official Docs Of Buffered Writer : https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWriter.html
-
+GFG Link : https://www.geeksforgeeks.org/difference-between-inputstream-and-outputstream-in-java/
 #File Handling in Java
 
 In Java, with the help of File Class, we can work with files. This File Class is inside the java.io package.
