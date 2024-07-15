@@ -1,0 +1,57 @@
+#BIGINTEGER AND BIG DECIMAL
+
+In Java, the BigInteger and BigDecimal classes are part of the java.math package and are used for mathematical operations involving very large or very precise numbers,
+which are beyond the capabilities of primitive data types like int, long, and double.
+
+#BigInteger
+The BigInteger class is used for arbitrary-precision integers.
+It can handle very large integer values that are not limited by the fixed size of primitive data types.
+
+#Common Methods:
+add(BigInteger val): Adds the specified value.
+subtract(BigInteger val): Subtracts the specified value.
+multiply(BigInteger val): Multiplies by the specified value.
+divide(BigInteger val): Divides by the specified value.
+mod(BigInteger val): Computes the remainder.
+pow(int exponent): Raises to the power of the specified exponent.
+gcd(BigInteger val): Computes the greatest common divisor.
+
+#Examples :
+
+BigInteger bigInt1 = new BigInteger("123456789012345678901234567890");
+BigInteger bigInt2 = new BigInteger("987654321098765432109876543210");
+
+BigInteger sum = bigInt1.add(bigInt2);
+BigInteger difference = bigInt1.subtract(bigInt2);
+BigInteger product = bigInt1.multiply(bigInt2);
+BigInteger quotient = bigInt1.divide(bigInt2);
+BigInteger remainder = bigInt1.mod(bigInt2);
+BigInteger power = bigInt1.pow(2);
+
+#BigDecimal
+The BigDecimal class is used for arbitrary-precision decimal numbers.
+It is especially useful for financial calculations where precision is crucial.
+
+#Common Methods:
+add(BigDecimal val): Adds the specified value.
+subtract(BigDecimal val): Subtracts the specified value.
+multiply(BigDecimal val): Multiplies by the specified value.
+divide(BigDecimal val, RoundingMode roundingMode): Divides by the specified value with a rounding mode.
+setScale(int newScale, RoundingMode roundingMode): Sets the scale of the BigDecimal with a rounding mode.
+
+#Examples :
+
+BigDecimal bigDec1 = new BigDecimal("12345.6789012345678901234567890");
+BigDecimal bigDec2 = new BigDecimal("98765.4321098765432109876543210");
+BigDecimal sum = bigDec1.add(bigDec2);
+BigDecimal difference = bigDec1.subtract(bigDec2);
+BigDecimal product = bigDec1.multiply(bigDec2);
+BigDecimal quotient = bigDec1.divide(bigDec2, RoundingMode.HALF_UP);
+BigDecimal rounded = bigDec1.setScale(10, RoundingMode.HALF_UP);
+
+#Key Points:
+
+Precision: Both BigInteger and BigDecimal provide arbitrary precision, which is essential for calculations requiring a high degree of accuracy.
+Immutability: Both classes are immutable, meaning that operations on these "objects" produce new objects rather than modifying the existing ones.
+Rounding: BigDecimal provides control over rounding behavior, which is important for financial and scientific calculations.
+By using BigInteger and BigDecimal, you can perform complex mathematical operations with precision and without worrying about the limitations of primitive data types.
