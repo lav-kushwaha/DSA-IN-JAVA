@@ -1,7 +1,7 @@
 package _22_FileHandling;
 import java.io.*;
 
-public class FileHandling {
+public class Input {
     public static void main(String[] args) throws IOException {
         //INPUT STREAM :
         // We are taking data in byte stream and putting it out in char stream
