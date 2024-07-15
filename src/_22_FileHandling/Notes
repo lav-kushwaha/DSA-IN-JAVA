@@ -1,0 +1,22 @@
+#File Handling in Java
+
+In Java, with the help of File Class, we can work with files. This File Class is inside the java.io package.
+The File class can be used by creating an object of the class and then specifying the name of the file.
+
+#Why File Handling is Required?
+File Handling is an integral part of any programming language as file handling enables us to store the output of any particular program in a file and allows us to perform certain operations on it.
+In simple words, file handling means reading and writing data to a file.
+
+#read() and readLine()
+
+#read()
+The read() method reads one character or byte at a time. It is found in classes like InputStream and Reader.
+
+#readLine()
+The readLine() method reads a whole line of text at a time. It is typically found in the BufferedReader class.
+
+#Summary
+read(): Reads one character or byte at a time. Returns the character read, or -1 if the end of the stream is reached.
+readLine(): Reads an entire line of text. Returns the line read, or null if the end of the stream is reached.
+
+Both methods are useful for different scenarios, with read() being suitable for character-by-character reading and readLine() being ideal for reading text line by line.
