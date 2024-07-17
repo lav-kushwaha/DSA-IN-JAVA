@@ -1,0 +1,83 @@
+#Static Nested Classes:
+
+Definition: A static nested class is a nested class that is declared static.
+It can access static members of the outer class directly.
+Usage: Useful when you want to logically group classes and avoid using them outside the context of the outer class.
+
+Example:
+
+public class OuterClass {
+    static class NestedStaticClass {
+        void display() {
+            System.out.println("Nested static class method");
+        }
+    }
+
+    public static void main(String[] args) {
+        OuterClass.NestedStaticClass nested = new OuterClass.NestedStaticClass();
+        nested.display(); // Output: Nested static class method
+    }
+}
+
+#Non-Static Nested Class (Inner Class):
+
+If you remove the static keyword from the NestedStaticClass declaration,
+it becomes a non-static nested class (also known as an inner class).
+Here’s how your code would look without static in the nested class:
+
+public class OuterClass {
+    class NestedStaticClass { // Non-static nested class (inner class)
+        void display() {
+            System.out.println("Nested static class method");
+        }
+    }
+
+    public static void main(String[] args) {
+        OuterClass outer = new OuterClass();
+        OuterClass.NestedStaticClass nested = outer.new NestedStaticClass();
+        nested.display(); // Output: Nested static class method
+    }
+}
+
+#Non-Static Nested Class (Inner Class):
+When static is removed from NestedStaticClass, it becomes an inner class.
+Inner classes have a reference to an instance of the outer class (OuterClass in this case).
+
+#Instantiation:
+To instantiate a non-static nested class (inner class), you need an instance of the outer class.
+This is because an inner class is associated with an instance of the outer class.
+In the main method, OuterClass outer = new OuterClass(); creates an instance of OuterClass.
+outer.new NestedStaticClass(); is used to instantiate NestedStaticClass within the context of outer.
+
+#Accessing the Method:
+The rest of the code remains the same.
+You can call display() on the nested object to invoke the method defined in NestedStaticClass.
+
+#Key Differences:
+
+#Static Nested Class:
+
+Declared using static.
+No reference to an instance of the outer class.
+Can be instantiated directly using OuterClass.NestedStaticClass.
+
+#Non-Static Nested Class (Inner Class):
+
+Declared without static.
+Has an implicit reference to an instance of the outer class.
+Requires an instance of the outer class to instantiate (outer.new NestedStaticClass()).
+
+#Use Cases:
+Use a static nested class when it does not need access to instance-specific methods or fields of the outer class and when you want to logically group classes together.
+Use a non-static nested class (inner class) when you need access to instance methods or fields of the outer class or when you want to encapsulate the inner class within an instance of the outer class.
+In summary, the choice between using static or not in a nested class depends on whether you need the inner class to have a direct association with an instance of the outer class or if it can exist independently.
+
+#Static Keywords
+#KEY NOTE :
+Static members belong to the class itself and are shared among all instances.
+Static methods can be called directly using the class name, without creating an instance of the class.
+Static variables are initialized once and shared across all instances.
+Static blocks are executed when the class is loaded into memory, and they run before the main method.
+Static nested classes do not have a reference to an instance of the outer class.
+
+Understanding and using the static keyword effectively can help in organizing code, optimizing memory usage, and defining behavior that is consistent across all instances of a class.
