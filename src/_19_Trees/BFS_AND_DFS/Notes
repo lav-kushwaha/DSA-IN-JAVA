@@ -138,8 +138,6 @@ public class BFSTreeTraversal {
     }
 }
 
-
-
 #Summary:
 • DFS in Trees: Involves Preorder, Inorder, and Postorder traversals.
 • BFS in Trees: Involves Level-order traversal.
