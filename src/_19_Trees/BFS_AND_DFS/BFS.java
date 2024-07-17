@@ -1,4 +1,4 @@
-package _19_Trees.Questions;
+package _19_Trees.BFS_AND_DFS;
 
 import java.util.LinkedList;
 import java.util.Queue;
