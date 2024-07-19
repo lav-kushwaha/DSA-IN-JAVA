@@ -1,4 +1,4 @@
-package _19_Trees;
+package _19_Trees.Concepts;
 
 public class SegmentTree {
     private static class Node {

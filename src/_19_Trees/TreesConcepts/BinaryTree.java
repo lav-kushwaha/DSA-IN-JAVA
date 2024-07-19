@@ -1,4 +1,4 @@
-package _19_Trees;
+package _19_Trees.Concepts;
 
 import java.util.Scanner;
 
