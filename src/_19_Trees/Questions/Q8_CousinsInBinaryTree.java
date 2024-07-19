@@ -3,14 +3,17 @@ package _19_Trees.Questions;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Solution {
+//993. Cousins in Binary Tree
+//https://leetcode.com/problems/cousins-in-binary-tree/description/
+
+public class Q8_CousinsInBinaryTree {
     static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
         TreeNode(int x) { val = x; }
     }
-    
+
     public boolean isCousins(TreeNode root, int A, int B) {
         if (root == null) return false;
         
@@ -19,12 +22,14 @@ public class Solution {
         
         while (!queue.isEmpty()) {
             int size = queue.size();
+
+            //flag
             boolean isAExist = false;        
             boolean isBExist = false;        
             
             for (int i = 0; i < size; i++) {
                 TreeNode current = queue.poll();
-                
+
                 if (current.val == A) isAExist = true;
                 if (current.val == B) isBExist = true;
                 
@@ -52,7 +57,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Q8_CousinsInBinaryTree solution = new Q8_CousinsInBinaryTree();
 
         // Example 1
         TreeNode root1 = new TreeNode(1);
