@@ -1,4 +1,4 @@
-package _19_Trees.Concepts;
+package _19_Trees.TreesConcepts;
 
 public class AVLTree {
 
