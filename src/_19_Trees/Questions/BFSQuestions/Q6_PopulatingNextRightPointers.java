@@ -1,4 +1,4 @@
-package _19_Trees.Questions;
+package _19_Trees.Questions.BFSQuestions;
 
 //https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
 //116. Populating Next Right Pointers in Each Node(Asked in Amazon california)

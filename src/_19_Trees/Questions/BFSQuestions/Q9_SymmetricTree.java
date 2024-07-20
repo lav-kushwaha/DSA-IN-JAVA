@@ -1,4 +1,4 @@
-package _19_Trees.Questions;
+package _19_Trees.Questions.BFSQuestions;
 
 //https://leetcode.com/problems/symmetric-tree/description/
 //101. Symmetric Tree

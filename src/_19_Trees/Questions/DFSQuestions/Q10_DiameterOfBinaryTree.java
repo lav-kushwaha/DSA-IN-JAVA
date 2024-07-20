@@ -1,4 +1,7 @@
-package _19_Trees.Questions.DFSQuestion;
+package _19_Trees.Questions.DFSQuestions;
+
+//https://leetcode.com/problems/diameter-of-binary-tree/
+//543. Diameter of Binary Tree
 
 class Q10_DiameterOfBinaryTree {
     public static class TreeNode {
@@ -6,12 +9,8 @@ class Q10_DiameterOfBinaryTree {
         TreeNode left;
         TreeNode right;
 
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
+        TreeNode(int val) {
             this.val = val;
-            this.left = left;
-            this.right = right;
         }
     }
 
