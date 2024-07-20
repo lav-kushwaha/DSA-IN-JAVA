@@ -1,10 +1,10 @@
-package _19_Trees.BFS_AND_DFS;
+package _19_Trees.Questions.BFS_AND_DFS_Concepts;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 
-public class BFS {
+public class BreadthFirstSearch {
 
     static class Node{
         private final int value;
@@ -19,7 +19,7 @@ public class BFS {
     //root node
     private Node root;
 
-    public BFS(){
+    public BreadthFirstSearch(){
         this.root = null;
     }
 
@@ -77,7 +77,7 @@ public class BFS {
     }
 
     public static void main(String[] args) {
-        BFS tree = new BFS();
+        BreadthFirstSearch tree = new BreadthFirstSearch();
         tree.insert(1);
         tree.insert(2);
         tree.insert(3);
