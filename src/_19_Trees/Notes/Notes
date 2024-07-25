@@ -63,6 +63,7 @@ The height of the root node 15 is now 1, and the height of the node 10 is 0.
 This correctly follows the definition where the height of a leaf node is 0 and the height of an internal node is one more than the maximum height of its children.
 
 ==========================================================================++++++++++++++++++++++++========================================================================================================
+
 #Simple method to calculate height.
 
    // Method to calculate the height of the BST
@@ -94,6 +95,7 @@ The provided code checks for balance by comparing subtree heights and ensuring t
 
 
 ============================================================================+++++++++++++++++++++++++++++++++++++++++++===============================================================================================
+
 #Binary Tree Traversals :
 
 1. Preorder Traversals : -
@@ -159,6 +161,7 @@ This is because the root-first order is easy to serialize and deserialize while 
 #Tree Modifications:
 When performing operations that need to modify the tree, like mirroring or flattening the tree, preorder traversal can be used to visit and modify nodes in a structured way.
 
+=====================================================+++++++++++++++++++++++++++++++++++++===========================================================================================================
 
 #Difference between & and &&
 The operators & and && are both used in Java, but they serve different purposes and have different behaviors.
@@ -221,6 +224,36 @@ Choosing between & and && depends on the specific use case:
 
 Use & for bitwise operations or when you need both boolean operands to be evaluated.
 Use && when working with boolean expressions and you want the benefits of short-circuit evaluation.
+
+==============================================+++++++++++++++++++++++++++++++++++++++++++++++============================================
+
+#Inclusive and Exclusive
+
+#Inclusive: Think of a range with brackets [ ] that are closed on both ends, meaning it includes both the start and end points.
+Example: [0, 10] means it includes 0 through 10.
+
+#Code Examples
+
+#Inclusive:
+
+for (int i = 0; i <= 10; i++) {
+    System.out.println(i);  // This will print numbers from 0 to 10 (inclusive)
+}
+
+Think of <= as including the last number.
+
+#Exclusive:
+
+#Exclusive: Think of a range with a parenthesis ( ) that is open on the end, meaning it does not include the end point.
+Example: [0, 10) means it includes 0 through 9, but not 10.
+
+for (int i = 0; i < 10; i++) {
+    System.out.println(i);  // This will print numbers from 0 to 9 (exclusive)
+}
+
+Think of < as stopping before the last number.
+
+
 
 
 
