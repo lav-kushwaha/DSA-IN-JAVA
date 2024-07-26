@@ -50,7 +50,7 @@ public class Q19_SerializeAndDeserialize {
             return null;
         }
 
-        TreeNode node = new TreeNode(Integer.parseInt(val));
+        TreeNode node = new TreeNode(Integer.parseInt(val)); //converting string into int.
         node.left = helper2(list);
         node.right = helper2(list);
         return node;
