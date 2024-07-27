@@ -55,26 +55,22 @@ public class Q21_SumRoottoLeafNumbers {
 
 //2nd method
 //class Solution {
-//    int sum = 0;  // to store the total sum of all root-to-leaf numbers
-//
 //    public int sumNumbers(TreeNode root) {
 //        helper(root,0);  // start the helper function with an empty string
 //        return sum;  // return the total sum
 //    }
 //
-//    private void helper(TreeNode root, int num) {
+//    private int helper(TreeNode root, int sum) {
 //        if (root == null) return;  // base case: if the current node is null, return
 //
-//        num = num * 10 + root.val;  // append the current node's value to the path string
+//        sum = sum * 10 + root.val;  // append the current node's value to the path string
 //
 //        // If the current node is a leaf, convert the path string to an integer and add it to sum
 //        if (root.left == null && root.right == null) {
-//            sum = sum + num;
-//            return;  // return since it's a leaf node
+//            return sum;  // return since it's a leaf node
 //        }
-//
-//        // Recursively call the helper function for left and right children
-//        helper(root.left, num);
-//        helper(root.right, num);
+
+//        Recursively call the helper function for left and right children
+//        return helper(root.left, num) + helper(root.right, num);
 //    }
 //}
