@@ -1,6 +1,6 @@
 package _19_Trees.Questions.DFSQuestions;
 
-public class Q23_FindPathExistOrNot {
+public class Q23_PathExistsInBinaryTreeFromRootToLeaf {
     static class TreeNode {
         private int val;
         private TreeNode left;
@@ -49,7 +49,7 @@ public class Q23_FindPathExistOrNot {
         // Array to check the path
         int[] arr = {3, 9, 12, 8};
 
-        Q23_FindPathExistOrNot finder = new Q23_FindPathExistOrNot();
+        Q23_PathExistsInBinaryTreeFromRootToLeaf finder = new Q23_PathExistsInBinaryTreeFromRootToLeaf();
         boolean exists = finder.findPath(root, arr);
 
         System.out.println("Path exists: " + exists);
