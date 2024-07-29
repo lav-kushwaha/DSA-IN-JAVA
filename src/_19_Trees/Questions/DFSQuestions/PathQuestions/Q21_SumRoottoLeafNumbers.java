@@ -1,4 +1,4 @@
-package _19_Trees.Questions.DFSQuestions;
+package _19_Trees.Questions.DFSQuestions.PathQuestions;
 
 //https://leetcode.com/problems/sum-root-to-leaf-numbers/description/
 //129. Sum Root to Leaf Numbers

@@ -1,4 +1,4 @@
-package _19_Trees.Questions.DFSQuestions;
+package _19_Trees.Questions.DFSQuestions.PathQuestions;
 
 //https://leetcode.com/problems/path-sum/description/
 //112. Path Sum

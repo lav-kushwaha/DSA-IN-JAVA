@@ -1,6 +1,4 @@
-package _19_Trees.Questions.DFSQuestions;
-
-import com.sun.source.tree.Tree;
+package _19_Trees.Questions.DFSQuestions.PathQuestions;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -47,7 +45,7 @@ public class Q24_PathExistsInBinaryTreeAtAnyNodes {
         return count;
     }
 
-    //List of path
+    //Put path in list
     public List<List<Integer>> findPaths(TreeNode root, int targetSum) {
         List<List<Integer>> paths = new ArrayList<>();
         List<Integer> path = new ArrayList<>();

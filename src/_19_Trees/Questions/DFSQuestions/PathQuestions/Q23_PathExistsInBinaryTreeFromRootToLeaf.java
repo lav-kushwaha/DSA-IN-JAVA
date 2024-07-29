@@ -1,4 +1,4 @@
-package _19_Trees.Questions.DFSQuestions;
+package _19_Trees.Questions.DFSQuestions.PathQuestions;
 
 public class Q23_PathExistsInBinaryTreeFromRootToLeaf {
     static class TreeNode {

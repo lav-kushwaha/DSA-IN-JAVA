@@ -1,4 +1,4 @@
-package _19_Trees.Questions.DFSQuestions;
+package _19_Trees.Questions.DFSQuestions.PathQuestions;
 
 //https://leetcode.com/problems/binary-tree-maximum-path-sum/
 //124. Binary Tree Maximum Path Sum
