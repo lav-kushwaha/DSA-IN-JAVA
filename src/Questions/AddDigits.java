@@ -1,7 +1,7 @@
 package Questions;
 
 //https://leetcode.com/problems/add-digits/
-//258. Add Digits
+//258. Add Digits (Easy Question)
 
 class AddDigits {
 
