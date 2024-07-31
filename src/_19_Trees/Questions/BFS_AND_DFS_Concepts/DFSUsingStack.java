@@ -47,6 +47,7 @@ public class DFSUsingStack {
         root.left.right = new TreeNode(6);
         root.left.right.left = new TreeNode(4);
 
+        //right subtree
         root.right = new TreeNode(9);
         root.right.left = new TreeNode(18);
 
