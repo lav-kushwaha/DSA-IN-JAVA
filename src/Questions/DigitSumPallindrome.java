@@ -4,6 +4,8 @@ package Questions;
 //Sum of Digit is Pallindrome or not
 
 class DigitSumPallindrome {
+
+    //Check is digittal sum palindrome or not
    static int isDigitSumPalindrome(int N) {
         // code here
          int sum = 0;
@@ -20,6 +22,8 @@ class DigitSumPallindrome {
             reverse = reverse * 10 + digits;
             num = num/10;
         }
+
+        //check sum is equal to reverse no. or not.
         if(sum==reverse){
             return 1;
         }
