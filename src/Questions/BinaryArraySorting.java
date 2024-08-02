@@ -1,4 +1,5 @@
 package Questions;
+
 //https://www.geeksforgeeks.org/problems/binary-array-sorting-1587115620/1?page=1&category=Arrays,Strings&difficulty=Basic&sortBy=submissions
 //Binary Array Sorting.
 
@@ -11,6 +12,8 @@ public class BinaryArraySorting {
         binSort(arr,N);//function call
         System.out.println(Arrays.toString(arr));//print ans
     }
+
+    //Binary sort method
     static void binSort(int A[], int N)
     {
         int count = 0; // Count of 0's
