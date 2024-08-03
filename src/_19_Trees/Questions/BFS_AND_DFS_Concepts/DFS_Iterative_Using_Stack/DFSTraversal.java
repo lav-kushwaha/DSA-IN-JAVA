@@ -13,7 +13,6 @@ public class DFSTraversal {
         }
     }
 
-
     // Iterative Preorder DFS
     public void preorderDFS(TreeNode root) {
         if (root == null) {
@@ -31,6 +30,8 @@ public class DFSTraversal {
             if (node.right != null) {
                 stack.push(node.right);
             }
+
+            //we are adding left node last. so, we can remove at first. bcz in preOrder (N-L-R)
             if (node.left != null) {
                 stack.push(node.left);
             }
