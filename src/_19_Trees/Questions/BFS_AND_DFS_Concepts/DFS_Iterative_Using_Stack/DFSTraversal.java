@@ -1,10 +1,12 @@
 package _19_Trees.Questions.BFS_AND_DFS_Concepts.DFS_Iterative_Using_Stack;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 public class DFSTraversal {
     // Definition for a binary tree node
-   static class TreeNode {
+    static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -14,9 +16,10 @@ public class DFSTraversal {
     }
 
     // Iterative Preorder DFS
-    public void preorderDFS(TreeNode root) {
+    public List<Integer> preorderDFS(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
         if (root == null) {
-            return;
+            return result;
         }
 
         Stack<TreeNode> stack = new Stack<>();
@@ -24,27 +27,29 @@ public class DFSTraversal {
 
         while (!stack.isEmpty()) {
             TreeNode node = stack.pop();
-            System.out.print(node.val + " "); // Process the current node
+            result.add(node.val); // Add the current node value to the result list
 
             // Push the right child first so that the left child is processed first
             if (node.right != null) {
                 stack.push(node.right);
             }
 
-            //we are adding left node last. so, we can remove at first. bcz in preOrder (N-L-R)
+            // Add left node last so it is processed first
             if (node.left != null) {
                 stack.push(node.left);
             }
         }
+
+        return result;
     }
 
     // Iterative Inorder DFS
-    public void inorderDFS(TreeNode root) {
+    public List<Integer> inorderDFS(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
         TreeNode current = root;
 
         while (current != null || !stack.isEmpty()) {
-            // Left traversal, processing, and right traversal occur here. (L-N-R)
             // Reach the leftmost node of the current node (Left Traversal)
             while (current != null) {
                 stack.push(current);
@@ -53,22 +58,25 @@ public class DFSTraversal {
 
             // Current must be null at this point
             current = stack.pop();
-            System.out.print(current.val + " "); // Process the current node(Processing)
+            result.add(current.val); // Add the current node value to the result list
 
-            // We have visited the node and its left subtree. Now, it's right subtree's turn(Right Traversal)
+            // Move to the right subtree
             current = current.right;
         }
+
+        return result;
     }
 
     // Iterative Postorder DFS
-    public void postorderDFS(TreeNode root) {
+    public List<Integer> postorderDFS(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
         if (root == null) {
-            return;
+            return result;
         }
 
-        Stack<TreeNode> stack1 = new Stack<>();
-        Stack<TreeNode> stack2 = new Stack<>();
-        stack1.push(root);
+        Stack<TreeNode> stack1 = new Stack<>();// Stack for processing nodes
+        Stack<TreeNode> stack2 = new Stack<>();//Stack to help with post-order traversal
+        stack1.push(root);// Start with the root node
 
         while (!stack1.isEmpty()) {
             TreeNode node = stack1.pop();
@@ -84,8 +92,10 @@ public class DFSTraversal {
 
         while (!stack2.isEmpty()) {
             TreeNode node = stack2.pop();
-            System.out.print(node.val + " "); // Process the current node
+            result.add(node.val); // Add the current node value to the result list
         }
+
+        return result;
     }
 
     public static void main(String[] args) {
@@ -105,18 +115,12 @@ public class DFSTraversal {
         DFSTraversal traversal = new DFSTraversal();
 
         // Perform Preorder DFS
-        System.out.print("Preorder DFS Traversal: ");
-        traversal.preorderDFS(root);
-        System.out.println();
+        System.out.println("Preorder DFS Traversal: " + traversal.preorderDFS(root));
 
         // Perform Inorder DFS
-        System.out.print("Inorder DFS Traversal: ");
-        traversal.inorderDFS(root);
-        System.out.println();
+        System.out.println("Inorder DFS Traversal: " + traversal.inorderDFS(root));
 
         // Perform Postorder DFS
-        System.out.print("Postorder DFS Traversal: ");
-        traversal.postorderDFS(root);
-        System.out.println();
+        System.out.println("Postorder DFS Traversal: " + traversal.postorderDFS(root));
     }
 }
