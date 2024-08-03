@@ -44,7 +44,8 @@ public class DFSTraversal {
         TreeNode current = root;
 
         while (current != null || !stack.isEmpty()) {
-            // Reach the leftmost node of the current node
+            // Left traversal, processing, and right traversal occur here. (L-N-R)
+            // Reach the leftmost node of the current node (Left Traversal)
             while (current != null) {
                 stack.push(current);
                 current = current.left;
@@ -52,9 +53,9 @@ public class DFSTraversal {
 
             // Current must be null at this point
             current = stack.pop();
-            System.out.print(current.val + " "); // Process the current node
+            System.out.print(current.val + " "); // Process the current node(Processing)
 
-            // We have visited the node and its left subtree. Now, it's right subtree's turn
+            // We have visited the node and its left subtree. Now, it's right subtree's turn(Right Traversal)
             current = current.right;
         }
     }
@@ -89,13 +90,17 @@ public class DFSTraversal {
 
     public static void main(String[] args) {
         // Construct the binary tree
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(5);
-        root.right.left = new TreeNode(6);
-        root.right.right = new TreeNode(7);
+        TreeNode root = new TreeNode(12);
+
+        //left subtree
+        root.left = new TreeNode(3);
+        root.left.left = new TreeNode(5);
+        root.left.right = new TreeNode(6);
+        root.left.right.left = new TreeNode(4);
+
+        //right subtree
+        root.right = new TreeNode(9);
+        root.right.left = new TreeNode(18);
 
         DFSTraversal traversal = new DFSTraversal();
 
