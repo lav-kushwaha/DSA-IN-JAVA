@@ -7,9 +7,10 @@ import java.util.Arrays;
 
 class RotateAnArray {
 
+    //left rotate method
      static void leftRotate(int[] arr, int n, int d) {
 
-        d=d%n;
+        d=d%n; //remainder
         reverse(arr,0,d-1);//function call
         reverse(arr,d,n-1);//function call
         reverse(arr,0,n-1);//function call
