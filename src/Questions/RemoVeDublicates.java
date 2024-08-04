@@ -5,7 +5,7 @@ import java.util.ArrayList;
 //https://www.geeksforgeeks.org/problems/remove-duplicates3034/0
 //Remove Duplicates
 
-class RemoVeDublicates {
+class RemoVeDuplicates {
     static String removeDups(String str) {
         // code here
         ArrayList<Character> a = new ArrayList<>();
