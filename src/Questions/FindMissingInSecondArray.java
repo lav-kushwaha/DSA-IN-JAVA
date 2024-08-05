@@ -1,22 +1,36 @@
 package Questions;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 class FindMissingInSecondArray {
     static ArrayList<Integer> findMissing(int a[], int b[], int n, int m)
     {
+//        ArrayList<Integer> ans = new ArrayList<>();
+//        for(int i=0;i<n;i++){
+//            int p = a[i];
+//            int q=0;
+//            for(int j=0;j<m;j++){
+//                if(b[j]==a[i]){
+//                    q=1;
+//                    break;
+//                }
+//            }
+//            if(q==0){
+//                ans.add(p);
+//            }
+//        }
+//        return ans;
+//
+        //optimize code
+        HashSet<Integer> set = new HashSet<>();
         ArrayList<Integer> ans = new ArrayList<>();
-        for(int i=0;i<n;i++){
-            int p = a[i];
-            int q=0;
-            for(int j=0;j<m;j++){
-                if(b[j]==a[i]){
-                    q=1;
-                    break;
-                }
-            }
-            if(q==0){
-                ans.add(p);
+        for (int i = 0; i < m; i++) {
+            set.add(b[i]);
+        }
+        for (int i = 0; i < n; i++) {
+            if (!set.contains(a[i])) {
+                ans.add(a[i]);
             }
         }
         return ans;
