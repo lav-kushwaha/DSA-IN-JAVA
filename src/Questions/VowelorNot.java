@@ -7,7 +7,7 @@ class VowelorNot {
     static String isVowel(char c){
         // code here
         String x="";
-        if(c=='A'||c=='E'||c=='I'||c=='O'||c=='U'||c=='a'||c=='e'||c=='i'||c=='o'||c=='u')
+        if(c=='A'||c=='E'||c=='I'||c=='O'||c=='U'||c=='a'||c=='e'||c=='i'||c=='o'||c=='u')//aeiou
         {
           x="YES";
             
