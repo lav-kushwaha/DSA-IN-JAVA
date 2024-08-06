@@ -12,7 +12,7 @@ public class sqrt {
     }
     static int squareroot(int n) {
         for (int i = 1; i <= n; i++) {
-            if (i * i == n) {
+            if (i * i == n) {//sqr
                 return i;
             }
         }
