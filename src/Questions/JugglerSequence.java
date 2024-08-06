@@ -16,7 +16,7 @@ public class JugglerSequence {
     //recursion helper function.
     private static List<Long> recursiveHelper(long n, List<Long> arr) {
         if (n <= 1) {
-            return arr;
+            return arr;//return arr
         }
         
         if (n % 2 == 0) {
@@ -31,6 +31,6 @@ public class JugglerSequence {
 
     public static void main(String[] args) {
         List<Long> result = recursiveFunction(9); // Change the argument as needed
-        System.out.println(result);
+        System.out.println(result);//print result
     }
 }
