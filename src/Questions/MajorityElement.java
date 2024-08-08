@@ -1,5 +1,8 @@
 package Questions;
 
+//https://www.geeksforgeeks.org/problems/majority-element-1587115620/0
+//Majority Element
+
 class MajorityElement
 {
     static int majorityElement(int arr[], int N)
