@@ -1,4 +1,4 @@
-package _23_Heap_DataStructure;
+package _23_Heap_DataStructure.Heaps;
 
 import java.util.ArrayList;
 import java.util.Collections;
