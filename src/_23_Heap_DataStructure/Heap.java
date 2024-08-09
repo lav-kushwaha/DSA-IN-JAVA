@@ -1,0 +1,114 @@
+package _23_Heap_DataStructure;
+
+import java.util.ArrayList;
+
+public class Heap<T extends Comparable<T>> {
+    private ArrayList<T> list;
+
+    public Heap() {
+        list = new ArrayList<>();
+    }
+
+    // Swap two elements in the heap based on their indices
+    private void swap(int first, int second) {
+        T temp = list.get(first);
+        list.set(first, list.get(second));
+        list.set(second, temp);
+    }
+
+    // Get the index of the parent of the current node
+    private int parent(int index) {
+        return (index - 1) / 2;
+    }
+
+    // Get the index of the left child of the current node
+    private int left(int index) {
+        return index * 2 + 1;
+    }
+
+    // Get the index of the right child of the current node
+    private int right(int index) {
+        return index * 2 + 2;
+    }
+
+    // Insert a new value into the heap and maintain the heap property
+    public void insert(T value) {
+        list.add(value);
+        upheap(list.size() - 1); // Restore the heap property from bottom to top
+    }
+
+    // Heapify up: move the element at the given index up to its correct position
+    private void upheap(int index) {
+        if (index == 0) return; // Base case: root reached
+
+        int p = parent(index);
+
+        // Swap with parent if current value is smaller
+        if (list.get(index).compareTo(list.get(p)) < 0) {
+            swap(index, p); // Swap current element with parent if it's smaller
+            upheap(p); // Recursive call on the parent
+        }
+    }
+
+    // Remove and return the minimum element (root) from the heap
+    public T remove() throws Exception {
+        if (list.isEmpty()) {
+            throw new Exception("Removing from an empty heap");
+        }
+
+        T rootValue = list.get(0); // Store the root value to return later
+        T lastValue = list.remove(list.size() - 1); // Remove the last element
+
+        // If the heap is not empty after removal, move the last element to the root
+        if (!list.isEmpty()) {
+            list.set(0, lastValue);
+            downheap(0); // Restore the heap property from top to bottom
+        }
+        return rootValue;
+    }
+
+    // Heapify down: move the element at the given index down to its correct position
+    private void downheap(int index) {
+        int min = index;
+        int leftChild = left(index);
+        int rightChild = right(index);
+
+        // If the left child is smaller than the current element, update min
+        if (leftChild < list.size() && list.get(leftChild).compareTo(list.get(min)) < 0) {
+            min = leftChild;
+        }
+
+        // If the right child is smaller than the current element, update min
+        if (rightChild < list.size() && list.get(rightChild).compareTo(list.get(min)) < 0) {
+            min = rightChild;
+        }
+
+        // If the smallest element is not the current element, swap and recurse
+        if (min != index) {
+            swap(min, index);
+            downheap(min);
+        }
+    }
+
+    // Perform heap sort and return a sorted list of elements
+    public ArrayList<T> heapSort() throws Exception {
+        ArrayList<T> sortedList = new ArrayList<>();
+        while (!list.isEmpty()) {
+            sortedList.add(this.remove()); // Continuously remove the min element and add to sortedList
+        }
+        return sortedList;
+    }
+
+    public static void main(String[] args) throws Exception {
+        Heap<Integer> heap = new Heap<>();
+        // Min Heap
+        heap.insert(12);
+        heap.insert(32);
+        heap.insert(42);
+        heap.insert(62);
+        heap.insert(2);
+
+        System.out.println(heap.remove()); // Expected to print the smallest element
+        System.out.println(heap.heapSort()); // Expected to print sorted elements
+    }
+}
