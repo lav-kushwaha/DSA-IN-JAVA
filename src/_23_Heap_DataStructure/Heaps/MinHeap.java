@@ -90,6 +90,29 @@ public class MinHeap {
         }
     }
 
+    // Return the minimum element (root) without removing it
+    public int peek() throws Exception {
+        if (list.isEmpty()) {
+            throw new Exception("Peeking into an empty heap");
+        }
+        return list.get(0);
+    }
+
+    // Check if the heap is empty
+    public boolean isEmpty() {
+        return list.isEmpty();
+    }
+
+    // Return the size of the heap
+    public int getSize() {
+        return list.size();
+    }
+
+    // Print the heap elements
+    public void printHeap() {
+        System.out.println(list);
+    }
+
     // Perform heap sort and return a sorted list of elements
     public ArrayList<Integer> heapSort() throws Exception {
         ArrayList<Integer> sortedList = new ArrayList<>();
@@ -108,7 +131,16 @@ public class MinHeap {
         minHeap.insert(62);
         minHeap.insert(2);
 
-        System.out.println(minHeap.remove()); // Expected to print the smallest element
-        System.out.println(minHeap.heapSort()); // Expected to print sorted elements
+        System.out.println("Heap: ");
+        minHeap.printHeap(); // Print the current state of the heap
+
+        System.out.println("Peek: " + minHeap.peek()); // Expected to print the smallest element without removing it
+
+        System.out.println("Removed: " + minHeap.remove()); // Expected to print and remove the smallest element
+
+        System.out.println("Heap after removal: ");
+        minHeap.printHeap(); // Print the state of the heap after removal
+
+        System.out.println("Heap Sort: " + minHeap.heapSort()); // Expected to print all elements in sorted order
     }
 }

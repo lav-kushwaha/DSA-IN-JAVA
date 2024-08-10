@@ -38,7 +38,7 @@ public class MaxHeap {
         heapifyUp(list.size() - 1); // Restore the heap property from bottom to top
     }
 
-    // Heapify up: move the element at the given index up to its correct position
+    // Heapify up: move the element at the given index up to its correct position (bottom to top)
     private void heapifyUp(int index) {
         if (index == 0) return; // Base case: root reached
 
@@ -68,7 +68,7 @@ public class MaxHeap {
         return rootValue;
     }
 
-    // Heapify down: move the element at the given index down to its correct position
+    // Heapify down: move the element at the given index down to its correct position (top to bottom)
     private void heapifyDown(int index) {
         int max = index;
         int leftChild = left(index);
@@ -89,6 +89,28 @@ public class MaxHeap {
             swap(max, index);
             heapifyDown(max);
         }
+    }
+    // Return the maximum element (root) without removing it
+    public int peek() throws Exception {
+        if (list.isEmpty()) {
+            throw new Exception("Peeking into an empty heap");
+        }
+        return list.get(0);
+    }
+
+    // Check if the heap is empty
+    public boolean isEmpty() {
+        return list.isEmpty();
+    }
+
+    // Return the size of the heap
+    public int getSize() {
+        return list.size();
+    }
+
+    // Print the heap elements
+    public void printHeap() {
+        System.out.println(list);
     }
 
     // Perform heap sort and return a sorted list of elements
@@ -111,7 +133,16 @@ public class MaxHeap {
         heap.insert(62);
         heap.insert(2);
 
-        System.out.println(heap.remove()); // Expected to print the largest element
-        System.out.println(heap.heapSort()); // Expected to print elements in ascending order
+        System.out.println("Heap: ");
+        heap.printHeap(); // Print the current state of the heap
+
+        System.out.println("Peek: " + heap.peek()); // Expected to print the largest element without removing it
+
+        System.out.println("Removed: " + heap.remove()); // Expected to print and remove the largest element
+
+        System.out.println("Heap after removal: ");
+        heap.printHeap(); // Print the state of the heap after removal
+
+        System.out.println("Heap Sort: " + heap.heapSort()); // Expected to print all elements in sorted order (ascending)
     }
 }
