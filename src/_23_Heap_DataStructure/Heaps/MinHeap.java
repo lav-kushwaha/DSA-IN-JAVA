@@ -37,7 +37,7 @@ public class MinHeap {
         heapifyUp(list.size() - 1); // Restore the heap property from bottom to top
     }
 
-    // Heapify up: move the element at the given index up to its correct position
+    // Heapify up: move the element at the given index up to its correct position.(bottom to top)
     private void heapifyUp(int index) {
         if (index == 0) return; // Base case: root reached
 
@@ -67,7 +67,7 @@ public class MinHeap {
         return rootValue;
     }
 
-    // Heapify down: move the element at the given index down to its correct position
+    // Heapify down: move the element at the given index down to its correct position.(top to bottom)
     private void heapifyDown(int index) {
         int min = index;
         int leftChild = left(index);
