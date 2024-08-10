@@ -113,3 +113,12 @@ public class Heap<T extends Comparable<T>> {
         System.out.println(heap.heapSort()); // Expected to print sorted elements
     }
 }
+
+
+#Binary Heap:
+A Binary Heap is a Binary Tree that satisfies the following conditions.
+=>It should be a Complete Binary Tree.
+=>It should satisfy the Heap property.
+
+#Complete Binary Tree:
+The tree in Which all the levels are completely filled except the last level and last level is filled in such a way that all the keys are as left as possible.
