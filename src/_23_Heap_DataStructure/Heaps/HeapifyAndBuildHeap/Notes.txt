@@ -1,0 +1,16 @@
+#Heapify
+Purpose: Convert an arbitrary array or binary tree into a min-heap, where every parent node is smaller than or equal to its children.
+Process: Start from the Last Non-Leaf Node: Begin at the last non-leaf node, which is the parent of the last element in the array.
+Heapify Down: For each node, compare it with its children. If the node is greater than the smaller child, swap them.
+Repeat: Continue the heapify process up to the root, ensuring each subtree maintains the min-heap property.
+Time Complexity:
+O(n) because the process works efficiently from the bottom up, with fewer comparisons needed as you move up the heap.
+
+
+#Build-Heap
+Purpose: Construct a min-heap from an unordered array.
+Process:
+Start from the Last Non-Leaf Node: Perform Heapify Down starting from the last non-leaf node and moving towards the root.
+Ensure Heap Property: Each node ensures that its subtree satisfies the min-heap property.
+Time Complexity:
+O(n), as it efficiently reorganizes the array into a heap with fewer operations than inserting elements one by one.
