@@ -16,3 +16,7 @@ No Nulls: Hashtable does not allow null keys or values. Attempting to insert nul
 Performance: Due to its synchronization mechanism, Hashtable is generally slower than HashMap.
 Legacy Class: Hashtable is considered a legacy class, introduced in JDK 1.0. While it is still used, newer implementations like HashMap and ConcurrentHashMap are preferred.
 Iterators: Hashtable's enumerator is not fail-fast, meaning it won't throw a ConcurrentModificationException if the Hashtable is modified during iteration. However, its iterator is.
+
+#Summary
+Use HashMap when you need a non-synchronized, high-performance map that allows null keys and values.
+Use Hashtable if you need a thread-safe map and can sacrifice performance, but newer alternatives like ConcurrentHashMap are generally recommended for thread-safe operations.
