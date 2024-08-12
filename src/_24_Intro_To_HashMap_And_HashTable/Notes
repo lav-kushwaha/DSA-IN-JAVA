@@ -8,3 +8,11 @@ Allows Nulls: HashMap allows one null key and multiple null values.
 Performance: HashMap generally has better performance than Hashtable due to the lack of synchronization overhead.
 Introduced in JDK 1.2: HashMap was introduced later than Hashtable, in JDK 1.2, as part of the Java Collections Framework.
 Iterators: HashMap's iterator is fail-fast, which means it will throw a ConcurrentModificationException if the map is modified after the iterator is created, except through the iterator's own remove method.
+
+#Hashtable
+Synchronized: Hashtable is synchronized, meaning it is thread-safe.
+This synchronization comes with a performance cost because only one thread can access or modify the Hashtable at a time.
+No Nulls: Hashtable does not allow null keys or values. Attempting to insert null as a key or value will result in a NullPointerException.
+Performance: Due to its synchronization mechanism, Hashtable is generally slower than HashMap.
+Legacy Class: Hashtable is considered a legacy class, introduced in JDK 1.0. While it is still used, newer implementations like HashMap and ConcurrentHashMap are preferred.
+Iterators: Hashtable's enumerator is not fail-fast, meaning it won't throw a ConcurrentModificationException if the Hashtable is modified during iteration. However, its iterator is.
