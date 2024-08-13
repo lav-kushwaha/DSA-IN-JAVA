@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.TreeMap;
 
-public class Hashmaps {
+public class InBuilt_HashMap_HashSet_HashTree_Examples {
     public static void main(String[] args) {
 //        String name = "lavkushwaha";
 //        Integer a = 12;
