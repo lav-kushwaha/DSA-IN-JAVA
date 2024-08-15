@@ -1,4 +1,4 @@
-package _24_Intro_To_HashMap_And_HashTable;
+package _24_Intro_To_HashMap_And_HashTable.HashMaps;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -8,13 +8,18 @@ public class HashMapUsingLL<K, V> {
     // ArrayList type "linked list" and LinkedList type "custom-type Entity".
     private ArrayList<LinkedList<Entity>> list;
     private int size = 0;
-    private float lf = 0.5f;
+    private float lf;
 
     public HashMapUsingLL() {
+        this(10, 0.5f);
+    }
+
+    public HashMapUsingLL(int initialCapacity, float loadFactor) {
         list = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < initialCapacity; i++) {
             list.add(new LinkedList<>()); // Added 10 empty linked lists
         }
+        this.lf = loadFactor;
     }
 
     private class Entity {
@@ -41,6 +46,8 @@ public class HashMapUsingLL<K, V> {
         }
 
         // Load factor check before adding a new entity
+        //size + 1 is what the map’s size would be after adding the new element.
+        //size is the number of elements currently in the map.
         if ((float) (size + 1) / list.size() > lf) {
             reHash();
             hash = getHash(key); // Recalculate hash since list size changed
@@ -86,34 +93,60 @@ public class HashMapUsingLL<K, V> {
     }
 
     public void remove(K key) {
-        int hash = getHash(key);
+        int hash = Math.abs(key.hashCode() % list.size());
         LinkedList<Entity> entities = list.get(hash);
 
-        // Use iterator to avoid ConcurrentModificationException
-        var iterator = entities.iterator();
-        while (iterator.hasNext()) {
-            Entity entity = iterator.next();
-            if (entity.key.equals(key)) {
-                iterator.remove();
-                size--;
-                return;
+        Entity target = null;
+
+        for(Entity entity : entities) {
+            if(entity.key.equals(key)) {
+                target = entity;
+                break;
             }
         }
+
+        entities.remove(target);
+        size--;
     }
 
     public boolean containsKey(K key) {
         return get(key) != null;
     }
 
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public int capacity() {
+        return list.size();
+    }
+
+    public void clear() {
+        list.clear();
+        size = 0;
+        for (int i = 0; i < capacity(); i++) {
+            list.add(new LinkedList<>());
+        }
+    }
+
+    @Override
     public String toString() {
         StringBuilder build = new StringBuilder();
         build.append("{");
+        boolean first = true;
         for (LinkedList<Entity> entities : list) {
             for (Entity entity : entities) {
+                if (!first) {
+                    build.append(", ");
+                }
                 build.append(entity.key);
                 build.append(" = ");
                 build.append(entity.value);
-                build.append(" , ");
+                first = false;
             }
         }
         build.append("}");
@@ -124,7 +157,7 @@ public class HashMapUsingLL<K, V> {
         if (key == null) {
             return 0;
         }
-        return (key.hashCode() & 0x7fffffff) % list.size();
+        return (key.hashCode() & 0x7fffffff) % list.size(); //The constant 0x7fffffff in the hash function is used to ensure that the hash code is positive.
     }
 
     public static void main(String[] args) {
