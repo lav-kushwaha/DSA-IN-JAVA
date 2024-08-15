@@ -1,4 +1,4 @@
-package _24_Intro_To_HashMap_And_HashTable;
+package _24_Intro_To_HashMap_And_HashTable.HashMaps;
 
 public class MapUsingHash {
     private Entity[] entities;
