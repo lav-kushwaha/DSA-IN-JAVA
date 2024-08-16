@@ -27,7 +27,8 @@ To handle collisions, most implementations of HashMap use a technique called "ch
 
 #Load Factor and Rehashing
 Load Factor:
-The load factor is a measure of how full the HashMap is allowed to get before its capacity is automatically increased. It is calculated as size/capacity, where size is the number of key-value pairs, and capacity is the number of buckets.
+The load factor is a measure of how full the HashMap is allowed to get before its capacity is automatically increased.
+It is calculated as size/capacity, where size is the number of key-value pairs, and capacity is the number of buckets.
 A typical load factor is 0.75, meaning the HashMap will increase its capacity when it is 75% full.
 
 Rehashing:
