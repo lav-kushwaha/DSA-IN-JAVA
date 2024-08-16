@@ -1,0 +1,16 @@
+#Visual Representation
+=>To visualize this, let’s consider an example where list is an ArrayList with 10 linked lists, and each linked list can contain multiple Entity objects.
+
+Index  | ArrayList
+-------------------------
+0      | LinkedList -> Entity("apple", "fruit") -> null
+1      | LinkedList -> null
+2      | LinkedList -> Entity("dog", "animal") -> null
+3      | LinkedList -> Entity("lion", "King of jungle") -> Entity("peacock", "Birds") -> null
+4      | LinkedList -> null
+5      | LinkedList -> Entity("mango", "King of fruits") -> null
+6      | LinkedList -> null
+7      | LinkedList -> null
+8      | LinkedList -> null
+9      | LinkedList -> null
+
