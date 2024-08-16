@@ -34,7 +34,8 @@ public class HashMapUsingLL<K, V> {
 
     public void put(K key, V value) {
         int hash = getHash(key);
-        LinkedList<Entity> entities = list.get(hash);//get the index from ArrayList and that index refer to LinkedList.
+        LinkedList<Entity> entities = list.get(hash);//list.get(hash) accesses the LinkedList at the specified index in the ArrayList.
+
 
         // Search for the entity to update its value
         for (Entity entity : entities) {
@@ -49,12 +50,10 @@ public class HashMapUsingLL<K, V> {
         //size + 1 is what the map’s size would be after adding the new element.
         //size is the number of elements currently in the map.
         if ((float) (size + 1) / list.size() > lf) {
-            reHash();
-            hash = getHash(key); // Recalculate hash since list size changed
-            entities = list.get(hash);
+            reHash();//rehashing or resize
         }
 
-        //if key is not found then add that key,vaue.
+        //if key is not found then add that key,value.
         entities.add(new Entity(key, value));
         size++;
     }
@@ -79,38 +78,57 @@ public class HashMapUsingLL<K, V> {
         }
     }
 
-    public V get(K key) {
-        int hash = getHash(key);
-        LinkedList<Entity> entities = list.get(hash);
-
-        // Search in the linked-list
-        for (Entity entity : entities) {
-            if (entity.key.equals(key)) {
-                return entity.value;
-            }
-        }
-        return null;
-    }
-
     public void remove(K key) {
-        int hash = Math.abs(key.hashCode() % list.size());
-        LinkedList<Entity> entities = list.get(hash);
+        // Step 1: Calculate the hash index for the given key.
+        int hash = getHash(key); //Math.abs(key.hashCode() % list.size())
 
+        // Step 2: Retrieve the LinkedList at the calculated index from the ArrayList
+        LinkedList<Entity> entities = list.get(hash);//list.get(hash) accesses the LinkedList at the specified index in the ArrayList.
+
+        // Step 3: Initialize a variable to hold the target entity to be removed
         Entity target = null;
 
-        for(Entity entity : entities) {
-            if(entity.key.equals(key)) {
+        // Step 4: Iterate through the LinkedList to find the Entity with the matching key
+        for (Entity entity : entities) {
+            if (entity.key.equals(key)) {
+                // If a matching key is found, set the target to this Entity
                 target = entity;
-                break;
+                break; // Exit the loop as the target has been found
             }
         }
 
-        entities.remove(target);
-        size--;
+        // Step 5: If the target Entity was found, remove it from the LinkedList
+        if (target != null) {
+            entities.remove(target); //remove method.
+            size--; // Decrease the size of the hashmap to reflect the removal
+        }
+    }
+
+
+    // It iterates through the LinkedList at the computed index to find the key.
+    // If found, it returns the associated value; otherwise, it returns null.
+        public V getValue(K key) {
+            int hash = getHash(key);
+            LinkedList<Entity> entities = list.get(hash);//arraylist get method
+
+            // Search in the linked-list
+            for (Entity entity : entities) {
+                if (entity.key.equals(key)) {
+                    return entity.value;
+                }
+            }
+            return null;
+        }
+
+    private int getHash(K key) {
+        if (key == null) {
+            return 0;
+        }
+        return (key.hashCode() & 0x7fffffff) % list.size(); //The constant 0x7fffffff in the hash function is used to ensure that the hash code is positive.
     }
 
     public boolean containsKey(K key) {
-        return get(key) != null;
+        return getValue(key) != null;
     }
 
     public boolean isEmpty() {
@@ -153,12 +171,6 @@ public class HashMapUsingLL<K, V> {
         return build.toString();
     }
 
-    private int getHash(K key) {
-        if (key == null) {
-            return 0;
-        }
-        return (key.hashCode() & 0x7fffffff) % list.size(); //The constant 0x7fffffff in the hash function is used to ensure that the hash code is positive.
-    }
 
     public static void main(String[] args) {
         HashMapUsingLL<String, String> map = new HashMapUsingLL<>();
@@ -166,7 +178,8 @@ public class HashMapUsingLL<K, V> {
         map.put("Lion", "King of animals");
         map.put("peacock", "Birds");
 
-        System.out.println(map.get("mango"));
+        System.out.println(map.getValue("mango"));
         System.out.println(map);
+        System.out.println(map.containsKey("mango"));
     }
 }
