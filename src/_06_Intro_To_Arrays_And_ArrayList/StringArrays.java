@@ -1,4 +1,4 @@
-package _06_Introduction_To_Arrays_And_ArrayList;
+package _06_Intro_To_Arrays_And_ArrayList;
 public class StringArrays {
     public static void main(String[] args) {
         // In Java, String objects are immutable. This means that once a String object is created, its content cannot be changed.

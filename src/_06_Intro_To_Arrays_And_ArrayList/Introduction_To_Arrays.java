@@ -1,6 +1,4 @@
-package _06_Introduction_To_Arrays_And_ArrayList;
-
-import java.util.Arrays;
+package _06_Intro_To_Arrays_And_ArrayList;
 
 public class Introduction_To_Arrays {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package _06_Introduction_To_Arrays_And_ArrayList;
+package _06_Intro_To_Arrays_And_ArrayList;
 
 public class MutableArrays {
     //In Java, arrays are indeed mutable.

@@ -1,4 +1,4 @@
-package _06_Introduction_To_Arrays_And_ArrayList.ArrayList;
+package _06_Intro_To_Arrays_And_ArrayList.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package _06_Introduction_To_Arrays_And_ArrayList;
+package _06_Intro_To_Arrays_And_ArrayList;
 
 import java.util.Arrays;
 public class Different_Ways_To_Print_Arrays_Elements {

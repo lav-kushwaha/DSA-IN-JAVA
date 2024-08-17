@@ -1,4 +1,4 @@
-package _06_Introduction_To_Arrays_And_ArrayList.Questions;
+package _06_Intro_To_Arrays_And_ArrayList.Questions;
 
 import java.util.Arrays;
 
