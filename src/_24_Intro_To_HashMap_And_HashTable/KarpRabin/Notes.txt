@@ -1,0 +1,14 @@
+#KarpRabin
+The **Rabin-Karp algorithm** is a string-search algorithm that uses hashing to find a pattern in a text.
+It works by computing a hash for the pattern and then sliding a window over the text, calculating the hash for each substring of the same length. If the hashes match, it checks if the substring matches the pattern.
+
+### Key Points:
+1. **Hashing**: Convert the pattern and text substrings into a numeric hash.
+2. **Sliding Window**: Efficiently update the hash for each new substring (rolling hash).
+3. **Comparison**: If hashes match, directly compare the substring with the pattern.
+
+### Complexity:
+- **Average Time**: O(n + m) for text length n and pattern length m.
+- **Worst Time**: O(n.m) due to possible hash collisions.
+
+Rabin-Karp is efficient for multiple pattern searches but can be slower if many hash collisions occur.
