@@ -14,4 +14,10 @@ public class KarpRabin {
         return hash;
     }
 
+    //One char removed and one char added
+    private long updateHash(long prevHash, char oldChar, char newChr, int patternLength){
+        long newHash = (prevHash - oldChar) / PRIME;
+        newHash =
+    }
+
 }
