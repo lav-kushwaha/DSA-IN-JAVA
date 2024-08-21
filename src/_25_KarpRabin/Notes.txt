@@ -9,6 +9,6 @@ It works by computing a hash for the pattern and then sliding a window over the 
 
 ### Complexity:
 - **Average Time**: O(n + m) for text length n and pattern length m.
-- **Worst Time**: O(n.m) due to possible hash collisions.
+- **Worst Time**: O(n*m) due to possible hash collisions.
 
 Rabin-Karp is efficient for multiple pattern searches but can be slower if many hash collisions occur.
