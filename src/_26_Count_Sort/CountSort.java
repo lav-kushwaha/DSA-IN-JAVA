@@ -33,7 +33,7 @@ public class CountSort {
     }
 
     public static void main(String[] args) {
-        int [] arr = {6,3,10,9,2,4,9,7};
+        int [] arr = {6,3,10,9,2,4,11,7};
         countSort(arr);
         System.out.println(Arrays.toString(arr));
     }
