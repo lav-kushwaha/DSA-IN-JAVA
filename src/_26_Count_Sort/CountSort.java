@@ -1,6 +1,8 @@
 package _26_Count_Sort;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CountSort {
     public static void countSort(int[] array){
@@ -32,9 +34,43 @@ public class CountSort {
         }
     }
 
+    //count-sort using hash
+    public static void countSortHash(int [] array){
+        if(array == null || array.length <= 1) {
+            return;
+        }
+
+        int max = Arrays.stream(array).max().getAsInt();//max value in array
+        int min = Arrays.stream(array).min().getAsInt();//min value in array
+
+        Map<Integer,Integer> coutMap = new HashMap<>();
+
+        //count
+        for(int num : array){
+            coutMap.put(num,coutMap.getOrDefault(num,0)+1);
+        }
+
+        int index = 0;
+        for(int i = min;i<=max;i++){
+            int count = coutMap.getOrDefault(i,0);
+            //iterate no of times count is appearing.
+            for(int j=0;j<count;j++){
+                array[index] = i;
+                index++;
+            }
+        }
+
+    }
+
     public static void main(String[] args) {
-        int [] arr = {6,3,10,9,2,4,11,7};
+        int [] arr = {2,1,4,3,5};
+
+        //count sort.
         countSort(arr);
+//        System.out.println(Arrays.toString(arr));
+
+        //count sort using hash
+        countSortHash(arr);
         System.out.println(Arrays.toString(arr));
     }
 }
