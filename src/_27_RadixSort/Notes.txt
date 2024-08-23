@@ -1,0 +1,48 @@
+#fill()
+The fill() method in Java is part of the java.util.Arrays class and is used to assign a specified value to each element of an array.
+This method allows for quick initialization or resetting of all elements in the array to the same value.
+
+#Syntax :
+There are several overloaded versions of the fill() method in Java:
+
+1.Filling entire arrays:
+
+Arrays.fill(array, value);
+
+This version sets every element of the specified array to the given value.
+
+2.Filling a specific range within an array:
+Arrays.fill(array, fromIndex, toIndex, value);
+This version sets each element in a specified range within the array to the given value. The range is specified by fromIndex (inclusive) and toIndex (exclusive).
+
+Examples :
+
+1.Filling an entire array:
+
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = new int[5];
+        Arrays.fill(numbers, 10);  // Fills the entire array with 10
+        System.out.println(Arrays.toString(numbers));  // Output: [10, 10, 10, 10, 10]
+    }
+}
+
+
+2.Filling a specific range in an array:
+
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = new int[5];
+        Arrays.fill(numbers, 1, 4, 20);  // Fills the array from index 1 to 3 (4 is exclusive) with 20
+        System.out.println(Arrays.toString(numbers));  // Output: [0, 20, 20, 20, 0]
+    }
+}
+
+
+
+
+
