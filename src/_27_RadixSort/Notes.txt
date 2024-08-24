@@ -42,7 +42,13 @@ public class Main {
     }
 }
 
+#Time Complexity of Radix Sort
+=>Radix Sort is a non-comparative sorting algorithm that sorts numbers by processing individual digits. The time complexity of Radix Sort depends on the following factors:
+n: The number of elements to be sorted.
+d: The number of digits in the maximum element.
 
+Time Complexity: O(d×(n+k)) or O(n) for constant d and k.
+Space Complexity: O(n+k) or O(n) for constant k.
 
 
 
