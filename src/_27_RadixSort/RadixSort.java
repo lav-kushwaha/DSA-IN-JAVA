@@ -62,7 +62,7 @@ public class RadixSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {170, 45, 75, 90, 802, 24, 2, 66};
+        int[] arr = {30,20,80,120,10};
         radixSort(arr);
         System.out.println("Sorted array: " + Arrays.toString(arr));
     }
