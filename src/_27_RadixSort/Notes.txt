@@ -1,3 +1,8 @@
+Q.What is Radix Sort ?
+Radix Sort is a non-comparative sorting algorithm that sorts numbers or strings by processing their individual digits or characters.
+Unlike comparison-based sorting algorithms like Quick Sort or Merge Sort, Radix Sort works by distributing elements into different "buckets" based on their individual digit or character values, and then reassembling them in order.
+
+
 #fill()
 The fill() method in Java is part of the java.util.Arrays class and is used to assign a specified value to each element of an array.
 This method allows for quick initialization or resetting of all elements in the array to the same value.
