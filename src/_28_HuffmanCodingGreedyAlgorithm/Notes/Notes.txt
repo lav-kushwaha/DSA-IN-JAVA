@@ -1,3 +1,15 @@
 #Huffman Coding is a greedy algorithm
 Huffman Coding is a greedy algorithm used for lossless data compression.
 It assigns shorter binary codes to more frequent characters and longer codes to less frequent ones to minimize the overall length of encoded data.
+
+Here’s a concise step-by-step outline of the algorithm:
+
+01.Calculate Character Frequencies: Count the frequency of each character in the input data.
+
+02.Build a Priority Queue (Min-Heap): Insert all characters with their frequencies into a min-heap (priority queue), with the smallest frequency having the highest priority.
+
+03.Construct the Huffman Tree:
+While there is more than one node in the heap:
+Extract the two nodes with the smallest frequencies.
+Create a new internal node with these two nodes as children. The frequency of this new node is the sum of the frequencies of its children.
+Insert the new node back into the heap.
