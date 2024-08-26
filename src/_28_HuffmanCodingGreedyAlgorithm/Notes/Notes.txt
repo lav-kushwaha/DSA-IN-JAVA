@@ -13,3 +13,12 @@ While there is more than one node in the heap:
 Extract the two nodes with the smallest frequencies.
 Create a new internal node with these two nodes as children. The frequency of this new node is the sum of the frequencies of its children.
 Insert the new node back into the heap.
+
+04.Generate Huffman Codes: Once the tree is built, traverse it from the root to each leaf node to assign binary codes.
+Left branches represent 0 and right branches represent 1.
+
+05.Encode the Data: Replace each character in the input data with its corresponding Huffman code.
+
+06.Decode the Data: To decode, traverse the Huffman Tree based on the binary code until you reach a leaf node (character).
+
+Huffman Coding efficiently compresses data by reducing the average code length for characters, which is especially useful when some characters are more frequent than others.
