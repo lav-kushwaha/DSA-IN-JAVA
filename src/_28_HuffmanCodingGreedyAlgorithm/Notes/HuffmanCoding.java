@@ -102,7 +102,7 @@ public class HuffmanCoding {
     }
 
     public static void main(String[] args) {
-        String text = "huffman coding algorithm";
+        String text = "huffman coding algorithm using java";
         encode(text);
     }
 }
