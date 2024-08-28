@@ -1,4 +1,4 @@
-package _28_HuffmanCodingGreedyAlgorithm.Notes;
+package _28_HuffmanCodingGreedyAlgorithm;
 
 import java.util.HashMap;
 import java.util.Map;
