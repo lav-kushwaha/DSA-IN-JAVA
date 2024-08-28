@@ -81,5 +81,31 @@ public class HuffmanCoder {
         this.initEncoderDecoder(ft,"");
 
     }
+    private void initEncoderDecoder(Node node, String osf) {
+        if(node == null){
+            return;
+        }
 
+        //i'm at leaf node
+        if(node.left == null && node.right==null){
+            this.encoder.put(node.data,osf);
+            this.decoder.put(osf,node.data);
+        }
+
+        //whenever i'll go left, i'll add 0 and whenever i'll go right i'll add 1.
+        //recursion
+        this.initEncoderDecoder(node.left,osf+"0");
+        this.initEncoderDecoder(node.right,osf+"1");
+    }
+
+    //char to byte
+    public StringBuilder encode(String source){
+        //i.e, abbc -> 01111001
+        StringBuilder build = new StringBuilder();
+
+        for(int i=0;i<source.length();i++){
+            build.append(encoder.get(source.charAt(i)));
+        }
+        return build;
+    }
 }
