@@ -22,3 +22,11 @@ Left branches represent 0 and right branches represent 1.
 06.Decode the Data: To decode, traverse the Huffman Tree based on the binary code until you reach a leaf node (character).
 
 Huffman Coding efficiently compresses data by reducing the average code length for characters, which is especially useful when some characters are more frequent than others.
+
+
+#Why Use a Priority Queue?
+ The Huffman coding algorithm requires repeatedly combining the two nodes with the smallest frequencies.
+ The PriorityQueue (min-heap) is perfect for this because:
+
+ 🔹Efficient Retrieval: The node with the smallest frequency can be accessed in constant time.
+ 🔹Efficient Insertion and Removal: Insertion and removal of elements in a heap have a time complexity of O(log n), making these operations efficient as the heap size changes.
