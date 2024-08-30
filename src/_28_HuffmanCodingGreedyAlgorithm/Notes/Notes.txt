@@ -30,3 +30,7 @@ Huffman Coding efficiently compresses data by reducing the average code length f
 
  🔹Efficient Retrieval: The node with the smallest frequency can be accessed in constant time.
  🔹Efficient Insertion and Removal: Insertion and removal of elements in a heap have a time complexity of O(log n), making these operations efficient as the heap size changes.
+
+ Time Complexity:O(nlogn)
+ Space Complexity: O(n)
+
