@@ -31,6 +31,17 @@ Huffman Coding efficiently compresses data by reducing the average code length f
  🔹Efficient Retrieval: The node with the smallest frequency can be accessed in constant time.
  🔹Efficient Insertion and Removal: Insertion and removal of elements in a heap have a time complexity of O(log n), making these operations efficient as the heap size changes.
 
+#Key-Point :
+
+Huffman coding is a lossless data compression algorithm that:
+
+Uses Prefix Codes: Ensures no code is a prefix of another, making it uniquely decodable.
+Employs Frequency-Based Encoding: Assigns shorter codes to more frequent symbols and longer codes to less frequent ones.
+Relies on a Greedy Approach: Builds a binary tree by repeatedly merging the least frequent symbols.
+Provides Efficient Encoding and Decoding: Compresses data effectively and ensures easy retrieval of original data.
+Is Optimal for Given Frequencies: Minimizes the average length of encoded symbols based on symbol frequency distribution.
+
  Time Complexity:O(nlogn)
  Space Complexity: O(n)
+
 
