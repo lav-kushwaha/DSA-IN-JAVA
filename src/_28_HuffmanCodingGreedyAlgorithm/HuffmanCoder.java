@@ -32,7 +32,7 @@ public class HuffmanCoder {
     }
 
     public void buildHuffmanTree(String feeder) {
-        // Build frequency map
+        // Build frequency map.
         HashMap<Character, Integer> frequencyMap = new HashMap<>();
         for (char ch : feeder.toCharArray()) {
             frequencyMap.put(ch, frequencyMap.getOrDefault(ch, 0) + 1);
@@ -89,7 +89,8 @@ public class HuffmanCoder {
         for (char ch : source.toCharArray()) {
             encodedString.append(encoder.get(ch));
         }
-        return encodedString;
+
+        return encodedString;//return encoded string
     }
 
     public StringBuilder decode(String codeString) {
@@ -108,7 +109,7 @@ public class HuffmanCoder {
             }
         }
 
-        return decodedString;
+        return decodedString;//return decoded string
     }
 
     public static void main(String[] args) throws Exception {
