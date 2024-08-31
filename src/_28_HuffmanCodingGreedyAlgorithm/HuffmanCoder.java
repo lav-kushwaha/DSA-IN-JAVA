@@ -86,6 +86,8 @@ public class HuffmanCoder {
 
     public StringBuilder encode(String source) {
         StringBuilder encodedString = new StringBuilder();
+
+        //iteration
         for (char ch : source.toCharArray()) {
             encodedString.append(encoder.get(ch));
         }
