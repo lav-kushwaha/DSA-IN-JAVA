@@ -101,6 +101,7 @@ public class HuffmanCoder {
         StringBuilder decodedString = new StringBuilder();
         StringBuilder currentCode = new StringBuilder();
 
+        //iteration
         for (char bit : codeString.toCharArray()) {
             currentCode.append(bit);
             if (decoder.containsKey(currentCode.toString())) {
