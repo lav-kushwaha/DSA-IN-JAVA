@@ -45,3 +45,29 @@ Is Optimal for Given Frequencies: Minimizes the average length of encoded symbol
  Space Complexity: O(n)
 
 
+#getOrDefault
+ // Build frequency map.
+        HashMap<Character, Integer> frequencyMap = new HashMap<>();
+        //count the each char
+        for (char ch : feeder.toCharArray()) {
+            frequencyMap.put(ch, frequencyMap.getOrDefault(ch, 0) + 1);
+        }
+
+Example String: "feeder"
+
+1.Initial State:
+frequencyMap is empty: {}
+
+2.Iteration 1: Character f
+ch = 'f'
+frequencyMap.getOrDefault('f', 0) returns 0 (since f is not yet in the map).
+frequencyMap.put(ch, 0 + 1);
+
+Update frequencyMap with ('f', 1).
+frequencyMap: {'f': 1}
+
+.ie, {'f': 1, 'e': 3, 'd': 1, 'r': 1}
+The getOrDefault method in Java's HashMap is used to retrieve the value associated with a specific key. If the key is found in the HashMap, getOrDefault returns the corresponding value.
+If the key is not found, it returns a default value specified by you.
+
+

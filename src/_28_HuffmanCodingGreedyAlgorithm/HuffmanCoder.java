@@ -8,22 +8,26 @@ public class HuffmanCoder {
     private HashMap<Character, String> encoder;
     private HashMap<String, Character> decoder;
 
+    //implements Comparable<Node>: This indicates that the Node class implements the Comparable interface,
+    // specifically for comparing Node objects.
     private class Node implements Comparable<Node> {
         Character data;
-        int cost; // frequency
+        int frequency; // cost
         Node left;
         Node right;
 
-        public Node(Character data, int cost) {
+        public Node(Character data, int frequency) {
             this.data = data;
-            this.cost = cost;
+            this.frequency = frequency;
             this.left = null;
             this.right = null;
         }
 
         @Override
-        public int compareTo(Node other) {
-            return this.cost - other.cost;
+        //The compareTo method is part of the Comparable interface in Java,
+        // which allows objects of a class to be compared with each other for ordering.
+        public int compareTo(Node other) {//
+            return Integer.compare(this.frequency, other.frequency);
         }
     }
 
@@ -34,23 +38,26 @@ public class HuffmanCoder {
     public void buildHuffmanTree(String feeder) {
         // Build frequency map.
         HashMap<Character, Integer> frequencyMap = new HashMap<>();
+        //count of each char.
         for (char ch : feeder.toCharArray()) {
             frequencyMap.put(ch, frequencyMap.getOrDefault(ch, 0) + 1);
         }
 
         // Create a priority queue (min-heap) for the Huffman tree
         PriorityQueue<Node> minHeap = new PriorityQueue<>();
+
+        //frequencyMap.entrySet(): This method returns a set of all key-value pairs
         for (Map.Entry<Character, Integer> entry : frequencyMap.entrySet()) {
             minHeap.offer(new Node(entry.getKey(), entry.getValue()));
         }
 
         // Build the Huffman tree.
-        //remove and combine while the heap size remain one.
+        //remove 2 min node from heap and combine while the heap size remain one.
         while (minHeap.size() > 1) {
             Node first = minHeap.poll();
             Node second = minHeap.poll();
 
-            Node newNode = new Node(null, first.cost + second.cost);
+            Node newNode = new Node(null, first.frequency + second.frequency);
 
             newNode.left = first;
             newNode.right = second;
@@ -78,7 +85,7 @@ public class HuffmanCoder {
             decoder.put(code, node.data);
         }
 
-        //whenever I'll go left, i'll add 0 and whenever I'll go right I'll add 1.
+        //whenever I'll go left, I'll add 0 and whenever I'll go right I'll add 1.
         //recursion
         initEncoderDecoder(node.left, code + "0");
         initEncoderDecoder(node.right, code + "1");
@@ -116,7 +123,7 @@ public class HuffmanCoder {
     }
 
     public static void main(String[] args) throws Exception {
-        String str = "abbccda";
+        String str = "abcd";
         HuffmanCoder huff = new HuffmanCoder(str);
 
         // Encode the string
