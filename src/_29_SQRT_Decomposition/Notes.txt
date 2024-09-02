@@ -1,0 +1,3 @@
+What is SQRT Decomposition?
+SQRT Decomposition is a technique used to divide an array into blocks of size approximately sqrt(n) (where n is the size of the array).
+It allows efficient range sum queries and updates, typically achieving O(sqrt(n)) time complexity for both operations.
