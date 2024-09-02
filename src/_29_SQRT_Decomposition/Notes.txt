@@ -1,3 +1,22 @@
 What is SQRT Decomposition?
 SQRT Decomposition is a technique used to divide an array into blocks of size approximately sqrt(n) (where n is the size of the array).
 It allows efficient range sum queries and updates, typically achieving O(sqrt(n)) time complexity for both operations.
+
+#Key Components of Your Implementation :
+
+01.Block Construction:
+You correctly initialize blocks to store the sum of elements for each block.
+However, the size of blocks should be (n + sqrt - 1) / sqrt to ensure it can cover all elements in arr, especially if n is not a perfect square.
+
+02.Query Function:
+
+This function is mostly correct. It calculates the sum of elements in three parts:
+Left Part: Elements before the first full block in the range.
+Middle Part: Full blocks completely within the range.
+Right Part: Elements after the last full block in the range.
+The logic to calculate the sum is almost right but needs a small correction in edge cases, such as when l == 0.
+
+03.Update Function:
+
+The update function correctly updates the block sum and the array element.
+However, there's a small discrepancy in how block_id is calculated and used.
