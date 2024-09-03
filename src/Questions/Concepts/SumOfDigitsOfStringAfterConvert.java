@@ -46,7 +46,6 @@ class SumOfDigitsOfStringAfterConvert {
             }
             sum = newSum; // Update sum with the new computed sum of digits
         }
-
         return sum;
     }
     public static void main(String[] args) {
