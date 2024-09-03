@@ -4,29 +4,50 @@ package Questions.Concepts;
 //1945. Sum of Digits of String After Convert
 
 class SumOfDigitsOfStringAfterConvert {
+//    public static int getLucky(String s, int k) {
+//
+//        StringBuilder build = new StringBuilder();
+//
+//        for(int c : s.toCharArray()){
+//            int position = c - 'a'+ 1; // Calculate alphabet position
+//            build.append(position);
+//        }
+//
+//        String numStr = build.toString();
+//        int sum = 0;
+//
+//        while(k!=0){
+//           sum = 0;
+//           for(char ch : numStr.toCharArray()){
+//                int digit = ch - '0'; //Convert char to its integer value
+//                sum+=digit;
+//           }
+//           numStr = Integer.toString(sum);
+//           k--;
+//        }
+//        return sum;
+//    }
+
+    //optimise
     public static int getLucky(String s, int k) {
-
-        StringBuilder build = new StringBuilder();
-
-        for(int c : s.toCharArray()){
-            int position = c - 'a'+ 1;
-            build.append(position);
-        }
-
-        String numStr = build.toString();
         int sum = 0;
 
-        while(k!=0){
-           sum = 0;
-           for(char ch : numStr.toCharArray()){
-                int digit = ch - '0';
-                sum+=digit;
-           }
-           numStr = Integer.toString(sum);
-           k--;
+        for (char c : s.toCharArray()) {
+            int position = c - 'a' + 1; // Calculate alphabet position
+            sum += (position / 10) + (position % 10);
         }
-        return sum;
 
+        // Step 2: Perform the digit transformation k times
+        while (k-- > 1) {
+            int newSum = 0;
+            while (sum > 0) {
+                newSum += sum % 10; // Add each digit of sum
+                sum /= 10;
+            }
+            sum = newSum; // Update sum with the new computed sum of digits
+        }
+
+        return sum;
     }
     public static void main(String[] args) {
         String str = "leetcode";
