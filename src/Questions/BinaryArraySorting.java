@@ -9,13 +9,13 @@ public class BinaryArraySorting {
     public static void main(String[] args) {
         int [] arr = {1,0,1,1,0};
         int N = 5;
+
         binSort(arr,N);//function call
         System.out.println(Arrays.toString(arr));//print ans
     }
 
     //Binary sort method
-    static void binSort(int A[], int N)
-    {
+   public static void binSort(int A[], int N) {
         int count = 0; // Count of 0's
 
         //Traverse the array and count the number of 0's
