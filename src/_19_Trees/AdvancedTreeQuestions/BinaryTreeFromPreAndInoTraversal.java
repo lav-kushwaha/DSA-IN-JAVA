@@ -2,10 +2,12 @@ package _19_Trees.AdvancedTreeQuestions;
 
 //105. Construct Binary Tree from Preorder and Inorder Traversal
 //https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/
+//TC : O(N)
+//SC : O(N) - HashMap
 
 import java.util.HashMap;
 
-public class BinaryTreeFromPreAndIno {
+public class BinaryTreeFromPreAndInoTraversal {
 
     // Definition for a binary tree node
     public class TreeNode {
@@ -63,7 +65,7 @@ public class BinaryTreeFromPreAndIno {
     }
 
     public static void main(String[] args) {
-        BinaryTreeFromPreAndIno solution = new BinaryTreeFromPreAndIno();
+        BinaryTreeFromPreAndInoTraversal solution = new BinaryTreeFromPreAndInoTraversal();
 
         // Test Case 1: Example from the problem statement
         int[] preorder1 = {3, 9, 20, 15, 7};
