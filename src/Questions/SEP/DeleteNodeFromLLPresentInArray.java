@@ -1,17 +1,15 @@
 package Questions.SEP;
-
 import java.util.HashSet;
 
 //https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/description/
 //3217. Delete Nodes From Linked List Present in Array
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int val) { this.val = val; }
-}
-
-public class Solution {
+public class DeleteNodeFromLLPresentInArray {
+    static class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int val) { this.val = val; }
+    }
     public ListNode removeNodes(ListNode head, int[] nums) {
         HashSet<Integer> set = new HashSet<>();
         for (int num : nums) {
@@ -43,7 +41,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        DeleteNodeFromLLPresentInArray solution = new DeleteNodeFromLLPresentInArray();
 
         // Example 1
         ListNode head1 = new ListNode(1);
