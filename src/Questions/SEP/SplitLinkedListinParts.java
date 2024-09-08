@@ -1,5 +1,8 @@
 package Questions.SEP;
 
+//https://leetcode.com/problems/split-linked-list-in-parts/?envType=daily-question&envId=2024-09-08
+//725. Split Linked List in Parts
+
 class SplitLinkedListinParts {
     static class ListNode {
         int val;
