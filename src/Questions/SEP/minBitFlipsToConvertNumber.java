@@ -10,6 +10,7 @@ class minBitFlipsToConvertNumber {
         int count = 0;
 
         while(xor != 0) {
+            // In every iteration, the rightmost set bit (1) will be turned to 0
             xor = xor & (xor - 1);
             count++;
         }
