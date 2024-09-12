@@ -1,5 +1,8 @@
 package Questions.SEP;
 
+//https://leetcode.com/problems/count-the-number-of-consistent-strings/
+//1684. Count the Number of Consistent Strings
+
 import java.util.HashSet;
 import java.util.Set;
 
