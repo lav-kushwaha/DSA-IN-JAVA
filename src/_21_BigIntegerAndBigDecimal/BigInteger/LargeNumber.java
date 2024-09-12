@@ -54,6 +54,18 @@ public class LargeNumber {
         BigInteger remainder = r1.remainder(r2);
         System.out.println(remainder);//1
 
+        //mod(BigInteger val): Computes the remainder of dividing the current BigInteger by the specified BigInteger.
+        BigInteger mod1 = BigInteger.valueOf(36);
+        BigInteger mod2 = BigInteger.valueOf(5);
+        BigInteger modans = mod1.mod(mod2);
+        System.out.println(modans);//1
+
+        //gcd(BigInteger val): Computes the greatest common divisor of the current BigInteger and the specified BigInteger.
+        BigInteger g1 = BigInteger.valueOf(4);
+        BigInteger g2 = BigInteger.valueOf(8);
+        BigInteger gans = g1.gcd(g2);
+        System.out.println(gans);//4
+
         //compareTo
         if(r2.compareTo(r1)<0){ //r2<r1 which is true.
             System.out.println("yes");
