@@ -1,6 +1,8 @@
 package Questions.SEP;
-
 import java.util.Arrays;
+
+//https://leetcode.com/problems/xor-queries-of-a-subarray/description/?envType=daily-question&envId=2024-09-13
+//1310. XOR Queries of a Subarray
 
 class xorQueriesofSubarray {
     public int[] xorQueries(int[] arr, int[][] queries) {
