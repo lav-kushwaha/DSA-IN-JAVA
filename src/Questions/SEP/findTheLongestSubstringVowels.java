@@ -5,6 +5,9 @@ import java.util.HashMap;
 //1371. Find the Longest Substring Containing Vowels in Even Counts
 
 public class findTheLongestSubstringVowels {
+    //Approach-1 (Using map to store states)
+    //T.C : O(n)
+    //S.C : O(1)
     public int findTheLongestSubstring(String s) {
         HashMap<String, Integer> map = new HashMap<>();
         
@@ -37,12 +40,13 @@ public class findTheLongestSubstringVowels {
         return maxLength;
     }
 
-    //second approach using XOR
+    //Approach-2 (Using map to store states and using XOR to make states)
+    //T.C : O(n)
+    //S.C ; O(1)
     public int findTheLongestSubstring2(String s) {
+
         HashMap<String, Integer> map = new HashMap<>();
-
         int[] vowelCount = new int[5]; // a, e, i, o, u
-
         String currState = "00000";
         map.put(currState, -1);
 
@@ -68,6 +72,32 @@ public class findTheLongestSubstringVowels {
         }
 
         return maxLength;
+    }
+
+    //Approach-3 (using Mask and Xor property)
+    //T.C : O(n)
+    //S.C : O(32) ~ O(1) - Maximum 2^5 states possible
+    public int findTheLongestSubstring3(String s) {
+        HashMap<Integer, Integer> mp = new HashMap<>();
+        int mask = 0;
+        mp.put(mask, -1);
+        int maxL = 0;
+        for (int i = 0; i < s.length(); i++) {
+            int val = 0;
+            if (s.charAt(i) == 'a')      val = (1 << 0);
+            else if (s.charAt(i) == 'e') val = (1 << 1);
+            else if (s.charAt(i) == 'i') val = (1 << 2);
+            else if (s.charAt(i) == 'o') val = (1 << 3);
+            else if (s.charAt(i) == 'u') val = (1 << 4);
+
+            mask ^= val; //xor nikala
+
+            if (!mp.containsKey(mask)) //agar past me nahi dekha to map me daaldo
+                mp.put(mask, i);
+
+            maxL = Math.max(maxL, i - mp.get(mask)); //maxL nikaal lo
+        }
+        return maxL;
     }
 
     public static void main(String[] args) {
