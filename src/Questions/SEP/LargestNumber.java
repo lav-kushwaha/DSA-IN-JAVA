@@ -30,5 +30,9 @@ public class LargestNumber {
         return result.toString();
     }
 
-
+    public static void main(String[] args) {
+        LargestNumber ln = new LargestNumber();
+        int[] nums = {3, 30, 34, 5, 9};
+        System.out.println(ln.largestNumber(nums));  // Expected output: "9534330"
+    }
 }
