@@ -46,4 +46,11 @@ public class DiffWaysToCompute {
 
         return result;
     }
+
+    public static void main(String[] args) {
+        DiffWaysToCompute calculator = new DiffWaysToCompute();
+        String expression = "2-1-1";
+        List<Integer> results = calculator.diffWaysToCompute(expression);
+        System.out.println(results); // Output will be [0, 2]
+    }
 }
