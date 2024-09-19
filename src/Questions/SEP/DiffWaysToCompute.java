@@ -7,7 +7,7 @@ import java.util.List;
 
 //Approach-(Simple and straight forward convert to minutes and sort)
 //T.C : O(n*2^n)
-//S.C : O(2^n) //The result vector stores all possible outcomes.
+//S.C : O(2^n) //The result list stores all possible outcomes.
 // The number of results is at most exponential in terms of the number of operators, so the space required to store the results is O(2^n).
 public class DiffWaysToCompute {
 
