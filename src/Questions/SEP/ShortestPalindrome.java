@@ -3,6 +3,9 @@ package Questions.SEP;
 //https://leetcode.com/problems/shortest-palindrome/description/
 //214. Shortest Palindrome
 
+// Approach : used the prefix-suffix matching approach in this solution. T.C: O(n).
+//We can solve this problem using KMP to optimize the T.C from O(n²) to O(n).
+
 class ShortestPalindrome {
 
     public static String shortestPalindrome(String s) {
