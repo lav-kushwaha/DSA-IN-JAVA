@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Questions;
 
 //https://leetcode.com/problems/walking-robot-simulation/description/?envType=daily-question&envId=2024-09-04
 //874. Walking Robot Simulation.

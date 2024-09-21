@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Questions;
 
 //https://www.geeksforgeeks.org/problems/majority-element-1587115620/0
 //Majority Element

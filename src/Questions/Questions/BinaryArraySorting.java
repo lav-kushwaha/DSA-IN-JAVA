@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Questions;
 
 //https://www.geeksforgeeks.org/problems/binary-array-sorting-1587115620/1?page=1&category=Arrays,Strings&difficulty=Basic&sortBy=submissions
 //Binary Array Sorting.

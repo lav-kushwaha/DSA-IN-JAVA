@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Questions;
 
 //https://www.geeksforgeeks.org/problems/juggler-sequence3930/1
 //Juggler Sequence.

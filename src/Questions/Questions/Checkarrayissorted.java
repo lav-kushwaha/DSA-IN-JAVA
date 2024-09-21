@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Questions;
 
 //https://www.geeksforgeeks.org/problems/check-if-an-array-is-sorted0701/0
 //Check if array is sorted

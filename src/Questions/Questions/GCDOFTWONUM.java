@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Questions;
 
 class GCDOFTWONUM {
     public static int gcd(int a, int b) {

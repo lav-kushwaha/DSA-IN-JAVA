@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Questions;
 
 class SumOfSeries {
     public static long seriesSum(int n) {

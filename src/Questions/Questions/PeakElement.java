@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Questions;
 
 //https://www.geeksforgeeks.org/problems/peak-element/0
 //Peak element

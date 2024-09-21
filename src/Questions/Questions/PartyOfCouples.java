@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Questions;
 
 class PartyOfCouples{
     static int findSingle(int n, int arr[]){

@@ -1,4 +1,4 @@
-package Questions;
+package Questions.Questions;
 
 //https://www.geeksforgeeks.org/problems/sum-of-digit-is-pallindrome-or-not2751/0
 //Sum of Digit is Pallindrome or not
