@@ -1,4 +1,4 @@
-package _30_Graph_Theory.Graph_Representations;
+package _30_Graph_Theory.Graph_Representations.Undirected_Graph;
 
 public class Adjacent_Matrix {
 
