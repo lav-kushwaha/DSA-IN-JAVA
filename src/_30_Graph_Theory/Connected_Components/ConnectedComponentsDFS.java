@@ -2,9 +2,9 @@ package _30_Graph_Theory.Connected_Components;
 
 import java.util.*;
 
-//1. Using DFS to find connected components:
+//2. Using DFS to find connected components:
 
-public class ConnectedComponents {
+public class ConnectedComponentsDFS {
     
     // Function to perform DFS
     public static void dfs(int node, List<List<Integer>> adjList, boolean[] visited) {
