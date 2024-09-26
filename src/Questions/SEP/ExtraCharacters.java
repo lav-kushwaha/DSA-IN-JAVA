@@ -4,6 +4,7 @@ import java.util.HashSet;
 
 //https://leetcode.com/problems/extra-characters-in-a-string/description/
 //2707. Extra Characters in a String
+//Dynamic programming question
 
 public class ExtraCharacters {
     int dp[] = new int[50];
