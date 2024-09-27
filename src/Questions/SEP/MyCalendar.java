@@ -1,4 +1,4 @@
-package Questions.Questions;
+package Questions.SEP;
 import java.util.TreeMap;
 
 //https://leetcode.com/problems/my-calendar-i/description/
