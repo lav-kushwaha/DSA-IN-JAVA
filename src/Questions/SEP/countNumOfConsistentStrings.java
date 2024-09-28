@@ -13,30 +13,26 @@ public class countNumOfConsistentStrings {
         for (char ch : allowed.toCharArray()) {
             set.add(ch);
         }
-        
+        //count
         int count = 0;
 
         for (String word : words) {
             boolean isConsistent = true;
-
             for (char ch : word.toCharArray()) {
                 if (!set.contains(ch)) {
                     isConsistent = false;
                     break;
                 }
             }
-
             if (isConsistent) {
                 count++;
             }
         }
-
         return count;
     }
     
     public static void main(String[] args) {
         countNumOfConsistentStrings counter = new countNumOfConsistentStrings();
-        
         String allowed = "abc";
         String[] words = {"a", "b", "c", "ab", "ac", "bc", "abc", "abcd"};
         
