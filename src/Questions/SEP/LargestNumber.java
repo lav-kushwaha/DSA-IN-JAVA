@@ -15,6 +15,7 @@ public class LargestNumber {
             elements[i] = Integer.toString(nums[i]);
         }
 
+        //comparator
         Arrays.sort(elements, new Comparator<String>() {
             public int compare(String a, String b) {
                 String first = a + b;
