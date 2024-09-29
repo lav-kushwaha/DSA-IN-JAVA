@@ -2,6 +2,9 @@ package Questions.SEP;
 
 import java.util.*;
 
+//https://leetcode.com/problems/all-oone-data-structure/description/
+//432. All O`one Data Structure
+
 public class AllOne {
     // Doubly Linked List node to store count and a list of strings with that count
     private class Node {
