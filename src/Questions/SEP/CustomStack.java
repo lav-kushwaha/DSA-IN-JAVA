@@ -1,4 +1,6 @@
 package Questions.SEP;
+//https://leetcode.com/u/Lav_Kushwaha/
+//1381. Design a Stack With Increment Operation
 
 class CustomStack {
     int stack[];
