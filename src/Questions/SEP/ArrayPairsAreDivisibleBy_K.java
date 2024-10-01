@@ -1,5 +1,8 @@
 package Questions.SEP;
 
+//https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/
+//1497. Check If Array Pairs Are Divisible by k
+
 public class ArrayPairsAreDivisibleBy_K {
     public boolean canArrange(int[] arr, int k) {
         int[] remainderCount = new int[k];
