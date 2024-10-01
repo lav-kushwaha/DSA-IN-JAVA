@@ -8,7 +8,7 @@ public class ArrayPairsAreDivisibleBy_K {
         int[] remainderCount = new int[k];
 
         for (int num : arr) {
-            int remainder = ((num % k) + k) % k;
+            int remainder = ((num % k) + k) % k;//handle negative remainders.
             remainderCount[remainder]++;
         }
 
