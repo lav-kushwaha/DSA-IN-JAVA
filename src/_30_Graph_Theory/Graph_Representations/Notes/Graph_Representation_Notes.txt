@@ -1,0 +1,55 @@
+Graph Representation Notes
+
+1. Adjacency Matrix
+- Definition: A 2D array (n x n) where n is the number of nodes.
+- Usage: If graph[i][j] = 1 (or a weight value), there is an edge from node i to node j.
+- Space Complexity: O(n²).
+- Pros:
+  - Easy to check if an edge exists between two nodes (O(1) lookup).
+  - Suitable for dense graphs.
+- Cons:
+  - Inefficient for sparse graphs due to high space requirements.
+
+2. Adjacency List
+- Definition: An array of lists where each list stores the neighbors of a node.
+- Usage: Each node has a list of its directly connected nodes.
+- Space Complexity: O(V + E), where V is the number of vertices and E is the number of edges.
+- Pros:
+  - Space-efficient for sparse graphs.
+  - Suitable for graphs with many nodes and fewer edges.
+- Cons:
+  - Checking the existence of an edge takes O(degree of vertex).
+
+3. Edge List
+- Definition: A list of all edges in the graph, typically stored as pairs (or triplets if weighted) of nodes.
+- Usage: Each edge is represented as (u, v) or (u, v, weight).
+- Space Complexity: O(E).
+- Pros:
+  - Simple and effective for iterating over all edges.
+  - Suitable for algorithms that only need the edges.
+- Cons:
+  - Inefficient for checking if an edge exists between two nodes (O(E) time complexity).
+
+4. Incidence Matrix
+- Definition: A 2D array (n x m) where n is the number of nodes and m is the number of edges.
+- Usage: Each column represents an edge, and rows represent nodes; values indicate edge connections.
+- Space Complexity: O(V * E).
+- Pros: Useful for specific graph properties.
+- Cons: High space requirements; not as commonly used as adjacency lists or matrices.
+
+Choosing Representation
+- Adjacency Matrix: Suitable for dense graphs (many edges), or if quick edge existence checks are required.
+- Adjacency List: Preferred for sparse graphs (few edges) due to lower space usage.
+- Edge List: Suitable for algorithms that need to process all edges directly, like Kruskal's MST algorithm.
+- Incidence Matrix: Rarely used, better suited for specific mathematical applications.
+
+Summary Table
+
+| Representation    | Space Complexity | Pros                        | Cons                         |
+|-------------------|------------------|-----------------------------|------------------------------|
+| Adjacency Matrix  | O(V²)            | Fast edge lookup            | High space for sparse graphs |
+| Adjacency List    | O(V + E)         | Space-efficient for sparse  | Slower edge lookup           |
+| Edge List         | O(E)             | Simple, easy for iteration  | Slow edge existence checks   |
+| Incidence Matrix  | O(V * E)         | Useful in specific cases    | Very high space complexity   |
+
+Note: V = number of vertices, E = number of edges.
