@@ -24,6 +24,7 @@ class Swapped {
         System.out.print(a + " " + b);
     }
 
+    //swap method
     public static void swap(int a, int b) {
         int temp = a;
         a = b;
