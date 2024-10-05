@@ -1,5 +1,8 @@
 package Questions.Questions;
 
+//https://leetcode.com/problems/permutation-in-string/description/
+//567. Permutation in String
+
 class PermutationInString {
     public boolean checkInclusion(String s1, String s2) {
         int n = s1.length();
