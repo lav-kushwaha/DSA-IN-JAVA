@@ -8,6 +8,7 @@ class PermutationInString {
         int n = s1.length();
         int m = s2.length();
 
+        //array
         int [] arr1 = new int[26];
 
         for(int i=0;i<n;i++){
@@ -25,6 +26,7 @@ class PermutationInString {
         return false;
     }
 
+    //isMatch method
     public boolean isMatch(int[] arr1, int[] arr2){
         for(int i=0;i<26;i++){
             if(arr1[i]!=arr2[i]){
