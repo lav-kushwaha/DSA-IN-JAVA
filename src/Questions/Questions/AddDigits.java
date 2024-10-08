@@ -11,7 +11,6 @@ class AddDigits {
         }
         return num;
     }
-
     static int digitsSum(int num) {
         int sum = 0;
         while (num != 0) {
@@ -20,7 +19,7 @@ class AddDigits {
         }
         return sum;
     }
-    
+
     public static void main(String[] args) {
         System.out.println(digitsSum(35));
     }
