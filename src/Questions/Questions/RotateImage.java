@@ -5,8 +5,13 @@ import java.util.Arrays;
 //48. Rotate Image
 
 class RotateImage {
+    public static void rotate(int[][] matrix) {
+        transpose(matrix);
+        reverseRows(matrix);
+    }
+
     private static void transpose(int[][] matrix) {
-        //transpose
+        //transpose of matrix
         for(int i=0; i<matrix.length; i++) {
             for(int j=i; j<matrix[0].length; j++) {
                 int temp = matrix[i][j];
@@ -32,10 +37,6 @@ class RotateImage {
             }
         }
 
-    }
-    public static void rotate(int[][] matrix) {
-        transpose(matrix);
-        reverseRows(matrix);
     }
 
     public static void main(String[] args) {
