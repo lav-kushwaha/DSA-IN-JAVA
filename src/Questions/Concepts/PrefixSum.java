@@ -1,5 +1,4 @@
 package Questions.Concepts;
-
 //prefix sum
 public class PrefixSum {
 
