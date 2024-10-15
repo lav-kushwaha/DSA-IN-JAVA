@@ -4,14 +4,8 @@ import java.util.Arrays;
 //https://www.geeksforgeeks.org/problems/find-triplets-with-zero-sum/0
 //Find triplets with zero sum.
 
-class TripletsZeroSum
-{
-    // arr[]: input array
-    // n: size of the array
-    //Function to find triplets with zero sum.
-	public static boolean findTriplets(int arr[], int n)
-    {
-        //add code here.
+class TripletsZeroSum{
+	public static boolean findTriplets(int arr[], int n){
         Arrays.sort(arr);
         for(int i=0;i<n-1;i++){
             int j=i+1;
@@ -30,8 +24,8 @@ class TripletsZeroSum
     }
 
     public static void main(String[] args) {
-        int arr[] = {0, -1, 2, -3, 1};
-        int n = 5;
-        System.out.println(findTriplets(arr,n));//print ans
+        int arr[] = {0, -1, 2, -3, 1,3,8};
+        int n = 7;
+        System.out.println(findTriplets(arr,n));
     }
 }
