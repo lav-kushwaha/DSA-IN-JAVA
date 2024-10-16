@@ -1,4 +1,4 @@
-Graph Representation Notes
+#Graph Representation Notes
 
 1. Adjacency Matrix
 - Definition: A 2D array (n x n) where n is the number of nodes.
@@ -37,13 +37,13 @@ Graph Representation Notes
 - Pros: Useful for specific graph properties.
 - Cons: High space requirements; not as commonly used as adjacency lists or matrices.
 
-Choosing Representation
+#Choosing Representation
 - Adjacency Matrix: Suitable for dense graphs (many edges), or if quick edge existence checks are required.
 - Adjacency List: Preferred for sparse graphs (few edges) due to lower space usage.
 - Edge List: Suitable for algorithms that need to process all edges directly, like Kruskal's MST algorithm.
 - Incidence Matrix: Rarely used, better suited for specific mathematical applications.
 
-Summary Table
+#Summary Table
 
 | Representation    | Space Complexity | Pros                        | Cons                         |
 |-------------------|------------------|-----------------------------|------------------------------|
