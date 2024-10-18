@@ -10,6 +10,12 @@ import java.util.List;
 //S.C : O(2^n) //The result list stores all possible outcomes.
 // The number of results is at most exponential in terms of the number of operators, so the space required to store the results is O(2^n).
 public class DiffWaysToCompute {
+    public static void main(String[] args) {
+        DiffWaysToCompute calculator = new DiffWaysToCompute();
+        String expression = "2-1-1";
+        List<Integer> results = calculator.diffWaysToCompute(expression);
+        System.out.println(results); // Output will be [0, 2]
+    }
 
     public List<Integer> diffWaysToCompute(String expression) {
         return solve(expression);
@@ -48,12 +54,5 @@ public class DiffWaysToCompute {
         }
 
         return result;
-    }
-
-    public static void main(String[] args) {
-        DiffWaysToCompute calculator = new DiffWaysToCompute();
-        String expression = "2-1-1";
-        List<Integer> results = calculator.diffWaysToCompute(expression);
-        System.out.println(results); // Output will be [0, 2]
     }
 }
