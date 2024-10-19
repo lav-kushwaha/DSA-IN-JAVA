@@ -6,7 +6,6 @@ import java.util.*;
 //432. All O`one Data Structure
 
 public class AllOne {
-    // Doubly Linked List node to store count and a list of strings with that count
     private class Node {
         int count;
         LinkedList<String> keys;
@@ -60,7 +59,6 @@ public class AllOne {
         }
     }
 
-    // Increment the count for a key
     public void inc(String key) {
         if (!mp.containsKey(key)) {
             // Key doesn't exist, add it to the list after the head with count 1
