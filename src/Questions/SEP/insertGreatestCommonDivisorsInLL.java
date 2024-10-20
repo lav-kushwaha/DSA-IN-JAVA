@@ -4,12 +4,10 @@ package Questions.SEP;
 //https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list/description/
 
 class insertGreatestCommonDivisorsInLL {
-    // Definition for singly-linked list node.
     static class ListNode {
     int val;
     ListNode next;
     
-    // Constructor
     ListNode(int val) {
         this.val = val;
         this.next = null;
@@ -58,7 +56,7 @@ class insertGreatestCommonDivisorsInLL {
     public static void main(String[] args) {
         insertGreatestCommonDivisorsInLL solution = new insertGreatestCommonDivisorsInLL();
         
-        int[] values = {18, 24, 30};
+        int[] values = {18, 24, 30, 40, 60};
         ListNode head = solution.createLinkedList(values);
         
         // Print original list
