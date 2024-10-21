@@ -6,34 +6,29 @@ package Questions.Questions;
 import java.util.Arrays;
 
 public class BinaryArraySorting {
-    public static void main(String[] args) {
-        int [] arr = {1,0,1,1,0};
-        int N = 5;
-
-        binSort(arr,N);//function call
-        System.out.println(Arrays.toString(arr));//print ans
-    }
-
-    //Binary sort method
-   public static void binSort(int A[], int N) {
+    public static void binSort(int A[], int N) {
         int count = 0; // Count of 0's
 
-        //Traverse the array and count the number of 0's
         for (int i = 0; i < N; i++) {
             if (A[i] == 0) {
                 count++;
             }
         }
 
-        // Fill the first count elements with 0
         for (int i = 0; i < count; i++) {
             A[i] = 0;
         }
 
-        // Fill the remaining elements with 1
         for (int i = count; i < N; i++) {
             A[i] = 1;
         }
 
+    }
+    public static void main(String[] args) {
+        int [] arr = {1,1,0,1,1,0,0,1,1};
+        int N = 5;
+
+        binSort(arr,N);
+        System.out.println(Arrays.toString(arr));
     }
 }
