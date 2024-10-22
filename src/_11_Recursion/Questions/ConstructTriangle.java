@@ -7,7 +7,12 @@ import java.lang.*;
 
 public class ConstructTriangle
 {
-	// Function to generate Special Triangle.
+	public static void main(String[] args)
+	{
+		int[] A = { 1, 2, 3, 4, 5,6,7,8,9 };
+		printTriangle(A);
+	}
+
 	public static void printTriangle(int[] A)
 	{
 		// Base case
@@ -21,12 +26,5 @@ public class ConstructTriangle
 		}
 		printTriangle(temp);
 		System.out.println(Arrays.toString(A));
-	}
-
-	// Driver function.
-	public static void main(String[] args)
-	{
-		int[] A = { 1, 2, 3, 4, 5 };
-		printTriangle(A);
 	}
 }
