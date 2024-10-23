@@ -10,7 +10,7 @@ class GCDOFTWONUM {
     }
 
     public static void main(String[] args) {
-        int ans = gcd(12,21);
+        int ans = gcd(18,24);
         System.out.println(ans);
     }
 }
