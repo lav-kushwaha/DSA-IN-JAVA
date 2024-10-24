@@ -4,6 +4,13 @@ package Questions.SEP;
 //1497. Check If Array Pairs Are Divisible by k
 
 public class ArrayPairsAreDivisibleBy_K {
+    public static void main(String[] args) {
+        ArrayPairsAreDivisibleBy_K solution = new ArrayPairsAreDivisibleBy_K();
+        int[] arr1 = {1, 2, 3, 4, 5, 10, 6, 7, 8, 9,10,11};
+        int k1 = 8;
+        System.out.println(solution.canArrange(arr1, k1)); // Output: true
+    }
+
     public boolean canArrange(int[] arr, int k) {
         int[] remainderCount = new int[k];
 
@@ -17,14 +24,6 @@ public class ArrayPairsAreDivisibleBy_K {
                 return false;
             }
         }
-
         return remainderCount[0] % 2 == 0;
-    }
-
-    public static void main(String[] args) {
-        ArrayPairsAreDivisibleBy_K solution = new ArrayPairsAreDivisibleBy_K();
-        int[] arr1 = {1, 2, 3, 4, 5, 10, 6, 7, 8, 9};
-        int k1 = 5;
-        System.out.println(solution.canArrange(arr1, k1)); // Output: true
     }
 }
