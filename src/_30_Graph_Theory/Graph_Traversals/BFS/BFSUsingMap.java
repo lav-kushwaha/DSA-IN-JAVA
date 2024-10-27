@@ -1,4 +1,4 @@
-package _30_Graph_Theory.Graph_Traversals;
+package _30_Graph_Theory.Graph_Traversals.BFS;
 
 import java.util.*;
 
