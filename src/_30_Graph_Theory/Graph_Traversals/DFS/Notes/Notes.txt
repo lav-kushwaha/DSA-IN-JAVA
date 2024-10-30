@@ -1,34 +1,34 @@
-Depth First Search
+#Depth First Search In Graph (DFS)
 
 Depth-First Search (DFS) is an algorithm for traversing or searching through graph structures, either represented as adjacency lists or matrices.
 DFS starts from a specific node (often referred to as the root in a tree or the starting node in a graph) and explores as far as possible along each branch before backtracking.
 
-Key Characteristics of DFS:
+#Key Characteristics of DFS:
 Explores Depth: DFS follows each branch as deeply as possible before backtracking, making it a good choice for problems that require pathfinding from one point to another.
 Stack-Based: DFS can be implemented using a stack data structure. In recursive implementations, the call stack of recursive function calls essentially acts as a stack.
 Backtracking: After reaching the end of a path, DFS will backtrack to explore other unvisited paths.
 
-DFS Algorithm:
+#DFS Algorithm:
 Start at a source node, mark it as visited.
 For each adjacent unvisited node:
 Visit the node.
 Recursively apply DFS on that node.
 Once all adjacent nodes are visited, backtrack to the previous node and continue.
 
-DFS Applications
+#DFS Applications
 Pathfinding: DFS can determine if there is a path between nodes.
 Cycle Detection: DFS can detect cycles in a graph by checking if a node is revisited during traversal.
 Connected Components: DFS helps in finding all nodes connected to a starting node in undirected graphs.
 Topological Sorting: Used in directed acyclic graphs (DAGs).
 Maze Solving: DFS is useful for finding a path from a start to an endpoint.
 
-Complexity Analysis
+#Complexity Analysis
 
-Time Complexity:
+#Time Complexity:
 O(V+E), where
 V is the number of vertices and
 E is the number of edges.
 
-Space Complexity:
+#Space Complexity:
 O(V), mainly due to the recursion stack in the recursive version or the stack data structure in the iterative version.
 DFS is a versatile and fundamental graph traversal algorithm, ideal for exploring all nodes of a connected component in a graph.
