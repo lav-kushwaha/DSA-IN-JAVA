@@ -1,4 +1,4 @@
-package _30_Graph_Theory.Questions_Based_On_BFS_DFS;
+package _30_Graph_Theory.Questions_Based_On_BFS_DFS.DFS;
 
 //https://leetcode.com/problems/number-of-provinces/
 //547. Number of Provinces
