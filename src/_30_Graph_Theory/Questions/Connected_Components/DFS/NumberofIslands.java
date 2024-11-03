@@ -39,10 +39,11 @@ class NumberofIslands {
     public static void main(String[] args) {
         // Sample grid where '1' represents land and '0' represents water
         char[][] grid = {
-                {'1', '1', '1', '1', '0'},
-                {'1', '1', '0', '1', '0'},
                 {'1', '1', '0', '0', '0'},
-                {'0', '0', '0', '0', '0'}
+                {'1', '1', '0', '0', '1'},
+                {'0', '0', '0', '1', '1'},
+                {'0', '0', '0', '0', '0'},
+                {'1', '0', '1', '0', '1'}
         };
 
         NumberofIslands solution = new NumberofIslands();
