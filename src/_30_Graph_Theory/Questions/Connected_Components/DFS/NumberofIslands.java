@@ -54,3 +54,16 @@ class NumberofIslands {
         System.out.println("Number of islands: " + numberOfIslands);  // Expected output: 5
     }
 }
+
+
+/**
+ *
+ * Overall Complexity
+ * Since every cell is processed at most once (either by the main loop or by dfs), the entire algorithm runs in O(N * M) time.
+
+ * Space Complexity
+ * The space complexity is O(N * M) in the worst case due to the recursive stack used by dfs.
+ * If the grid consists of one large island, the recursion depth could go up to N * M.
+
+ */
+
