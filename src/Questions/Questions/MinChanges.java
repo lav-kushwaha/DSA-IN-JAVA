@@ -1,7 +1,6 @@
 package Questions.Questions;
 
 public class MinChanges {
-    // Method to calculate the minimum number of changes required
     public int minChanges(String s) {
         int count = 0;
         // Loop through the string, checking pairs of consecutive characters
@@ -11,7 +10,7 @@ public class MinChanges {
                 count++;
             }
         }
-        return count; // Return the number of changes required
+        return count;
     }
 
     public static void main(String[] args) {
