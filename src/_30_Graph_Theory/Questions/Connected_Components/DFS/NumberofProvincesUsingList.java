@@ -1,4 +1,4 @@
-package _30_Graph_Theory.Questions_Based_On_BFS_DFS.DFS;
+package _30_Graph_Theory.Questions.Connected_Components.DFS;
 
 import java.util.*;
 
