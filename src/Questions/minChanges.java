@@ -1,5 +1,7 @@
 package Questions;
 
+//https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful/
+//2914. Minimum Number of Changes to Make Binary String Beautiful
 public class minChanges {
     public int minChanges(String s) {
         int count = 0;
