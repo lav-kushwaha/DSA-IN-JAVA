@@ -6,7 +6,7 @@ import java.util.Queue;
 //994. Rotting Oranges
 
 class RottingOranges{
-    public int orangesRotting(int[][] grid) {
+    public static int orangesRotting(int[][] grid) {
        if(grid == null || grid.length == 0) return 0;
         int rows = grid.length;
         int cols = grid[0].length;
@@ -52,5 +52,10 @@ class RottingOranges{
             }
         }
         return count_fresh == cnt ? countMin : -1;
+    }
+    public static void main(String args[]) {
+        int arr[][]={ {2,1,1} , {1,1,0} , {0,1,1} };
+        int rotting = orangesRotting(arr);
+        System.out.println("Minimum Number of Minutes Required "+rotting);
     }
 }
