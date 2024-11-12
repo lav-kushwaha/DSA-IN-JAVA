@@ -1,5 +1,7 @@
 package Questions.Questions;
 
+import java.util.Arrays;
+
 //2601. Prime Subtraction Operation
 //https://leetcode.com/problems/prime-subtraction-operation/description/
 class primeSubOperation {
