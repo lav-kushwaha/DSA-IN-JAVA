@@ -1,5 +1,6 @@
 package Questions.Questions;
-
+//https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description
+//1574. Shortest Subarray to be Removed to Make Array Sorted
 //Approach (simple two pointer approach)
 //T.C : O(n) - We don't visit any element once inside the while loop
 //S.C : O(1)
