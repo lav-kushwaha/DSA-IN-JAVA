@@ -32,3 +32,4 @@ class minimizedMaximum {
         
         return ans;
     }
+}
