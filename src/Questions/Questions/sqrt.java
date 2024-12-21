@@ -14,7 +14,7 @@ public class sqrt {
         if (ans == -1) {
             System.out.println("Not a perfect square");
         } else {
-            System.out.println(ans);
+            System.out.println(ans);//ans
         }
     }
 }
