@@ -4,7 +4,6 @@ import java.util.*;
 
 //https://leetcode.com/problems/valid-arrangement-of-pairs/description/
 //2097. Valid Arrangement of Pairs
-
 class validArrangement {
     public int[][] validArrangement(int[][] pairs) {
         Map<Integer, List<Integer>> adj = new HashMap<>();
