@@ -2,7 +2,6 @@ package Questions.Questions;
 
 //https://leetcode.com/problems/add-digits/
 //258. Add Digits (Easy Question)
-
 class AddDigits {
 
     public static int addDigits(int num) {
