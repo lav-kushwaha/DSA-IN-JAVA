@@ -2,6 +2,7 @@ package Questions.Questions;
 
 //https://leetcode.com/problems/shifting-letters-ii/description/
 //2381. Shifting Letters II
+
 class shiftingLetters {
     public String shiftingLetters(String s, int[][] shifts) {
         int n = s.length();
@@ -19,7 +20,7 @@ class shiftingLetters {
         }
         
         for (int i = 1; i < n; i++) {
-            prefixSum[i] += prefixSum[i-1];
+            prefixSum[i] += prefixSum[i - 1];
         }
         
         char[] chars = s.toCharArray();
