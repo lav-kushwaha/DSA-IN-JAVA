@@ -1,4 +1,5 @@
 package Questions.Questions;
+
 import java.util.*;
 
 //https://leetcode.com/problems/divide-nodes-into-the-maximum-number-of-groups/description/
