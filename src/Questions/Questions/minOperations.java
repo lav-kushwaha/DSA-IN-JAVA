@@ -1,28 +1,29 @@
 package Questions.Questions;
 
-import java.util.HashSet;
+import java.util.*;
 
-//https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/description/
-//1769. Minimum Number of Operations to Move All Balls to Each Box
+//https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii/description/
+//3066. Minimum Operations to Exceed Threshold Value II
 class minOperations {
-    public int[] minOperations(String boxes) {
-        int n = boxes.length();
-        HashSet<Integer> set = new HashSet<>();
-
-        for (int i = 0; i < n; i++) {
-            if (boxes.charAt(i) == '1') {
-                set.add(i);
-            }
+    public int minOperations(int[] nums, int k) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for (int num : nums) {
+            if (num < k) pq.add(num);
         }
 
-        int[] answer = new int[n];
+        int operations = 0;
 
-        for (int i = 0; i < n; i++) {
-            for (int idx : set) {
-                answer[i] += Math.abs(i - idx);
-            }
+        while (!pq.isEmpty()) {
+            int x = pq.poll();
+            operations++;
+
+            if (pq.isEmpty()) break;
+
+            int y = pq.poll();
+            long newValue = 2L * x + y;
+
+            if (newValue < k) pq.add((int) newValue);
         }
-
-        return answer;
+        return operations;
     }
 }
