@@ -4,7 +4,7 @@ import java.util.*;
 
 //https://www.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/
 //Cycle Detection in unirected Graph (bfs)
-class GraphCycle {
+class UndirectedGraphCycleUsingBFS {
     public static boolean isCycle(int V, List<List<Integer>> adj) {
         boolean[] visited = new boolean[V];
 
