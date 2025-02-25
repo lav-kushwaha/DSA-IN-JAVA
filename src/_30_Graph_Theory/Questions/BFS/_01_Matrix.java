@@ -47,6 +47,7 @@ class _01_Matrix {
             int col = node.col;
             int steps = node.steps;
 
+            //add steps in dist
             dist[row][col] = steps;
 
             for (int i = 0; i < 4; i++) {
@@ -74,7 +75,7 @@ class _01_Matrix {
 
         for (int[] row : ans) {
             for (int val : row) {
-                System.out.print(val + " ");
+                System.out.print(val + " "); //print val
             }
             System.out.println();
         }
