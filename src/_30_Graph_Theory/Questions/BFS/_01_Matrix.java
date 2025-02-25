@@ -37,6 +37,7 @@ class _01_Matrix {
             }
         }
 
+        //directions
         int[] delRow = {-1, 0, 1, 0};
         int[] delCol = {0, 1, 0, -1};
 
@@ -51,15 +52,14 @@ class _01_Matrix {
             for (int i = 0; i < 4; i++) {
                 int newRow = row + delRow[i];
                 int newCol = col + delCol[i];
-
                 if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < m && vis[newRow][newCol] == 0) {
                     vis[newRow][newCol] = 1;
-                    q.add(new Node(newRow, newCol, steps + 1));
+                    q.add(new Node(newRow, newCol, steps + 1)); //add new row and col into queue.
                 }
             }
         }
 
-        return dist;
+        return dist; //returned distance
     }
 
     public static void main(String[] args) {
