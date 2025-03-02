@@ -1,7 +1,7 @@
 package Questions.Questions;
 
 //https://leetcode.com/problems/cells-with-odd-values-in-a-matrix/
-
+// Cells with Odd Values in a Matrix
 public class Cells_with_Odd_Values_in_a_Matrix {
     public static void main(String[] args) {
         int[][] indices = {
@@ -28,6 +28,7 @@ public class Cells_with_Odd_Values_in_a_Matrix {
 
            }
 
+           //oddelement count
            int oddElementCount = 0;
 
            for(int i=0;i<m;i++){
