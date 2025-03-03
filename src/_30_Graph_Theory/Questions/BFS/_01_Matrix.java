@@ -81,3 +81,68 @@ class _01_Matrix {
         }
     }
 }
+
+//class _01_Matrix {
+//    public int[][] nearest(int[][] grid) {
+//        int n = grid.length;
+//        int m = grid[0].length;
+//
+//        int[][] vis = new int[n][m];
+//        int[][] dist = new int[n][m];
+//        Queue<int[]> q = new LinkedList<>(); // Queue to store {row, col, steps}
+//
+//        // Initialize queue and visited array
+//        for (int i = 0; i < n; i++) {
+//            for (int j = 0; j < m; j++) {
+//                if (grid[i][j] == 1) {
+//                    q.add(new int[]{i, j, 0});
+//                    vis[i][j] = 1;
+//                }
+//            }
+//        }
+//
+//        // Directions for moving up, right, down, left
+//        int[] delRow = {-1, 0, 1, 0};
+//        int[] delCol = {0, 1, 0, -1};
+//
+//        // BFS traversal
+//        while (!q.isEmpty()) {
+//            int[] node = q.poll();
+//            int row = node[0];
+//            int col = node[1];
+//            int steps = node[2];
+//            dist[row][col] = steps;
+//
+//            // Explore 4 directions
+//            for (int i = 0; i < 4; i++) {
+//                int newRow = row + delRow[i];
+//                int newCol = col + delCol[i];
+//                if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < m && vis[newRow][newCol] == 0) {
+//                    vis[newRow][newCol] = 1;
+//                    q.add(new int[]{newRow, newCol, steps + 1});
+//                }
+//            }
+//        }
+//
+//        return dist;
+//    }
+//
+//    public static void main(String[] args) {
+//        int[][] grid = {
+//                {0, 1, 1, 0},
+//                {1, 1, 0, 0},
+//                {0, 0, 1, 1}
+//        };
+//
+//        _01_Matrix obj = new _01_Matrix();
+//        int[][] ans = obj.nearest(grid);
+//
+//        for (int[] row : ans) {
+//            for (int val : row) {
+//                System.out.print(val + " ");
+//            }
+//            System.out.println();
+//        }
+//    }
+//}
+
