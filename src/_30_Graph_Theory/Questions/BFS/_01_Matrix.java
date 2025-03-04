@@ -7,6 +7,7 @@ import java.util.*;
 //Distance of nearest cell having 1 in a binary matrix
 //https://www.geeksforgeeks.org/problems/distance-of-nearest-cell-having-1-1587115620/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card
 class _01_Matrix {
+    //node
     static class Node {
         int row;
         int col;
@@ -26,6 +27,7 @@ class _01_Matrix {
         int[][] vis = new int[n][m];
         int[][] dist = new int[n][m];
 
+        //Queue node.
         Queue<Node> q = new LinkedList<>();
 
         for (int i = 0; i < n; i++) {
