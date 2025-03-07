@@ -8,6 +8,7 @@ class findMissingAndRepeatedValues {
         int size = n * n;
         int[] count = new int[size + 1];
 
+        //loop
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 count[grid[i][j]]++;
