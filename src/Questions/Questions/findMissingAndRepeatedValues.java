@@ -14,7 +14,8 @@ class findMissingAndRepeatedValues {
             }
         }
 
-        int a = -1, b = -1;
+        int a = -1;
+        int b = -1;
 
         for (int num = 1; num <= size; num++) {
             if (count[num] == 2) {
