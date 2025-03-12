@@ -2,6 +2,8 @@ package _30_Graph_Theory.Questions.BFS;
 
 import java.util.*;
 
+//https://www.geeksforgeeks.org/problems/bipartite-graph/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card
+//Bipartite Graph
 class BipartiteGraph {
     public boolean isBipartite(ArrayList<ArrayList<Integer>> adj) {
         int v = adj.size();
