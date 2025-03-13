@@ -2,8 +2,8 @@ package _30_Graph_Theory.Questions.Connected_Components.DFS;
 
 //https://leetcode.com/problems/number-of-provinces/
 //547. Number of Provinces
-
 //APPROACH : DFS
+
 class NumberofProvincesUsingMatrix {
     public int findCircleNum(int[][] isConnected) {
         int provinces = 0;
@@ -18,6 +18,7 @@ class NumberofProvincesUsingMatrix {
         return provinces;
     }
 
+    //dfs
     private void dfs(int[][] isConnected, boolean[] visited, int i){
         visited[i] = true;
 
