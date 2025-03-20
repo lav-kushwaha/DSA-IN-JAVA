@@ -5,7 +5,7 @@ import java.util.Stack;
 
 //https://www.geeksforgeeks.org/problems/topological-sort/1
 //Topological sort
-class TopologicalSort {
+class TopologicalSortDFS {
     
     // Function to return list containing vertices in Topological order.
     static int[] topoSort(int V, ArrayList<ArrayList<Integer>> adj) {
@@ -63,7 +63,7 @@ class TopologicalSort {
         adj.get(5).add(2);
         
         // Perform topological sort
-        int[] ans = TopologicalSort.topoSort(V, adj);
+        int[] ans = TopologicalSortDFS.topoSort(V, adj);
         
         // Print the result
         for (int node : ans) {
