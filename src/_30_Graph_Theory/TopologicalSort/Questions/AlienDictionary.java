@@ -59,7 +59,6 @@ class AlienDictionary {
 
         return ans.toString();
     }
-    public class Main {
         public static void main(String[] args) {
             int N = 5, K = 4;
             String[] dict = {"baa", "abcd", "abca", "cab", "cad"};
@@ -71,6 +70,6 @@ class AlienDictionary {
             }
             System.out.println();
         }
-    }
+
 }
 
