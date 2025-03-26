@@ -5,6 +5,8 @@ import java.util.*;
 //https://www.geeksforgeeks.org/problems/alien-dictionary/1
 //Alien Dictionary
 class AlienDictionary {
+
+    //topoSort
     private List<Integer> topoSort(int V, List<List<Integer>> adj) {
         int indegree[] = new int[V];
         for (int i = 0; i < V; i++) {
@@ -32,7 +34,8 @@ class AlienDictionary {
 
         return topo;
     }
-    
+
+    //findOrder
     public String findOrder(String[] dict, int N, int K) {
         List<List<Integer>> adj = new ArrayList<>();
         for (int i = 0; i < K; i++) {
