@@ -1,19 +1,19 @@
-package _30_Graph_Theory.Questions.BFS;
+package _30_Graph_Theory.Graph_Traversals.Questions.DFS;
 
 import java.util.*;
 
 //https://www.geeksforgeeks.org/problems/bipartite-graph/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card
-//Bipartite Graph
+//Bipartite Graph using dfs
 class BipartiteGraph {
     public boolean isBipartite(ArrayList<ArrayList<Integer>> adj) {
         int v = adj.size();
-        int color[] = new int[v];
+        int[] color = new int[v];
         Arrays.fill(color, -1); // Initialize all nodes as uncolored (-1)
 
-        // Check for all components in case the graph is disconnected
+        // Check for all components (to handle disconnected graphs)
         for (int i = 0; i < v; i++) {
-            if (color[i] == -1) { // Only check unvisited components
-                if (!checkBipartiteBFS(i, color, adj)) {
+            if (color[i] == -1) { // If not colored, start DFS
+                if (!checkBipartiteDFS(i, 0, color, adj)) {
                     return false;
                 }
             }
@@ -21,21 +21,16 @@ class BipartiteGraph {
         return true;
     }
 
-    private boolean checkBipartiteBFS(int start, int[] color, ArrayList<ArrayList<Integer>> adj) {
-        Queue<Integer> queue = new LinkedList<>();
-        queue.add(start);
-        color[start] = 0; // Start coloring with 0
+    private boolean checkBipartiteDFS(int node, int col, int[] color, ArrayList<ArrayList<Integer>> adj) {
+        color[node] = col; // Assign color (0 or 1)
 
-        while (!queue.isEmpty()) {
-            int node = queue.poll();
-
-            for (int neighbor : adj.get(node)) {
-                if (color[neighbor] == -1) { // If unvisited, assign opposite color
-                    color[neighbor] = 1 - color[node];
-                    queue.add(neighbor);
-                } else if (color[neighbor] == color[node]) { // If same color as parent, not bipartite
+        for (int neighbor : adj.get(node)) {
+            if (color[neighbor] == -1) { // If uncolored, assign opposite color and DFS further
+                if (!checkBipartiteDFS(neighbor, 1 - col, color, adj)) {
                     return false;
                 }
+            } else if (color[neighbor] == color[node]) { // If neighbor has the same color, not bipartite
+                return false;
             }
         }
         return true;
@@ -69,3 +64,6 @@ class BipartiteGraph {
         System.out.println("Is the graph bipartite? " + result);
     }
 }
+
+//Time Complexity	O(V + E) (DFS visits each node and edge once)
+//Space Complexity	O(V + E) (Adjacency list + recursion stack + color array)

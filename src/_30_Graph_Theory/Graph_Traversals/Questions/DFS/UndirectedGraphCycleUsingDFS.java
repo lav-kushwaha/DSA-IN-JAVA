@@ -1,4 +1,4 @@
-package _30_Graph_Theory.Questions.DFS;
+package _30_Graph_Theory.Graph_Traversals.Questions.DFS;
 
 import java.util.*;
 

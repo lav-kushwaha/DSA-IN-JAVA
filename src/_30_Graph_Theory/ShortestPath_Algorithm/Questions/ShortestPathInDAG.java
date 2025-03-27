@@ -1,4 +1,4 @@
-package _30_Graph_Theory.TopologicalSort.Questions;
+package _30_Graph_Theory.ShortestPath_Algorithm.Questions;
 
 import java.util.*;
 import java.lang.*;
