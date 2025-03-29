@@ -13,10 +13,10 @@ class ShortestPathInDAG {
         int[][] edge = {{0,1,2},{0,4,1},{4,5,4},{4,2,2},{1,2,3},{2,3,6},{5,3,1}};
         ShortestPathInDAG obj = new ShortestPathInDAG();
         int res[] = obj.shortestPath(n, m, edge);
-        for (int i = 0; i < n; i++) {
-            System.out.print(res[i] + " ");
-        }
-        System.out.println();
+//        for (int i = 0; i < n; i++) {
+//            System.out.print(res[i] + " ");
+//        }
+//        System.out.println();
     }
 
     static class Pair {
@@ -25,6 +25,12 @@ class ShortestPathInDAG {
             this.first = _first;
             this.second = _second;
         }
+
+        //To print adj list we have override toString.
+//        @Override
+//        public String toString() {
+//            return "(" + first + ", " + second + ")";
+//        }
     }
 
     private void topoSort(int node, ArrayList<ArrayList<Pair>> adj, int vis[], Stack<Integer> st) {
@@ -44,6 +50,7 @@ class ShortestPathInDAG {
             adj.add(new ArrayList<>());
         }
 
+
         // Building adjacency list
         for (int i = 0; i < M; i++) {
             int u = edges[i][0];
@@ -52,6 +59,16 @@ class ShortestPathInDAG {
             adj.get(u).add(new Pair(v, wt));
         }
 
+        //printing adj list.
+//        for (int i = 0; i < adj.size(); i++) {
+//            System.out.print("List " + i + ": ");
+//            for (Pair p : adj.get(i)) {
+//                System.out.print(p + " ");
+//            }
+//            System.out.println();
+//        }
+
+
         int vis[] = new int[N];
         Stack<Integer> st = new Stack<>();
         for (int i = 0; i < N; i++) {
@@ -59,6 +76,7 @@ class ShortestPathInDAG {
                 topoSort(i, adj, vis, st);
             }
         }
+        System.out.println(st);
 
         int dist[] = new int[N];
         Arrays.fill(dist, (int)(1e9));
