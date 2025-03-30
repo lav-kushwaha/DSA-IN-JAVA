@@ -45,7 +45,7 @@ class ShortestPathInUndirected {
         return dist;
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         int n = 9, m = 10;
         int[][] edge = {{0,1},{0,3},{3,4},{4,5},{5,6},{1,2},{2,6},{6,7},{7,8},{6,8}};
 
