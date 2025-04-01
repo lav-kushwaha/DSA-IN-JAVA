@@ -32,10 +32,11 @@ class ShortestDistanceInBinaryMaze {
                 dist[i][j] = (int)(1e9); 
             }
         }
+
         dist[source[0]][source[1]] = 0; 
         q.add(new Tuple(0, source[0], source[1])); 
 
-       
+
         int dr[] = {-1, 0, 1, 0}; 
         int dc[] = {0, 1, 0, -1}; 
  
