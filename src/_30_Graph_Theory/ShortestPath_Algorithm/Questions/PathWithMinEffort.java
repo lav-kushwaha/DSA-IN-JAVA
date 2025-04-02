@@ -3,7 +3,7 @@ import java.util.*;
 
 //https://leetcode.com/problems/path-with-minimum-effort/
 //1631. Path With Minimum Effort
-class PathWithMaxEffort {
+class PathWithMinEffort {
     class Tuple{
         int distance;
         int row;
@@ -76,7 +76,7 @@ class PathWithMaxEffort {
     }
     public static void main(String[] args) {
         int[][] heights = {{1, 2, 2}, {3, 8, 2}, {5, 3, 5}};
-        PathWithMaxEffort obj = new PathWithMaxEffort();
+        PathWithMinEffort obj = new PathWithMinEffort();
         int ans = obj.MinimumEffort(heights);
         System.out.println("Minimum Effort: " + ans);
     }
