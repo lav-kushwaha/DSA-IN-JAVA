@@ -56,4 +56,15 @@ class PathWithMinimumEffort {
         return 0;
 
     }
+
+    public static void main(String[] args) {
+
+        int[][] heights={{1, 2, 2}, {3, 8, 2}, {5, 3, 5}};
+
+        PathWithMinimumEffort obj = new PathWithMinimumEffort();
+        int ans = obj.minimumEffortPath(heights);
+
+        System.out.print(ans);
+        System.out.println();
+    }
 }
