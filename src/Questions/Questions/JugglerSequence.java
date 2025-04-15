@@ -1,4 +1,5 @@
 package Questions.Questions;
+import java.util.*;
 
 class jugglerSequence {
     static List<Long> jugglerSequence(long n) {
