@@ -1,7 +1,5 @@
 package Questions.Questions;
 
-//https://leetcode.com/problems/letter-tile-possibilities/description/
-//1079. Letter Tile Possibilities
 class numTilePossibilities {
     public int numTilePossibilities(String tiles) {
         int[] counts = new int[26];
