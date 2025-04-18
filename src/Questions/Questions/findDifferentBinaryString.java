@@ -1,7 +1,5 @@
 package Questions.Questions;
 
-//https://leetcode.com/problems/find-unique-binary-string/description/
-//1980. Find Unique Binary String
 class findDifferentBinaryString {
     public String findDifferentBinaryString(String[] nums) {
         StringBuilder result = new StringBuilder();
