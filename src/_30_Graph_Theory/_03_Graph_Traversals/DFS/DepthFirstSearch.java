@@ -1,4 +1,4 @@
-package _30_Graph_Theory.Graph_Traversals.DFS;
+package _30_Graph_Theory._03_Graph_Traversals.DFS;
 
 import java.util.ArrayList;
 

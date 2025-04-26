@@ -1,4 +1,4 @@
-package _30_Graph_Theory.Graph_Representations.Undirected_Graph;
+package _30_Graph_Theory._01_Graph_Representations.Undirected_Graph;
 
 import java.util.ArrayList;
 import java.util.List;

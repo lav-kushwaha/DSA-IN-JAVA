@@ -1,4 +1,4 @@
-package _30_Graph_Theory.ShortestPath_Algorithm.Dijkstra_Algorithm.DijkstraAlgoUsingPQ;
+package _30_Graph_Theory._05_ShortestPath_Algorithm.Dijkstra_Algorithm.DijkstraAlgoUsingPQ;
 
 import java.util.*;
 

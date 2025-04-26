@@ -1,4 +1,4 @@
-package _30_Graph_Theory.ShortestPath_Algorithm.Questions;
+package _30_Graph_Theory._05_ShortestPath_Algorithm.Questions;
 import java.util.*;
 
 //https://leetcode.com/problems/path-with-minimum-effort/description/

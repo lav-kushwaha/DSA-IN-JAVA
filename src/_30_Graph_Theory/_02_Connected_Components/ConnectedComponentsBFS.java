@@ -1,4 +1,4 @@
-package _30_Graph_Theory.Connected_Components;
+package _30_Graph_Theory._02_Connected_Components;
 import java.util.*;
 
 //1. Using BFS to find connected components:

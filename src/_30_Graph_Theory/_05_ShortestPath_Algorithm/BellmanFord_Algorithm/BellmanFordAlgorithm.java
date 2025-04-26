@@ -1,4 +1,4 @@
-package _30_Graph_Theory.ShortestPath_Algorithm.BellmanFord_Algorithm;
+package _30_Graph_Theory._05_ShortestPath_Algorithm.BellmanFord_Algorithm;
 
 import java.util.*;
 

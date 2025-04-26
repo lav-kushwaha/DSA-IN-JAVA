@@ -1,4 +1,4 @@
-package _30_Graph_Theory.Graph_Traversals.Questions.DFS;
+package _30_Graph_Theory._03_Graph_Traversals.Questions.DFS;
 import java.util.*;
 
 //https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card

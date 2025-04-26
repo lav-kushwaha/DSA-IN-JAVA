@@ -1,4 +1,4 @@
-package _30_Graph_Theory.Graph_Traversals.Questions.BFS;
+package _30_Graph_Theory._03_Graph_Traversals.Questions.BFS;
 import java.util.LinkedList;
 import java.util.Queue;
 

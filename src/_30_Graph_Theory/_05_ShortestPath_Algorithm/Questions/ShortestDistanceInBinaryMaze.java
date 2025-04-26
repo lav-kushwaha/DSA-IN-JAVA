@@ -1,4 +1,4 @@
-package _30_Graph_Theory.ShortestPath_Algorithm.Questions;
+package _30_Graph_Theory._05_ShortestPath_Algorithm.Questions;
 import java.util.*;
 
 //https://takeuforward.org/data-structure/g-36-shortest-distance-in-a-binary-maze/

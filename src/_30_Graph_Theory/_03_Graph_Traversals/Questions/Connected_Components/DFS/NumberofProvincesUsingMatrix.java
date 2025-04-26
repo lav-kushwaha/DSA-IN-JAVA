@@ -1,4 +1,4 @@
-package _30_Graph_Theory.Graph_Traversals.Questions.Connected_Components.DFS;
+package _30_Graph_Theory._03_Graph_Traversals.Questions.Connected_Components.DFS;
 
 //https://leetcode.com/problems/number-of-provinces/
 //547. Number of Provinces

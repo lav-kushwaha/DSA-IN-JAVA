@@ -1,8 +1,7 @@
-package _30_Graph_Theory.ShortestPath_Algorithm.Questions;
+package _30_Graph_Theory._05_ShortestPath_Algorithm.Questions;
 
 import java.util.*;
 import java.lang.*;
-import java.io.*;
 
 //https://www.geeksforgeeks.org/problems/shortest-path-in-undirected-graph-having-unit-distance/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=shortest-path-in-undirected-graph-having-unit-distance
 //Shortest Path in Undirected

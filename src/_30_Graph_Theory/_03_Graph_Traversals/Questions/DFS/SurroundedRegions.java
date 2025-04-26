@@ -1,4 +1,4 @@
-package _30_Graph_Theory.Graph_Traversals.Questions.DFS;
+package _30_Graph_Theory._03_Graph_Traversals.Questions.DFS;
 
 //Surrounded Regions | Replace O’s with X’s
 //https://www.geeksforgeeks.org/problems/replace-os-with-xs0052/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=replace-os-with-xs

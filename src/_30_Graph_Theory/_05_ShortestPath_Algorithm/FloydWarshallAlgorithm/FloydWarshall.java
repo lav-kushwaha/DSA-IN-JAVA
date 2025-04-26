@@ -1,4 +1,4 @@
-package _30_Graph_Theory.ShortestPath_Algorithm.FloydWarshallAlgorithm;
+package _30_Graph_Theory._05_ShortestPath_Algorithm.FloydWarshallAlgorithm;
 
 //https://www.geeksforgeeks.org/problems/implementing-floyd-warshall2042/1
 //Floyd Warshall
