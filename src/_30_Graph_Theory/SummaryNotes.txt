@@ -1,0 +1,47 @@
+ Graph Algorithms – Summary Notes
+
+🔍 Traversal Algorithms
+BFS (Breadth-First Search)
+➤ Explores the graph level by level (like a wave).
+➤ Uses a queue (FIFO).
+➤ Finds the shortest path in an unweighted graph.
+➤ Good for finding the minimum number of edges from the source.
+
+DFS (Depth-First Search)
+➤ Explores the graph deeply first, then backtracks.
+➤ Uses recursion or a stack.
+➤ Useful for cycle detection, topological sorting, and exploring connected components.
+
+📍 Shortest Path Algorithms
+Dijkstra’s Algorithm
+➤ Finds the shortest path from a single source to all other nodes.
+➤ Works only with non-negative edge weights.
+➤ Uses a priority queue (min-heap).
+
+Bellman-Ford Algorithm
+➤ Same goal as Dijkstra: shortest path from a single source.
+➤ Works with negative edge weights.
+➤ Can detect negative weight cycles.
+
+Floyd-Warshall Algorithm
+➤ Finds shortest paths between all pairs of nodes.
+➤ Works for negative weights (no negative cycles).
+➤ Time complexity: O(V³).
+
+🌲 Minimum Spanning Tree (MST)
+Prim’s Algorithm
+➤ Builds MST by growing the tree from any starting node.
+➤ Always adds the lowest weight edge connecting the tree to a new node.
+➤ Uses a priority queue.
+
+Kruskal’s Algorithm
+➤ Builds MST by sorting all edges and picking the smallest ones.
+➤ Uses Disjoint Set Union (DSU) to avoid cycles.
+➤ Edges are added globally in order of weight.
+
+🔁 Other Important Algorithms
+Topological Sort
+➤ Only for DAGs (Directed Acyclic Graphs).
+➤ Prints nodes in an order such that for every edge u → v, u comes before v.
+➤ Nodes with no incoming edges are processed first.
+➤ Useful for task scheduling, build systems, etc.

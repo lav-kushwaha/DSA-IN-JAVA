@@ -1,4 +1,4 @@
-package _30_Graph_Theory._06_MinimumSpanningTree_And_DisjointSet;
+package _30_Graph_Theory._06_MinimumSpanningTree_And_DisjointSet.PrimsAlgorithm;
 
 import java.util.*;
 
