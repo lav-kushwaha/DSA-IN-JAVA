@@ -41,6 +41,22 @@ class DisjointSet {
             size.set(ulp_u, size.get(ulp_u) + size.get(ulp_v));
         }
     }
+
+    public void unionByRank(int u, int v) {
+        int ulp_u = findUPar(u); // Ultimate parent of u
+        int ulp_v = findUPar(v); // Ultimate parent of v
+
+        if (ulp_u == ulp_v) return; // Already in same set
+
+        if (rank.get(ulp_u) < rank.get(ulp_v)) {
+            parent.set(ulp_u, ulp_v); // u joins v's tree
+        } else if (rank.get(ulp_v) < rank.get(ulp_u)) {
+            parent.set(ulp_v, ulp_u); // v joins u's tree
+        } else {
+            parent.set(ulp_u, ulp_v); // Make v parent of u
+            rank.set(ulp_v, rank.get(ulp_v) + 1); // Increase rank of new root
+        }
+    }
 }
 
 // Edge class with comparable to sort by weight
