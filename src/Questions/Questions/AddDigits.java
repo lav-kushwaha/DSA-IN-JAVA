@@ -4,21 +4,20 @@ package Questions.Questions;
 //258. Add Digits (Easy Question)
 class AddDigits {
 
-    public static int addDigits(int num) {
-        while (num >= 10) {
-            num = digitsSum(num);
-        }
-        return num;
-    }
-
-    //method to sum of digits..
-    static int digitsSum(int num) {
+    public static int digitsSum(int num) {
         int sum = 0;
         while (num != 0) {
             sum += num % 10;
             num /= 10;
         }
         return sum;
+    }
+
+    public static int addDigits(int num) {
+        while (num >= 10) {
+            num = digitsSum(num);
+        }
+        return num;
     }
 
     public static void main(String[] args) {
