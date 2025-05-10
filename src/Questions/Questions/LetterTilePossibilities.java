@@ -13,6 +13,7 @@ class  LetterTilePossibilities {
         for(int i = 0; i < tiles.length(); i++){
             counts[tiles.charAt(i) - 'A']++;
         }
+
         int[] lengthCounts = new int[tiles.length() + 1];
         lengthCounts[0] = 1;
         for(int i = 0; i < counts.length; i++){
