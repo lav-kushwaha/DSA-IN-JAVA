@@ -1,8 +1,9 @@
 package Questions.Questions;
-import java.util.*;
+import java.util.ArrayList;
 
-//https://leetcode.com/problems/product-of-the-last-k-numbers/description/
+//https://leetcode.com/problems/product-of-the-last-k-numbers/
 //1352. Product of the Last K Numbers
+
 class ProductOfNumbers {
     ArrayList<Integer> list = new ArrayList<>();
     int prod = 1;
