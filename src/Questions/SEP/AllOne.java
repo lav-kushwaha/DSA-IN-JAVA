@@ -130,6 +130,9 @@ public class AllOne {
         allOne.inc("c");
         allOne.inc("c");
         allOne.inc("c");
+        allOne.inc("c");
+        allOne.inc("c");
+        allOne.inc("c");
         System.out.println(allOne.getMaxKey()); // Outputs "c"
         System.out.println(allOne.getMinKey()); // Outputs "a"
         allOne.dec("c");
